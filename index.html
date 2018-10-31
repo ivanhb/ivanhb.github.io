@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
   <!-- Site Properties -->
-  <title>Homepage - Semantic</title>
+  <title>Ivan Heibi's website</title>
   <link rel="stylesheet" type="text/css" href="dist/components/reset.css">
   <link rel="stylesheet" type="text/css" href="dist/components/site.css">
 
@@ -28,202 +28,63 @@
 
   <link rel="stylesheet" type="text/css" href="css/ar.css">
 
-  <style type="text/css">
-
-    .hidden.menu {
-      display: none;
-    }
-
-    .masthead.segment {
-      min-height: 700px;
-      padding: 1em 0em;
-    }
-    .masthead .logo.item img {
-      margin-right: 1em;
-    }
-    .masthead .ui.menu .ui.button {
-      margin-left: 0.5em;
-    }
-    .masthead h1.ui.header {
-      margin-top: 3em;
-      margin-bottom: 0em;
-      font-size: 4em;
-      font-weight: normal;
-    }
-    .masthead h2 {
-      font-size: 1.7em;
-      font-weight: normal;
-    }
-
-    .ui.vertical.stripe {
-      padding: 8em 0em;
-    }
-    .ui.vertical.stripe h3 {
-      font-size: 2em;
-    }
-    .ui.vertical.stripe .button + h3,
-    .ui.vertical.stripe p + h3 {
-      margin-top: 3em;
-    }
-    .ui.vertical.stripe .floated.image {
-      clear: both;
-    }
-    .ui.vertical.stripe p {
-      font-size: 1.33em;
-    }
-    .ui.vertical.stripe .horizontal.divider {
-      margin: 3em 0em;
-    }
-
-    .quote.stripe.segment {
-      padding: 0em;
-    }
-    .quote.stripe.segment .grid .column {
-      padding-top: 5em;
-      padding-bottom: 5em;
-    }
-
-    .footer.segment {
-      padding: 5em 0em;
-    }
-
-    .secondary.pointing.menu .toc.item {
-      display: none;
-    }
-
-    @media only screen and (max-width: 700px) {
-      .ui.fixed.menu {
-        display: none !important;
-      }
-      .secondary.pointing.menu .item,
-      .secondary.pointing.menu .menu {
-        display: none;
-      }
-      .secondary.pointing.menu .toc.item {
-        display: block;
-      }
-      .masthead.segment {
-        min-height: 350px;
-      }
-      .masthead h1.ui.header {
-        font-size: 2em;
-        margin-top: 1.5em;
-      }
-      .masthead h2 {
-        margin-top: 0.5em;
-        font-size: 1.5em;
-      }
-    }
-
-
-  </style>
   <script src="assets/library/jquery.min.js"></script>
   <script src="dist/components/visibility.js"></script>
   <script src="dist/components/sidebar.js"></script>
   <script src="dist/components/transition.js"></script>
+
   <script  type="text/javascript" src="content_config.js"></script>
-  <script>
-  $(document)
-    .ready(function() {
+  <script  type="text/javascript" src="js/pre_load.js"></script>
 
-      // fix menu when passed
-      $('.masthead')
-        .visibility({
-          once: false,
-          onBottomPassed: function() {
-            $('.fixed.menu').transition('fade in');
-          },
-          onBottomPassedReverse: function() {
-            $('.fixed.menu').transition('fade out');
-          }
-        })
-      ;
-
-      // create sidebar and attach to menu open
-      $('.ui.sidebar')
-        .sidebar('attach events', '.toc.item')
-      ;
-
-    })
-  ;
-  </script>
 </head>
 <body>
 
-<!-- Following Menu -->
-<div id="fixed_menu" class="ui large top fixed hidden menu"></div>
-<!-- Sidebar Menu -->
-<div id="slide_menu" class="ui vertical inverted sidebar menu"></div>
+
+  <!-- Following Menu -->
+  <div class="ui large top fixed hidden menu">
+    <div class="ui container">
+      <confelem class="a_list_menu"></confelem>
+    </div>
+  </div>
+
+  <!-- Sidebar Menu -->
+  <div class="ui vertical inverted sidebar menu">
+    <confelem class="a_list_menu"></confelem>
+  </div>
 
 
 <!-- Page Contents -->
 <div class="pusher">
-  <div class="ui vertical masthead aligned segment" style="background: #404040">
+  <div id='_top' class="ui vertical masthead segment" style="background: #7c464a">
+
 
     <div class="ui container">
-      <!--
       <div class="ui large secondary inverted pointing menu">
         <a class="toc item">
           <i class="sidebar icon"></i>
         </a>
-        <a class="active item">Home</a>
-        <a class="item">Work</a>
-        <a class="item">Company</a>
-        <a class="item">Careers</a>
+        <confelem class="a_list_menu"></confelem>
       </div>
-      -->
-
-
-      <div class="ui large secondary inverted pointing menu">
-        <a class="toc item">
-          <i class="sidebar icon"></i>
-        </a>
-        <pholder id="toc_a"></pholder>
-      </div>
-
     </div>
 
-
-
-    <div class="ui text container" style="color: white">
-      <!--<img class="img-thumbnail img-responsive aligned" rel="foaf:depiction" style="float: left; width: 400px; height: 400px " src="img/prof.jpg">-->
-
-      <h1 class="ui inverted header">
-        Ivan Heibi <ar style="font-family: 'Thabit', serif;" > أيفان هيبي
-        </ar>
-      </h1>
-      <div id="intro_text"></div>
-
-      <!--
-      <button class="ui inverted circular facebook icon button">
-        <i class="facebook big icon"></i>
-      </button>
-      <button class="ui inverted circular twitter icon button">
-        <i class="twitter big icon"></i>
-      </button>
-      <button class="ui inverted circular linkedin icon button" onclick="location.href='https://www.linkedin.com/in/ivan-heibi-738317a3'">
-        <i class="linkedin big icon"></i>
-      </button>
-      <button class="ui inverted circular github icon button">
-        <i class="github big icon"></i>
-      </button>
-      -->
-      <!--<div class="ui huge primary button">Get Started <i class="right arrow icon"></i></div>-->
+    <div class="ui text container top-container" style="color: white">
+      <h1 id="main_eng_title" class="ui inverted header" style="margin-top: 1em;"></h1>
+      <h3><confelem id="intro_eng_version"></confelem></h3>
     </div>
 
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div id="short_bio_top" class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eleven wide column">
-          <h3 id="short_bio_title" class="ui header">A short Bio</h3>
-          <lblconfig id="short_bio"></lblconfig>
+          <div class="section_title">A short Bio</div>
+          <confelem id="short_bio"></confelem>
         </div>
         <div class="five wide column">
 
             <img class="ui medium circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 310px; height: 310px; margin-bottom: 50px;" src="img/prof.jpg">
-          <div style="float:left">
+          <div style="text-align: center;">
             <a href="https://twitter.com/ivanheib"><i class="twitter big icon"></i></a>
             <a href="https://www.facebook.com/ivanhb.ita"><i class="facebook big icon"></i></a>
             <a href="https://www.linkedin.com/in/ivan-heibi-738317a3"><i class="linkedin big icon"></i></a>
@@ -234,14 +95,15 @@
     </div>
   </div>
 
-  <div class="ui vertical stripe segment">
+  <div id="works_list_top" class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
-        <div class="fourteen wide column">
-          <div class="ui right floated header huge">Main Projects</div>
-          <!--<h3 class="ui horizontal header divider fitted">Main Projects</h3>-->
+        <div class="column wide section_vertical_title_container">
+          <div class="section_vertical_title">Main Projects</div>
         </div>
-          <lblconfig id="works_list"></lblconfig>
+        <div class="fourteen wide column">
+          <confelem id="works_list"></confelem>
+        </div>
       </div>
     </div>
   </div>
@@ -276,69 +138,7 @@
 </div>
 
 </body>
-
-
-<script>
-//build intro content
-//document.getElementById("intro_text").innerHtml = "<h3>"+concat_arr_str(my_config['intro_text'])+"</h3>";
-$('#intro_text').html("<h3>"+concat_arr_str(my_config['intro_text'])+"</h3>");
-$('#fixed_menu').html(build_menu('fixed_menu'));
-$('#slide_menu').html(build_menu('slide_menu'));
-$('#toc_a').html(build_menu('toc_a'));
-
-//$('#short_bio_title').html(concat_arr_str(my_config['short_bio_title']));
-$('#short_bio').html(concat_arr_str(my_config['short_bio']));
-
-$('#works_list').html(build_works(my_config['works']));
-$('#works_list').addClass('works_content');
-
-
-
-function build_works(works_list){
-  var str_html = '';
-
-  for (var i = 0; i < works_list.length; i++) {
-    //str_html = str_html + '<h2 class="ui horizontal header divider">'+ works_list[i]['title'] + '</h2>';
-    //str_html = str_html + '<h2 class="ui horizontal header divider fitted">'+works_list[i]['title']+'</h2>';
-    str_html = str_html + '<h2 class="ui header"><div class="content work_title">'+works_list[i]['title']+'<div class="sub header work_subtitle">'+works_list[i]['subtitle']+'</div></div></h2>'
-
-    //str_html = str_html + '<h2 class="ui header"><i class="settings icon"></i><div class="content">'+ works_list[i]['title'] +'<div class="sub header">'+works_list[i]['subtitle']+'</div></div></h2>';
-    str_html = str_html + concat_arr_str(works_list[i]['content']) + '</br></br>';
-  }
-  return str_html;
-}
-
-function build_menu(menu_type) {
-  var str_menu = '<div class="ui container">';
-  var closing_str = "";
-
-  if (menu_type == 'fixed_menu') {
-    str_menu = '';
-    closing_str = "<div class='"+my_config[menu_type]['position']+" menu'></div></div>";
-  }
-  if (menu_type == 'slide_menu') {
-    str_menu = '';
-    closing_str = '';
-  }
-  if (menu_type == 'toc_a') {
-    str_menu = '';
-    closing_str = '';
-  }
-
-  for (var elem in my_config[menu_type]['items']) {
-    var active = "";
-    if ('default' in my_config[menu_type]['items'][elem]) {
-      active = "active";
-    }
-    str_menu = str_menu + "<a class='"+active+" item'>" + elem + "</a>";
-    active = "";
-  }
-  str_menu = str_menu + closing_str;
-  return str_menu;
-}
-
-
-</script>
+<script  type="text/javascript" src="js/post_load.js"></script>
 
 
 </html>
