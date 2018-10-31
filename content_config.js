@@ -13,10 +13,10 @@ var my_config = {
 
   'list_menu' : {
     'items': {
-      'Page Top':{'id': '', 'default':true},
-      'Short Biography':{'id': 'short_bio'},
-      'Main Projects':{'id': 'works_list'},
-      'Interests':{'id': 'short_bio'}
+      'Page Top':{'href': '#_top', 'default':true},
+      'Short Biography':{'href': '#short_bio_top'},
+      'Main Projects':{'href': '#works_list_top'},
+      'Publications':{'href': '#publications_list_top'}
     }
   },
 
@@ -36,6 +36,9 @@ var my_config = {
         This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface.
         One of the main characteristics of OSCAR is its adaptability to work with any other RDF triplestore. It is possible to configure OSCAR to work with a particular endpoint by configuring a particular JSON document, which specifies how the SPARQL queries are sent to that endpoint, and how the returned query results should be visualized, according to the predefined tabular view that OSCAR provides.
       `,
+      'extra':[
+        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>']
+      ]
     },
     {
       'title': 'LUCINDA',
@@ -44,6 +47,9 @@ var my_config = {
         This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. LUCINDA uses OSCAR and its features: which is a general search application for rdf data specially designed for open citations.
         One of the main characteristics of LUCINDA is its adaptability to work with any other RDF triplestore. In order to do that there is a configuration file that could be adopted according to the SPARQL endpoint we wish to integrate.
       `,
+      'extra':[
+        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/lucinda"><i class="github alternate medium icon"></i> Go to repository</a>']
+      ]
     },
     {
       'title': 'EMA',
@@ -51,21 +57,18 @@ var my_config = {
       'content': `
         A visual web-based framework meant for Email data analysis in digital and forensic investigation. The image legendOnion.png shows the general Framework architecture. Each different analysis will be contained in a unique folder inside the static/ folder. This architecture is meant to be flexible for updates and additional integration of new components and data analysis.
       `,
+      'extra':[
+        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/ivanhb/EMA"><i class="github alternate medium icon"></i> Go to repository</a>']
+      ]
+    }
+  ],
+
+  'publications': [
+    {
+      'title': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham',
+      'href': 'https://link.springer.com/chapter/10.1007/978-3-030-01379-0_9',
     }
   ]
 
 
-}
-
-
-function concat_arr_str(arr_str){
-  var concatter = "";
-  var spanner = " ";
-  for (var i = 0; i < arr_str.length; i++) {
-    if ( i == arr_str.length - 1) {
-      spanner = "";
-    }
-    concatter = concatter + arr_str[i] + spanner;
-  }
-  return concatter;
 }

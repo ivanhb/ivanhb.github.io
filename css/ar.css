@@ -145,3 +145,12 @@
 	transform: rotate(90deg);
 	transform-origin: left top 0;
 }
+
+
+a.git_repo_link {
+  color: #7c464a;
+}
+
+.publication_title{
+  font-size: 1.3rem;
+}
