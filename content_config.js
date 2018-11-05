@@ -1,4 +1,5 @@
 var my_config = {
+  'border_pattern': 'img/top_border_inverted.png',
   'main_eng_title': "Ivan Heibi's website",
   'intro_eng_text' : `
       This is Ivan Heibi's website, and you will find all the essential info about him in this page ...
@@ -28,78 +29,152 @@ var my_config = {
       <p>On the last year I worked as a research fellow with the OpenCitations project, specially dealing with data visualization and data querying of RDF datasets of scholarly articles/papers. Here my first steps toward Semantic web technologies began.</p>
   `,
 
-  'works': [
+  'section': [
     {
-      'title': 'OSCAR',
-      'subtitle': 'The general Search Application for Rdf data specially designed for Open Citations',
-      'content': `
-        A user friendly search platform applicable for any triplestore endpoint.
-        This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface.
-        One of the main characteristics of OSCAR is its adaptability to work with any other RDF triplestore. It is possible to configure OSCAR to work with a particular endpoint by configuring a particular JSON document, which specifies how the SPARQL queries are sent to that endpoint, and how the returned query results should be visualized, according to the predefined tabular view that OSCAR provides.
-      `,
-      'extra':[
-        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>']
-      ]
-    },
-    {
-      'title': 'LUCINDA',
-      'subtitle': 'An RDF data browser Javascript-based application.',
-      'content': `
-        This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. LUCINDA uses OSCAR and its features: which is a general search application for rdf data specially designed for open citations.
-        One of the main characteristics of LUCINDA is its adaptability to work with any other RDF triplestore. In order to do that there is a configuration file that could be adopted according to the SPARQL endpoint we wish to integrate.
-      `,
-      'extra':[
-        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/lucinda"><i class="github alternate medium icon"></i> Go to repository</a>']
-      ]
-    },
-    {
-      'title': 'EMA',
-      'subtitle': 'The Email Mining Application',
-      'content': `
-        A visual web-based framework meant for Email data analysis in digital and forensic investigation. The image legendOnion.png shows the general Framework architecture. Each different analysis will be contained in a unique folder inside the static/ folder. This architecture is meant to be flexible for updates and additional integration of new components and data analysis.
-      `,
-      'extra':[
-        ['','<a class="git_repo_link" style="float:right;" href="https://github.com/ivanhb/EMA"><i class="github alternate medium icon"></i> Go to repository</a>']
-      ]
-    }
-  ],
-
-  'publications': [
-    {
-      'title': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>',
-      'doi': 'https://doi.org/10.1007/978-3-030-01379-0_9',
-    }
-  ],
-
-  'activities': {
-
-    'id': 'activities',
-    'items':
-      [
+      'id': 'projects',
+      'title': 'Main projects',
+      'type': 'publication',
+      'items': [
         {
-            'title': {
-              'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
-              'label': 'Event: '
-            },
-            'subtitle': [
+          'title': {'value':'OSCAR','label':'','class':'publication'},
+          'subtitle': {'value':'The general Search Application for Rdf data specially designed for Open Citations','label':'','class':'publication'},
+          'content':{'value': `
+            A user friendly search platform applicable for any triplestore endpoint.
+            This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface.
+            One of the main characteristics of OSCAR is its adaptability to work with any other RDF triplestore. It is possible to configure OSCAR to work with a particular endpoint by configuring a particular JSON document, which specifies how the SPARQL queries are sent to that endpoint, and how the returned query results should be visualized, according to the predefined tabular view that OSCAR provides.
+          `,'label':'','class':'publication'},
+          'extra': [
+            [
+              {'value':''},
               {
-                'value': 'Lyon, France',
-                'label': 'Location: '
-              },
+                'value':'<a class="git_repo_link" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'class': 'git_link'
+              }
+            ]
+          ]
+          /*
+          'extra':[
+            ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>']
+          ]
+          */
+        },
+        {
+          'title': {'value':'LUCINDA','label':'','class':'publication'},
+          'subtitle': {'value':'An RDF data browser Javascript-based application.','label':'','class':'publication'},
+          'content': {'value': `
+            This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. LUCINDA uses OSCAR and its features: which is a general search application for rdf data specially designed for open citations.
+            One of the main characteristics of LUCINDA is its adaptability to work with any other RDF triplestore. In order to do that there is a configuration file that could be adopted according to the SPARQL endpoint we wish to integrate.
+          `,'label':'','class':'publication'},
+          'extra': [
+            [
+              {'value':''},
               {
-                'value': '23 - 27 April 2018',
-                'label': 'Date: '
-              },
-            ],
-            'content':{
-              'value': `
-                  The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
-              `,
-              'label': 'Description'
-            }
+                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/opencitations/lucinda"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'class': 'git_link'
+              }
+            ]
+          ]
+        },
+        {
+          'title': {'value':'EMA','label':'','class':'publication'},
+          'subtitle': {'value':'The Email Mining Application','label':'','class':'publication'},
+          'content': {'value': `
+            A visual web-based framework meant for Email data analysis in digital and forensic investigation. The image legendOnion.png shows the general Framework architecture. Each different analysis will be contained in a unique folder inside the static/ folder. This architecture is meant to be flexible for updates and additional integration of new components and data analysis.
+          `,'label':'','class':'publication'},
+          'extra': [
+            [
+              {'value':''},
+              {
+                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/EMA"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'class': 'git_link'
+              }
+            ]
+          ]
         }
-        //add other items
       ]
-  }
+    },
+    {
+      'id': 'publications',
+      'title': 'Publications',
+      'items': [
+        {
+          'content':{
+            'value': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>'
+          },
+          'subtitle':{
+            'value': ''
+          }
+        }
+      ]
+    },
 
+    {
+
+      'id': 'activities',
+      'title': 'Activities',
+      'items':
+        [
+          {
+              'title': {
+                'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
+                'label': 'Event: '
+              },
+              'subtitle': [
+                {
+                  'value': 'Lyon, France',
+                  'label': 'Location: '
+                },
+                {
+                  'value': '23 - 27 April 2018',
+                  'label': 'Date: '
+                },
+                {
+                  'value': `Presenting a talk about <a class="section_content_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
+                  'label': 'Contribution:'
+                }
+              ],
+              'content':[
+                {
+                  'value': `
+                      The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
+                  `,
+                  'label': 'Description'
+                }
+              ]
+          },
+
+          {
+              'title': {
+                'value': 'Workshop on Open Citations',
+                'label': 'Event: '
+              },
+              'subtitle': [
+                {
+                  'value': 'Bologna, Italy',
+                  'label': 'Location: '
+                },
+                {
+                  'value': '3 - 5 September 2018',
+                  'label': 'Date: '
+                },
+                {
+                  'value': `
+                  Staff of the Workshop
+                  `,
+                  'label': 'Contribution:'
+                }
+              ],
+              'content':[
+                {
+                  'value': `
+                      About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.
+                  `,
+                  'label': 'Description'
+                }
+              ]
+          }
+
+        ]
+    }
+  ]
 }

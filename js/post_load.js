@@ -2,6 +2,8 @@
 //document.getElementById("intro_text").innerHtml = "<h3>"+concat_arr_str(my_config['intro_text'])+"</h3>";
 
 //$('.a_list_menu').html(build_list('list_menu'));
+$(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
+
 $( ".a_list_menu").replaceWith(build_list('list_menu'));
 
 $('#main_eng_title').html(my_config['main_eng_title']);
@@ -10,71 +12,17 @@ $('#intro_eng_version').html(my_config['intro_eng_text']);
 
 $('#short_bio').html(my_config['short_bio']);
 
-$('#works_list').html(build_works(my_config['works']));
-$('#works_list').addClass('works_content');
-
-$('#publications_list').html(build_publications(my_config['publications']));
-
-$('#activities_list').html(build_section(my_config['activities']));
 
 
-function build_works(works_list){
-  var str_html = '';
-
-  for (var i = 0; i < works_list.length; i++) {
-    //Title + Content
-    str_html = str_html + '<h2 class="ui header"><div class="content work_title">'+works_list[i]['title']+'<div class="sub header work_subtitle">'+works_list[i]['subtitle']+'</div></div></h2>';
-    str_html = str_html + works_list[i]['content'] + '</br></br>';
-
-    //Extra
-    if ('extra' in works_list[i]) {
-      str_html = str_html +'<table width="100%" class="ui celled table"><tbody>';
-      for (var j = 0; j < works_list[i]['extra'].length; j++) {
-        var extra_row = works_list[i]['extra'][j];
-        str_html = str_html +'<tr>';
-
-        for (var k = 0; k < extra_row.length; k++) {
-          var row_elem = extra_row[k];
-          str_html = str_html +'<td>';
-          str_html = str_html+row_elem;
-          str_html = str_html +'</td>';
-        }
-
-        str_html = str_html +'</tr>';
-      }
-      str_html = str_html +'</tbody></table>';
-    }
+$( ".a_section" ).each(function( i ) {
+  if(my_config['section'][i] != undefined){
+      $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
   }
-  return str_html;
-}
+});
 
-function build_publications(publications_list){
-  var str_html = '';
 
-  for (var i = 0; i < publications_list.length; i++) {
-    //Title + Content
-    str_html = str_html + '<div class="publication_title">'+publications_list[i]['title']+'</div>';
-
-    //Extra
-    if ('extra' in publications_list[i]) {
-      str_html = str_html +'<table width="100%" class="ui celled table"><tbody>';
-      for (var j = 0; j < publications_list[i]['extra'].length; j++) {
-        var extra_row = publications_list[i]['extra'][j];
-        str_html = str_html +'<tr>';
-
-        for (var k = 0; k < extra_row.length; k++) {
-          var row_elem = extra_row[k];
-          str_html = str_html +'<td>';
-          str_html = str_html+row_elem;
-          str_html = str_html +'</td>';
-        }
-
-        str_html = str_html +'</tr>';
-      }
-      str_html = str_html +'</tbody></table>';
-    }
-  }
-  return str_html;
+function build_border_img(img_path){
+  return '<img class="ui fluid image" src="'+img_path+'">'
 }
 
 function build_menu(menu_type) {
@@ -151,6 +99,8 @@ function build_section(section_obj){
   var items = section_obj['items'];
   for (var i = 0; i < items.length; i++) {
 
+    str_html = str_html + "<div class='section_item'>";
+
     //Title
     str_html = str_html + gen_html_entry(items[i],'title');
 
@@ -161,25 +111,55 @@ function build_section(section_obj){
     str_html = str_html + gen_html_entry(items[i],'content');
 
     //Extra
+    str_html = str_html + gen_html_entry(items[i],'extra');
 
+
+    str_html = str_html + "</div>";
   }
   return str_html;
 
 
   function gen_html_entry(obj,field) {
     var str_html = "";
-    var end_index = 1;
-    if (field in obj) {
-      var arr_obj = [obj[field]];
-      if (obj[field] instanceof Array) {
-        end_index = obj[field].length;
-        arr_obj = obj[field];
+
+    if (field == 'extra') {
+      if (field in obj) {
+        str_html = str_html +'<table width="100%" class="ui celled table"><tbody>';
+        for (var j = 0; j < obj['extra'].length; j++) {
+          var extra_row = obj['extra'][j];
+          str_html = str_html +'<tr>';
+
+          for (var k = 0; k < extra_row.length; k++) {
+            var row_elem = extra_row[k]['value'];
+            str_html = str_html +'<td>';
+            str_html = str_html+'<div class="'+extra_row[k]['class']+'">'+row_elem+'<div>';
+            str_html = str_html +'</td>';
+          }
+
+          str_html = str_html +'</tr>';
+        }
+        str_html = str_html +'</tbody></table>';
       }
-      for (var j = 0; j < end_index; j++) {
-        str_html = str_html + gen_html_elem(arr_obj,j,'label',field = field);
-        str_html = str_html + gen_html_elem(arr_obj,j,'value',field = field);
+    }else {
+        var end_index = 1;
+        if (field in obj) {
+          var arr_obj = [obj[field]];
+          if (obj[field] instanceof Array) {
+            end_index = obj[field].length;
+            arr_obj = obj[field];
+          }
+          for (var j = 0; j < end_index; j++) {
+                str_html = str_html + gen_html_elem(arr_obj,j,'label',field = field);
+                str_html = str_html + gen_html_elem(arr_obj,j,'value',field = field);
+          }
+        }
       }
-    }
+    return str_html;
+  }
+
+  function gen_html_extra(obj,index,value,field='content') {
+    var str_html = "<div>";
+
     return str_html;
   }
 
@@ -191,8 +171,31 @@ function build_section(section_obj){
       str_html = "";
     }else {
       var str_val = obj[index][value];
-      str_html = '<div class="section_'+value+' section_'+field+'">'+str_val+'</div>';
+      var add_class = "";
+      if ('class' in obj[index]) {
+        add_class = obj[index]['class'];
+      }
+      str_html = '<div class="section_'+value+' section_'+field+' '+add_class+'">'+str_val+'</div>';
     }
     return str_html;
   }
+}
+
+
+function build_section_skeleton(section_obj) {
+  str_html = `
+      <div id="`+section_obj['id']+`_list_top" class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="column wide section_vertical_title_container">
+              <div class="section_vertical_title">`+section_obj['title']+`</div>
+            </div>
+            <div class="fourteen wide column">
+              `+build_section(section_obj)+`
+            </div>
+          </div>
+        </div>
+      </div>
+  `;
+  return str_html;
 }
