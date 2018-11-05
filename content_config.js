@@ -16,7 +16,8 @@ var my_config = {
       'Page Top':{'href': '#_top', 'default':true},
       'Short Biography':{'href': '#short_bio_top'},
       'Main Projects':{'href': '#works_list_top'},
-      'Publications':{'href': '#publications_list_top'}
+      'Publications':{'href': '#publications_list_top'},
+      'Activities':{'href': '#activities_list_top'}
     }
   },
 
@@ -65,10 +66,40 @@ var my_config = {
 
   'publications': [
     {
-      'title': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham',
-      'href': 'https://link.springer.com/chapter/10.1007/978-3-030-01379-0_9',
+      'title': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>',
+      'doi': 'https://doi.org/10.1007/978-3-030-01379-0_9',
     }
-  ]
+  ],
 
+  'activities': {
+
+    'id': 'activities',
+    'items':
+      [
+        {
+            'title': {
+              'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
+              'label': 'Event: '
+            },
+            'subtitle': [
+              {
+                'value': 'Lyon, France',
+                'label': 'Location: '
+              },
+              {
+                'value': '23 - 27 April 2018',
+                'label': 'Date: '
+              },
+            ],
+            'content':{
+              'value': `
+                  The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
+              `,
+              'label': 'Description'
+            }
+        }
+        //add other items
+      ]
+  }
 
 }

@@ -1,0 +1,48 @@
+
+.section_vertical_title_container{
+  color: #7c464a;
+  float:left;
+}
+
+.section_vertical_title{
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  color: #7c464a;
+  font-size: 3.2rem;
+  float: right;
+}
+
+.section_title{
+  color: #7c464a;
+  font-size: 3.2rem;
+}
+
+
+.section_label.section_title{
+  display:inline;
+  float:left;
+  font-size: 1.6rem;
+  margin-right: 2%;
+}
+.section_value.section_title{
+  font-size: 1.6rem;
+  color: black;
+}
+.section_label.section_subtitle{
+  display:inline;
+  float:left;
+  font-size: 1.5rem;
+  color: #7c464a;
+  margin-right: 2%;
+}
+.section_value.section_subtitle{
+  font-size: 1.5rem;
+}
+.section_label.section_content{
+  font-size: 1.5rem;
+  color: #7c464a;
+  margin-top: 0.5%;
+}
+.section_value.section_content{
+  font-size: 1.2rem;
+}

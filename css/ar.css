@@ -113,24 +113,6 @@
 
   }
 
-.section_vertical_title_container{
-  color: #7c464a;
-  float:left;
-}
-
-.section_vertical_title{
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  color: #7c464a;
-  font-size: 3.2rem;
-  float: right;
-}
-
-.section_title{
-  color: #7c464a;
-  font-size: 3.2rem;
-}
-
 .work_title{
   font-size: 2.4rem;
 }
@@ -149,8 +131,4 @@
 
 a.git_repo_link {
   color: #7c464a;
-}
-
-.publication_title{
-  font-size: 1.3rem;
 }

@@ -15,6 +15,8 @@ $('#works_list').addClass('works_content');
 
 $('#publications_list').html(build_publications(my_config['publications']));
 
+$('#activities_list').html(build_section(my_config['activities']));
+
 
 function build_works(works_list){
   var str_html = '';
@@ -132,4 +134,65 @@ function concat_arr_str(arr_str){
     concatter = concatter + arr_str[i] + spanner;
   }
   return concatter;
+}
+
+
+
+
+function build_section(section_obj){
+  var str_html = '';
+
+  //all other html elemnts
+
+  if (!('items' in section_obj)) {
+    return str_html;
+  }
+
+  var items = section_obj['items'];
+  for (var i = 0; i < items.length; i++) {
+
+    //Title
+    str_html = str_html + gen_html_entry(items[i],'title');
+
+    //subtitle
+    str_html = str_html + gen_html_entry(items[i],'subtitle');
+
+    //content
+    str_html = str_html + gen_html_entry(items[i],'content');
+
+    //Extra
+
+  }
+  return str_html;
+
+
+  function gen_html_entry(obj,field) {
+    var str_html = "";
+    var end_index = 1;
+    if (field in obj) {
+      var arr_obj = [obj[field]];
+      if (obj[field] instanceof Array) {
+        end_index = obj[field].length;
+        arr_obj = obj[field];
+      }
+      for (var j = 0; j < end_index; j++) {
+        str_html = str_html + gen_html_elem(arr_obj,j,'label',field = field);
+        str_html = str_html + gen_html_elem(arr_obj,j,'value',field = field);
+      }
+    }
+    return str_html;
+  }
+
+  function gen_html_elem(obj,index,value,field='content') {
+    var str_html = "";
+    if (!(index in obj)) {
+      str_html = "";
+    }else if (!(value in obj[index])) {
+      str_html = "";
+    }else {
+      var str_val = obj[index][value];
+      str_html = '<div class="section_'+value+' section_'+field+'">'+str_val+'</div>';
+    }
+    return str_html;
+  }
 }
