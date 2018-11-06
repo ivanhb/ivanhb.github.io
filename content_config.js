@@ -1,11 +1,11 @@
 var my_config = {
-  'border_pattern': 'img/top_border_inverted.png',
+  'border_pattern': 'img/circle_pattern.png',
   'main_eng_title': "Ivan Heibi's website",
   'intro_eng_text' : `
       This is Ivan Heibi's website, and you will find all the essential info about him in this page ...
       That's not giving you a lot of detail, is it? So read more about: my Biography, or move to see
       what I am working on, or even check how I like to spend my free time.
-      <p>Yes, there's something in there for everyone. Following these links and moving down on this page will led you through all you need to know about me.</p>
+      <p>Following the links below and moving down on this page will led you through all you need to know about me.</p>
     `,
 
   'intro_arabic_text' : `
@@ -16,7 +16,7 @@ var my_config = {
     'items': {
       'Page Top':{'href': '#_top', 'default':true},
       'Short Biography':{'href': '#short_bio_top'},
-      'Main Projects':{'href': '#works_list_top'},
+      'Main Projects':{'href': '#projects_list_top'},
       'Publications':{'href': '#publications_list_top'},
       'Activities':{'href': '#activities_list_top'}
     }
@@ -24,9 +24,9 @@ var my_config = {
 
   'short_bio_title': "A  short  Bio",
   'short_bio': `
-      <p> I'm Ivan, a computer scientist and a Ph.D student at the University of Bologna mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The Department of Classic Philology and Italian Studies with the new Digital Humanities course.</p>
-      <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy at to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
-      <p>On the last year I worked as a research fellow with the OpenCitations project, specially dealing with data visualization and data querying of RDF datasets of scholarly articles/papers. Here my first steps toward Semantic web technologies began.</p>
+  <p> I'm Ivan, a computer scientist and a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/it">University of Bologna</a> mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and specially involved in the new <a class="section_content_link" href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities course</a>.</p>
+  <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
+  <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
   `,
 
   'section': [
@@ -47,7 +47,7 @@ var my_config = {
             [
               {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -69,7 +69,7 @@ var my_config = {
             [
               {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/opencitations/lucinda"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -85,7 +85,7 @@ var my_config = {
             [
               {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/EMA"><i class="github alternate medium icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/EMA"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -140,6 +140,15 @@ var my_config = {
                   `,
                   'label': 'Description'
                 }
+              ],
+              'extra': [
+                [
+                  {'value':''},
+                  {
+                    'value':'<a class="git_repo_link" href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'class': 'git_link'
+                  }
+                ]
               ]
           },
 
@@ -171,6 +180,15 @@ var my_config = {
                   `,
                   'label': 'Description'
                 }
+              ],
+              'extra': [
+                [
+                  {'value':''},
+                  {
+                    'value':'<a class="git_repo_link" href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'class': 'git_link'
+                  }
+                ]
               ]
           }
 

@@ -124,7 +124,7 @@ function build_section(section_obj){
 
     if (field == 'extra') {
       if (field in obj) {
-        str_html = str_html +'<table width="100%" class="ui celled table"><tbody>';
+        str_html = str_html +'<table width="100%" class="ui celled table section_extra"><tbody>';
         for (var j = 0; j < obj['extra'].length; j++) {
           var extra_row = obj['extra'][j];
           str_html = str_html +'<tr>';

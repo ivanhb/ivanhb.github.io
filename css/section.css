@@ -58,8 +58,9 @@
 }
 a.section_content_link{
   font-size: 1.35rem;
-  text-decoration: underline;
+  /**text-decoration: underline;**/
   color: #3d3d3d;
+  font-weight: 560;
 }
 
 .section_value.section_title.publication{
@@ -71,4 +72,8 @@ a.section_content_link{
 
 .git_link{
   float:right;
+}
+
+.section_extra{
+  margin-top: 1%;
 }

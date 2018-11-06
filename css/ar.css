@@ -3,7 +3,7 @@
 }
 
 .masthead.segment {
-  min-height: 480px;
+  min-height: 430px;
   padding: 1em 0em;
 }
 .masthead .logo.item img {
@@ -109,10 +109,6 @@
     float: left;
   }
 
-  .top-container {
-
-  }
-
 .work_title{
   font-size: 2.4rem;
 }
@@ -131,4 +127,19 @@
 
 a.git_repo_link {
   color: #7c464a;
+  font-size: 110%;
+}
+
+a.icon {
+  color: #7c464a;
+}
+
+
+img.ui.fluid.image{
+  margin-top: 0.2%;
+  margin-right: 3.2%;
+  display:inline;
+  float:right;
+  width: 40%;
+  transform: skewX(-8deg);
 }
