@@ -77,3 +77,14 @@ a.section_content_link{
 .section_extra{
   margin-top: 1%;
 }
+
+
+
+@media only screen and (max-width: 700px) {
+
+  .section_vertical_title{
+    writing-mode: unset;
+    text-orientation: unset;
+  }
+
+}
