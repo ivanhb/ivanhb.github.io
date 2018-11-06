@@ -6,13 +6,8 @@ $(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
 
 $( ".a_list_menu").replaceWith(build_list('list_menu'));
 
-$('#main_eng_title').html(my_config['main_eng_title']);
-$('#intro_eng_version').html(my_config['intro_eng_text']);
-//$('#intro_arabic_version').html("<h3>"+concat_arr_str(my_config['intro_arabic_text'])+"</h3>");
-
+$('.an_entry').replaceWith(build_entry(my_config));
 $('#short_bio').html(my_config['short_bio']);
-
-
 
 $( ".a_section" ).each(function( i ) {
   if(my_config['section'][i] != undefined){
@@ -22,40 +17,15 @@ $( ".a_section" ).each(function( i ) {
 
 
 function build_border_img(img_path){
-  return '<img class="ui fluid image" src="'+img_path+'">'
+  return '<div class="img_border"><img class="ui fluid image" src="'+img_path+'"></div>'
 }
 
-function build_menu(menu_type) {
-  var str_menu = '<div class="ui container">';
-  var closing_str = "";
 
-  if (menu_type == 'fixed_menu') {
-    str_menu = '';
-    closing_str = "<div class='"+my_config[menu_type]['position']+" menu'></div></div>";
-  }
-  if (menu_type == 'slide_menu') {
-    str_menu = '';
-    closing_str = '';
-  }
-  if (menu_type == 'toc_a') {
-    str_menu = '';
-    closing_str = '';
-  }
-
-  for (var elem in my_config[menu_type]['items']) {
-    var active = "";
-    var obj_elem = my_config[menu_type]['items'][elem];
-    if ('default' in obj_elem) {
-      active = "active";
-    }
-    console.log(elem);
-    str_menu = str_menu + "<a class='"+active+" item scroll' href='"+obj_elem['href']+"'>" + elem + "</a>";
-    active = "";
-  }
-  str_menu = str_menu + closing_str;
-  return str_menu;
+function build_entry(my_config){
+  var str_html = '<h1 id="main_eng_title" class="ui inverted header" style="margin-top: 1em;">'+my_config['main_eng_title']+'</h1>';
+  str_html = str_html + "<h3 class='intro_eng_version'>"+my_config['intro_eng_text']+"</h3>";
+  return str_html;
 }
-
 
 function build_list(menu_type) {
   var str_html = '';
@@ -70,22 +40,6 @@ function build_list(menu_type) {
   }
   return str_html;
 }
-
-
-function concat_arr_str(arr_str){
-  var concatter = "";
-  var spanner = " ";
-  for (var i = 0; i < arr_str.length; i++) {
-    if ( i == arr_str.length - 1) {
-      spanner = "";
-    }
-    concatter = concatter + arr_str[i] + spanner;
-  }
-  return concatter;
-}
-
-
-
 
 function build_section(section_obj){
   var str_html = '';
@@ -181,7 +135,6 @@ function build_section(section_obj){
   }
 }
 
-
 function build_section_skeleton(section_obj) {
   str_html = `
       <div id="`+section_obj['id']+`_list_top" class="ui vertical stripe segment">
@@ -199,4 +152,18 @@ function build_section_skeleton(section_obj) {
       </div>
   `;
   return str_html;
+}
+
+
+//UTIL
+function concat_arr_str(arr_str){
+  var concatter = "";
+  var spanner = " ";
+  for (var i = 0; i < arr_str.length; i++) {
+    if ( i == arr_str.length - 1) {
+      spanner = "";
+    }
+    concatter = concatter + arr_str[i] + spanner;
+  }
+  return concatter;
 }
