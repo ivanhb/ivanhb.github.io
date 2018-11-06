@@ -185,11 +185,12 @@ function build_section(section_obj){
 function build_section_skeleton(section_obj) {
   str_html = `
       <div id="`+section_obj['id']+`_list_top" class="ui vertical stripe segment">
+        <div class="mobile_section_title">`+section_obj['title']+`</div>
         <div class="ui middle aligned stackable grid container">
           <div class="row">
-            <div class="column wide section_vertical_title_container">
-              <div class="section_vertical_title">`+section_obj['title']+`</div>
-            </div>
+          <div class="section_vertical_title_container">
+            <div class="section_vertical_title">`+section_obj['title']+`</div>
+          </div>
             <div class="fourteen wide column">
               `+build_section(section_obj)+`
             </div>
