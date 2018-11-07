@@ -1,19 +1,16 @@
-//build intro content
-//document.getElementById("intro_text").innerHtml = "<h3>"+concat_arr_str(my_config['intro_text'])+"</h3>";
 
-//$('.a_list_menu').html(build_list('list_menu'));
+$( ".a_list_menu").replaceWith(build_list(my_config['list_menu'],a_class= "item scroll"));
 $(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
-
-$( ".a_list_menu").replaceWith(build_list('list_menu'));
-
 $('.an_entry').replaceWith(build_entry(my_config));
-$('#short_bio').html(my_config['short_bio']);
-
+$('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
 $( ".a_section" ).each(function( i ) {
   if(my_config['section'][i] != undefined){
       $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
   }
 });
+
+
+
 
 
 function build_border_img(img_path){
@@ -27,15 +24,15 @@ function build_entry(my_config){
   return str_html;
 }
 
-function build_list(menu_type) {
+function build_list(obj, a_class= "") {
   var str_html = '';
-  for (var elem in my_config[menu_type]['items']) {
+  for (var elem in obj['items']) {
     var active = "";
-    var obj_elem = my_config[menu_type]['items'][elem];
+    var obj_elem = obj['items'][elem];
     if ('default' in obj_elem) {
       active = "active";
     }
-    str_html = str_html + "<a class='"+active+" item scroll' href='"+obj_elem['href']+"'>" + elem + "</a>";
+    str_html = str_html + "<a class='"+active+" "+a_class+"' href='"+obj_elem['href']+"'>" + elem + "</a>";
     active = "";
   }
   return str_html;
@@ -154,7 +151,34 @@ function build_section_skeleton(section_obj) {
   return str_html;
 }
 
+function build_bio_section(obj) {
+  var list_a = "";
+  if ('links' in obj) {
+    for (var i = 0; i < obj['links'].length; i++) {
+      list_a = list_a + "<a class='"+obj['links'][i]['a_class']+"' href='"+obj['links'][i]['href']+"'>" + obj['links'][i]['content'] + "</a>";
+    }
+  }
 
+  return `
+      <div id="short_bio_top" class="ui vertical stripe segment">
+        <div class="ui middle aligned stackable grid container">
+          <div class="row">
+            <div class="eleven wide column">
+              <div class="section_title">`+obj['title']+`</div>
+              `+obj['content']+`
+              <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="git_link"><a class="git_repo_link" href="https://www.slideshare.net/slideshow/embed_code/key/swnznj4Qd1lSqr"><i class="ui paperclip icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
+            </div>
+            <div class="five wide column">
+                <img id='pro_img' class="ui medium circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 310px; height: 310px; margin-bottom: 50px;" src="img/prof.jpg">
+              <div style="text-align: center;">
+              `+list_a+`
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
+}
 //UTIL
 function concat_arr_str(arr_str){
   var concatter = "";

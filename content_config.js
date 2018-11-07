@@ -22,12 +22,20 @@ var my_config = {
     }
   },
 
-  'short_bio_title': "A  short  Bio",
-  'short_bio': `
-  <p> I'm Ivan, a computer scientist and a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/it">University of Bologna</a> mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and specially involved in the new <a class="section_content_link" href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities course</a>.</p>
-  <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
-  <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
-  `,
+  'bio_section': {
+    'title': "A  short  Bio",
+    'content': `
+      <p> I'm Ivan, a computer scientist and a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/it">University of Bologna</a> mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and specially involved in the new <a class="section_content_link" href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities course</a>.</p>
+      <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
+      <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
+    `,
+    'links':[
+      {'href': 'https://twitter.com/ivanheib','a_class':'ui circular blue twitter icon button','content':'<i class="twitter big icon"></i>'},
+      {'href': 'https://www.facebook.com/ivanhb.ita','a_class':'ui circular blue facebook icon button','content':'<i class="facebook big icon"></i>'},
+      {'href': 'https://www.linkedin.com/in/ivan-heibi-738317a3','a_class':'ui circular blue linkedin icon button','content':'<i class="linkedin big icon"></i>'},
+      {'href': 'https://github.com/ivanhb','a_class':'ui circular blue github icon button','content':'<i class="github big icon"></i>'}
+    ]
+  },
 
   'section': [
     {
@@ -186,6 +194,46 @@ var my_config = {
                   {'value':''},
                   {
                     'value':'<a class="git_repo_link" href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'class': 'git_link'
+                  }
+                ]
+              ]
+          },
+
+          {
+              'title': {
+                'value': 'WikiCite 2018',
+                'label': 'Event: '
+              },
+              'subtitle': [
+                {
+                  'value': 'Berkeley, California, USA',
+                  'label': 'Location: '
+                },
+                {
+                  'value': '27 - 29 November 2018',
+                  'label': 'Date: '
+                },
+                {
+                  'value': `
+                  Presenting a talk about: OSCAR and LUCINDA with Wikidata
+                  `,
+                  'label': 'Contribution:'
+                }
+              ],
+              'content':[
+                {
+                  'value': `
+                      WikiCite 2018 is a 3-day conference, summit, and hack day dedicated to the vision of creating an open repository of bibliographic data to support the citation and fact-checking needs of Wikimedia projects, and possibly, to serve as an open infrastructure for research, education, and information quality across the web.
+                  `,
+                  'label': 'Description'
+                }
+              ],
+              'extra': [
+                [
+                  {'value':''},
+                  {
+                    'value':'<a class="git_repo_link" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Go to the conference website</a>',
                     'class': 'git_link'
                   }
                 ]
