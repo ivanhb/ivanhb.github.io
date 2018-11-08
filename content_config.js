@@ -2,10 +2,8 @@ var my_config = {
   'border_pattern': 'img/circle_pattern.png',
   'main_eng_title': "Ivan Heibi's website",
   'intro_eng_text' : `
-      This is Ivan Heibi's website, and you will find all the essential info about him in this page ...
-      That's not giving you a lot of detail, is it? So read more about: my Biography, or move to see
-      what I am working on, or even check how I like to spend my free time.
-      <p>Following the links below and moving down on this page will led you through all you need to know about me.</p>
+      This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
+      <p>In case you want to ask me for any further info, just feel free to contact me.</p>
     `,
 
   'intro_arabic_text' : `
