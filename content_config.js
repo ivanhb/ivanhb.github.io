@@ -75,7 +75,7 @@ var my_config = {
             [
               {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" href="https://github.com/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -232,6 +232,10 @@ var my_config = {
                   {'value':''},
                   {
                     'value':'<a class="git_repo_link" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Go to the conference website</a>',
+                    'class': 'git_link'
+                  },
+                  {
+                    'value':'<a class="git_repo_link" href="https://github.com/opencitations/lucinda/example/wikidata/browser.html?browse=Q15429595"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
                     'class': 'git_link'
                   }
                 ]
