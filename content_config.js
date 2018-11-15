@@ -231,11 +231,15 @@ var my_config = {
                 [
                   {'value':''},
                   {
-                    'value':'<a class="git_repo_link" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Go to the conference website</a>',
+                    'value':'<a class="git_repo_link" target="_blank" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Go to the conference website</a>',
                     'class': 'git_link'
                   },
                   {
-                    'value':'<a class="git_repo_link" href="https://github.com/opencitations/lucinda/example/wikidata/browser.html?browse=Q15429595"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
+                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q15429595"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
+                    'class': 'git_link'
+                  },
+                  {
+                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/oscar/example/v2/wikidata.html"><i class="star big icon"></i> OSCAR demo for Wikidata</a>',
                     'class': 'git_link'
                   }
                 ]
