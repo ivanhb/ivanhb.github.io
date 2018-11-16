@@ -157,7 +157,7 @@ var my_config = {
                     'class': 'git_link'
                   },
                   {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q15429595"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
+                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q30536251"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
                     'class': 'git_link'
                   },
                   {
