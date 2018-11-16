@@ -122,84 +122,6 @@ var my_config = {
         [
           {
               'title': {
-                'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
-                'label': 'Event: '
-              },
-              'subtitle': [
-                {
-                  'value': 'Lyon, France',
-                  'label': 'Location: '
-                },
-                {
-                  'value': '23 - 27 April 2018',
-                  'label': 'Date: '
-                },
-                {
-                  'value': `Presenting a talk about <a class="section_content_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
-                  'label': 'Contribution:'
-                }
-              ],
-              'content':[
-                {
-                  'value': `
-                      The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
-                  `,
-                  'label': 'Description'
-                }
-              ],
-              'extra': [
-                [
-                  {'value':''},
-                  {
-                    'value':'<a class="git_repo_link" href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
-                    'class': 'git_link'
-                  }
-                ]
-              ]
-          },
-
-          {
-              'title': {
-                'value': 'Workshop on Open Citations',
-                'label': 'Event: '
-              },
-              'subtitle': [
-                {
-                  'value': 'Bologna, Italy',
-                  'label': 'Location: '
-                },
-                {
-                  'value': '3 - 5 September 2018',
-                  'label': 'Date: '
-                },
-                {
-                  'value': `
-                  Staff of the Workshop
-                  `,
-                  'label': 'Contribution:'
-                }
-              ],
-              'content':[
-                {
-                  'value': `
-                      About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.
-                  `,
-                  'label': 'Description'
-                }
-              ],
-              'extra': [
-                [
-                  {'value':''},
-                  {
-                    'value':'<a class="git_repo_link" href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
-                    'class': 'git_link'
-                  }
-                ]
-              ]
-          },
-
-          {
-              'title': {
                 'value': 'WikiCite 2018',
                 'label': 'Event: '
               },
@@ -244,8 +166,83 @@ var my_config = {
                   }
                 ]
               ]
+          },
+          {
+              'title': {
+                'value': 'Workshop on Open Citations',
+                'label': 'Event: '
+              },
+              'subtitle': [
+                {
+                  'value': 'Bologna, Italy',
+                  'label': 'Location: '
+                },
+                {
+                  'value': '3 - 5 September 2018',
+                  'label': 'Date: '
+                },
+                {
+                  'value': `
+                  Staff of the Workshop
+                  `,
+                  'label': 'Contribution:'
+                }
+              ],
+              'content':[
+                {
+                  'value': `
+                      About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.
+                  `,
+                  'label': 'Description'
+                }
+              ],
+              'extra': [
+                [
+                  {'value':''},
+                  {
+                    'value':'<a class="git_repo_link" href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'class': 'git_link'
+                  }
+                ]
+              ]
+          },
+          {
+              'title': {
+                'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
+                'label': 'Event: '
+              },
+              'subtitle': [
+                {
+                  'value': 'Lyon, France',
+                  'label': 'Location: '
+                },
+                {
+                  'value': '23 - 27 April 2018',
+                  'label': 'Date: '
+                },
+                {
+                  'value': `Presenting a talk about <a class="section_content_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
+                  'label': 'Contribution:'
+                }
+              ],
+              'content':[
+                {
+                  'value': `
+                      The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
+                  `,
+                  'label': 'Description'
+                }
+              ],
+              'extra': [
+                [
+                  {'value':''},
+                  {
+                    'value':'<a class="git_repo_link" href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'class': 'git_link'
+                  }
+                ]
+              ]
           }
-
         ]
     }
   ]
