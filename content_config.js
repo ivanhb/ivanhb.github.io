@@ -26,6 +26,7 @@ var my_config = {
       <p> I'm Ivan, a computer scientist and a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/it">University of Bologna</a> mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and specially involved in the new <a class="section_content_link" href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities course</a>.</p>
       <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
       <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
+      <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="git_link"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
     `,
     'links':[
       {'href': 'https://twitter.com/ivanheib','a_class':'ui circular blue twitter icon button','content':'<i class="twitter big icon"></i>'},
@@ -51,9 +52,12 @@ var my_config = {
           `,'label':'','class':'publication'},
           'extra': [
             [
-              {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" target="_blank" href="http://opencitations.net/search"><i class="star big icon"></i> Try it on OpenCitations website</a>',
+                'class': 'git_link'
+              },
+              {
+                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -73,9 +77,12 @@ var my_config = {
           `,'label':'','class':'publication'},
           'extra': [
             [
-              {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" target="_blank" href="http://opencitations.net/browser/ra/6932102"><i class="star big icon"></i> Try it on OpenCitations website</a>',
+                'class': 'git_link'
+              },
+              {
+                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -91,7 +98,7 @@ var my_config = {
             [
               {'value':''},
               {
-                'value':'<a class="git_repo_link" href="https://github.com/ivanhb/EMA"><i class="github alternate big icon"></i> Go to repository</a>',
+                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/ivanhb/EMA"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'git_link'
               }
             ]
@@ -105,7 +112,7 @@ var my_config = {
       'items': [
         {
           'content':{
-            'value': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>'
+            'value': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" target="_blank"  href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>'
           },
           'subtitle':{
             'value': ''
@@ -200,7 +207,7 @@ var my_config = {
                 [
                   {'value':''},
                   {
-                    'value':'<a class="git_repo_link" href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'value':'<a class="git_repo_link" target="_blank"  href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
                     'class': 'git_link'
                   }
                 ]
@@ -221,7 +228,7 @@ var my_config = {
                   'label': 'Date: '
                 },
                 {
-                  'value': `Presenting a talk about <a class="section_content_link" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
+                  'value': `Presenting a talk about <a class="section_content_link" target="_blank" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
                   'label': 'Contribution:'
                 }
               ],
@@ -237,7 +244,7 @@ var my_config = {
                 [
                   {'value':''},
                   {
-                    'value':'<a class="git_repo_link" href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'value':'<a class="git_repo_link" target="_blank"  href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
                     'class': 'git_link'
                   }
                 ]

@@ -166,7 +166,6 @@ function build_bio_section(obj) {
             <div class="eleven wide column">
               <div class="section_title">`+obj['title']+`</div>
               `+obj['content']+`
-              <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="git_link"><a class="git_repo_link" href="https://www.slideshare.net/slideshow/embed_code/key/swnznj4Qd1lSqr"><i class="ui paperclip icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
             </div>
             <div class="five wide column">
                 <img id='pro_img' class="ui medium circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 310px; height: 310px; margin-bottom: 50px;" src="img/prof.jpg">
