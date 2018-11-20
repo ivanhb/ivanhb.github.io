@@ -158,9 +158,12 @@ var my_config = {
               ],
               'extra': [
                 [
-                  {'value':''},
                   {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Go to the conference website</a>',
+                    'value':'<a class="git_repo_link" target="_blank" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Conference website</a>',
+                    'class': 'git_link'
+                  },
+                  {
+                    'value':'<a class="git_repo_link" target="_blank" href="https://docs.google.com/presentation/d/1lM8HDFUytUEQ2vu603yJ0R1T8qTdsx8q50o5vP9y2so/edit?usp=sharing"><i class="eye big icon"></i> View the presentation</a>',
                     'class': 'git_link'
                   },
                   {
@@ -207,7 +210,7 @@ var my_config = {
                 [
                   {'value':''},
                   {
-                    'value':'<a class="git_repo_link" target="_blank"  href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'value':'<a class="git_repo_link" target="_blank"  href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Workshop website</a>',
                     'class': 'git_link'
                   }
                 ]
@@ -244,7 +247,7 @@ var my_config = {
                 [
                   {'value':''},
                   {
-                    'value':'<a class="git_repo_link" target="_blank"  href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Go to the workshop website</a>',
+                    'value':'<a class="git_repo_link" target="_blank"  href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Workshop website</a>',
                     'class': 'git_link'
                   }
                 ]
