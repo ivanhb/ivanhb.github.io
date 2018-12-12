@@ -4,7 +4,7 @@
 
 
 .section_item + .section_item{
-  margin-top: 8%;
+  margin-top: 10%;
 }
 
 
@@ -70,8 +70,8 @@ a.section_content_link{
   font-size: 1.6rem;
 }
 
-.git_link{
-  float:right;
+.extra_elem{
+  float:left;
 }
 
 .section_extra{
@@ -98,5 +98,23 @@ a.section_content_link{
     font-size: 3.2rem;
     color: var(--main-theme-color);
   }
+
+  .extra_elem:after{
+    float: left;
+    content:"\a";
+    white-space: pre;
+  }
+
+  .section_extra,
+  tbody > tr > td{
+    display:block;
+    word-wrap:break-word;
+    font-size: 0.85rem;
+  }
+
+  .section_item + .section_item{
+    margin-top: 15%;
+  }
+
 
 }

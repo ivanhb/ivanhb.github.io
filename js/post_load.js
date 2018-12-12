@@ -1,13 +1,28 @@
 
-$( ".a_list_menu").replaceWith(build_list(my_config['list_menu'],a_class= "item scroll"));
-$(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
-$('.an_entry').replaceWith(build_entry(my_config));
-$('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
-$( ".a_section" ).each(function( i ) {
-  if(my_config['section'][i] != undefined){
-      $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
-  }
-});
+var resource_iri = null;
+var myRegexp = /index\.html\?(.*)=(.*)/g;
+var groups = myRegexp.exec(String(window.location.href));
+
+var type_req = null;
+var res_req = null;
+if (groups != null) {
+  if (groups.length > 1) {type_req = groups[1];}
+  if (groups.length > 2) {res_req = groups[2];}
+}
+
+if (type_req != null) {
+  handle_req(res_req, type_req);
+}else {
+  $( ".a_list_menu").replaceWith(build_list(my_config['list_menu'],a_class= "item scroll"));
+  $(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
+  $('.an_entry').replaceWith(build_entry(my_config));
+  $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
+  $( ".a_section" ).each(function( i ) {
+    if(my_config['section'][i] != undefined){
+        $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
+    }
+  });
+}
 
 
 
@@ -178,6 +193,21 @@ function build_bio_section(obj) {
       </div>`;
 
 }
+
+function handle_req(res, type) {
+  switch (type) {
+    case 'lib':
+      switch (res) {
+        case 'badge':
+          break;
+        default:
+      }
+      break;
+    default:
+
+  }
+}
+
 //UTIL
 function concat_arr_str(arr_str){
   var concatter = "";
