@@ -4,7 +4,7 @@
 
 
 .section_item + .section_item{
-  margin-top: 10%;
+  margin-top: 7%;
 }
 
 
@@ -80,6 +80,31 @@ a.section_content_link{
 
 .mobile_section_title{
   display: none;
+}
+
+
+@media only screen and (max-width: 1200px) {
+  #pro_image{
+    visibility:hidden;
+  }
+
+  .extra_elem:after{
+    float: left;
+    content:"\a";
+    white-space: pre;
+  }
+
+  .section_extra,
+  tbody > tr > td{
+    display:block;
+    word-wrap:break-word;
+    font-size: 0.85rem;
+  }
+
+
+  .section_item + .section_item{
+    margin-top: 15%;
+  }
 }
 
 

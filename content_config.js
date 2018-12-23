@@ -59,7 +59,13 @@ var my_config = {
               {
                 'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i> Go to repository</a>',
                 'class': 'extra_elem'
-              }
+              },
+              /*
+              {
+                'value': `
+                  <span class="__oc_badge__" input="10.1186/1756-8722-6-59" type="br" preview="citation_count"></span>
+                  `
+              }*/
             ]
           ]
           /*
@@ -117,8 +123,16 @@ var my_config = {
           'subtitle':{
             'value': ''
           }
+        },
+        {
+          'content':{
+            'value': '<u>Upcoming:</u> Heibi I., Peroni S., Shotton D. Enabling text search on SPARQL-endpoints through OSCAR. Data Science. </br><a class="git_repo_link" target="_blank"  href="data/paper/oscar-datascience2019/oscar-datascience2019.html">Preview version</a>'
+          },
+          'subtitle':{
+            'value': ''
+          }
         }
-      ]
+      ],
     },
 
     {

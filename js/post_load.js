@@ -182,9 +182,11 @@ function build_bio_section(obj) {
               <div class="section_title">`+obj['title']+`</div>
               `+obj['content']+`
             </div>
-            <div class="five wide column">
-                <img id='pro_img' class="ui medium circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 310px; height: 310px; margin-bottom: 50px;" src="img/prof.jpg">
-              <div style="text-align: center;">
+            <div class="extra_bio five wide column">
+              <div class="bio_extra_elem">
+                <img id='pro_img' class="ui circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 330px; height: 330px; margin-bottom: 50px;" src="img/prof.jpg">
+              </div>
+              <div class="bio_extra_elem" style="text-align: center;">
               `+list_a+`
               </div>
             </div>
