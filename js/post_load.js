@@ -178,18 +178,18 @@ function build_bio_section(obj) {
       <div id="short_bio_top" class="ui vertical stripe segment">
         <div class="ui middle aligned stackable grid container">
           <div class="row">
-            <div class="eleven wide column">
+
+            <div class="my_bio wide column">
               <div class="section_title">`+obj['title']+`</div>
-              `+obj['content']+`
-            </div>
-            <div class="extra_bio five wide column">
-              <div class="bio_extra_elem">
-                <img id='pro_img' class="ui circular image img-thumbnail img-responsive bordered" rel="foaf:depiction" style="float: left; width: 330px; height: 330px; margin-bottom: 50px;" src="img/prof.jpg">
-              </div>
-              <div class="bio_extra_elem" style="text-align: center;">
-              `+list_a+`
+              <div class="bio_body">
+                  <div class="bio_content">`+obj['content']+`</div>
+                  <div class="bio_side">
+                      <img id='pro_img' class="ui circular image img-thumbnail bordered" rel="foaf:depiction" src="img/prof.jpg">
+                      <div class="bio_extra_elem" style="text-align: center;">`+list_a+`</div>
+                  </div>
               </div>
             </div>
+
           </div>
         </div>
       </div>`;

@@ -82,10 +82,30 @@ a.section_content_link{
   display: none;
 }
 
+#pro_img{
+  text-align: center;
+  width: 310px;
+  height: 310px;
+  margin-bottom: 50px;
+  margin-left: 1%;
+}
+
+.bio_body{
+  display:flex;
+}
+.bio_content{
+  width:70%;
+}
 
 @media only screen and (max-width: 1200px) {
-  #pro_image{
-    visibility:hidden;
+  #pro_img{
+    display:none;
+  }
+  .bio_body{
+    display:block;
+  }
+  .bio_content{
+    width:100%;
   }
 
   .extra_elem:after{
@@ -99,6 +119,10 @@ a.section_content_link{
     display:block;
     word-wrap:break-word;
     font-size: 0.85rem;
+  }
+
+  .extra_bio{
+    text-align: center;
   }
 
 
