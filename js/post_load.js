@@ -1,4 +1,6 @@
 
+populate_config_file();
+
 var resource_iri = null;
 var myRegexp = /index\.html\?(.*)=(.*)/g;
 var groups = myRegexp.exec(String(window.location.href));
@@ -26,7 +28,35 @@ if (type_req != null) {
 
 
 
+function populate_config_file() {
+  //Projects section
+  $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "https://ivanhb.github.io/data/project.csv",
+            dataType: "text",
+            success: function(data) {
+                //console.log(data);
+                csv_matrix = process_csv_data(data);
+                console.log(csv_matrix);
+                build_project_elem(csv_matrix);
+            }
+         });
+   });
 
+   function build_project_elem(csv_matrix) {
+     var list_obj = [];
+     for (var i = 1; i < csv_matrix.length; i++) {
+       var elem = csv_matrix[i];
+       var obj_elem = {};
+       obj_elem['title'] = elem[0];
+       obj_elem['subtitle'] = elem[1];
+       obj_elem['content'] = elem[3];
+       //obj_elem['extra'] = build_extra_arr_obj(elem[4]);
+       console.log(obj_elem);
+     }
+   }
+}
 
 function build_border_img(img_path){
   return '<div class="img_border"><img class="ui fluid image" src="'+img_path+'"></div>'
@@ -221,4 +251,36 @@ function concat_arr_str(arr_str){
     concatter = concatter + arr_str[i] + spanner;
   }
   return concatter;
+}
+
+function process_csv_data(allText) {
+    var record_num = 5;  // or however many elements there are in each row
+    var all_rows = allText.split('\n');
+
+    for (var i = 0; i < all_rows.length; i++) {
+      all_cells_i = all_rows[i].split('","');
+      all_rows[i] = all_cells_i;
+    }
+    return all_rows;
+}
+
+function build_extra_arr_obj(a_text) {
+
+  var arr_ext = a_text.split(']],[[')
+  var extra_obj_arr = []
+
+  for (var i = 0; i < arr_ext.length; i++) {
+    var ex_i = arr_ext[i];
+    ex_i = ex_i.replace('[[','');
+    ex_i = ex_i.replace(']]','');
+    ex_parts_i = ex_i.split(',');
+
+    var ext_obj = {}
+    ext_obj['type'] = ex_parts_i[0];
+    ext_obj['value'] = ex_parts_i[1];
+    ext_obj['link'] = ex_parts_i[2];
+    extra_obj_arr.push(ext_obj);
+  }
+
+  return extra_obj_arr;
 }
