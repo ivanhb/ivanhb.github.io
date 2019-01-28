@@ -31,6 +31,15 @@ function build_page() {
 
 
 function populate_config_file() {
+
+  if (my_config['bio_section'] != undefined) {
+      var a_target_fun = my_config['bio_section']['target'];
+      if (a_target_fun != undefined) {
+        pending += 1;
+        Reflect.apply(a_target_fun,undefined,[]);
+      }
+  }
+
   if (my_config['section'] != undefined) {
     for (var i = 0; i < my_config['section'].length; i++) {
       var a_target_fun = my_config['section'][i]['target'];
@@ -40,6 +49,14 @@ function populate_config_file() {
       }
     }
   }
+}
+
+function call_bk_prof_section(items) {
+      my_config['bio_section'].links = items;
+      pending -= 1;
+      if (pending == 0) {
+        build_page();
+      }
 }
 
 function call_bk_section(id,items) {

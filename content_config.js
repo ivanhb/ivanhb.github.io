@@ -28,11 +28,8 @@ var my_config = {
       <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
       <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
     `,
+    'target': populate_bio_section_contacts,
     'links':[
-      {'href': 'https://twitter.com/ivanheib','a_class':'ui circular blue twitter icon button','content':'<i class="twitter big icon"></i>'},
-      {'href': 'https://www.facebook.com/ivanhb.ita','a_class':'ui circular blue facebook icon button','content':'<i class="facebook big icon"></i>'},
-      {'href': 'https://www.linkedin.com/in/ivan-heibi-738317a3','a_class':'ui circular blue linkedin icon button','content':'<i class="linkedin big icon"></i>'},
-      {'href': 'https://github.com/ivanhb','a_class':'ui circular blue github icon button','content':'<i class="github big icon"></i>'}
     ]
   },
 
@@ -59,13 +56,68 @@ var my_config = {
       'type': 'activity',
       'target': populate_activity_section,
       'items': [
-        ]
+      ]
     }
   ]
 }
 
+
+//Build a section
+function populate_bio_section_contacts() {
+  $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "https://ivanhb.github.io/data/contacts.csv",
+            dataType: "text",
+            success: function(data) {
+                //console.log(data);
+                var csv_matrix = process_csv_data(data);
+                var list_obj = _build_items(csv_matrix);
+                console.log(list_obj);
+                call_bk_prof_section(list_obj);
+            }
+         });
+   });
+
+   function _build_items(csv_matrix) {
+     var list_obj = [];
+     for (var i = 1; i < csv_matrix.length; i++) {
+       var elem = csv_matrix[i];
+       var obj_elem = {};
+       var push_it = true;
+
+       obj_elem["a_class"] = "";
+       obj_elem["content"] = "";
+       switch (elem[0].replace('"','')) {
+         case 'twitter':
+           obj_elem["a_class"] = "ui circular blue twitter icon button";
+           obj_elem["content"] = '<i class="twitter big icon"></i>';
+           break;
+         case 'facebook':
+           obj_elem["a_class"] = "ui circular blue facebook icon button";
+           obj_elem["content"] = '<i class="facebook big icon"></i>';
+           break;
+         case 'git':
+           obj_elem["a_class"] = "ui circular blue github icon button";
+           obj_elem["content"] = '<i class="github big icon"></i>';
+           break;
+         case 'linkedin':
+           obj_elem["a_class"] = "ui circular blue linkedin icon button";
+           obj_elem["content"] = '<i class="linkedin big icon"></i>';
+           break;
+         default:
+           push_it = false;
+       }
+       obj_elem['href'] = elem[1];
+       if (push_it) {
+          list_obj.push(obj_elem);
+       }
+     }
+     return list_obj;
+   }
+}
+
 function populate_activity_section() {
-  //Projects section
   $(document).ready(function() {
         $.ajax({
             type: "GET",
