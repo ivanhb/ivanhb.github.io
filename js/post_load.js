@@ -37,9 +37,10 @@ function populate_config_file() {
             dataType: "text",
             success: function(data) {
                 //console.log(data);
-                csv_matrix = process_csv_data(data);
+                var csv_matrix = process_csv_data(data);
                 console.log(csv_matrix);
-                build_project_elem(csv_matrix);
+                var list_obj = build_project_elem(csv_matrix);
+                console.log(list_obj);
             }
          });
    });
@@ -49,12 +50,14 @@ function populate_config_file() {
      for (var i = 1; i < csv_matrix.length; i++) {
        var elem = csv_matrix[i];
        var obj_elem = {};
-       obj_elem['title'] = elem[0];
-       obj_elem['subtitle'] = elem[1];
-       obj_elem['content'] = elem[3];
-       //obj_elem['extra'] = build_extra_arr_obj(elem[4]);
-       console.log(obj_elem);
+
+       obj_elem['title'] = {'value':elem[0].replace('"',''), 'label': ''};
+       obj_elem['subtitle'] = {'value':elem[1], 'label': ''};
+       obj_elem['content'] = {'value':elem[3], 'label': ''};
+       obj_elem['extra'] = build_extra_arr_obj(elem[3]);
+       list_obj.push(obj_elem);
      }
+     return list_obj;
    }
 }
 
@@ -273,12 +276,46 @@ function build_extra_arr_obj(a_text) {
     var ex_i = arr_ext[i];
     ex_i = ex_i.replace('[[','');
     ex_i = ex_i.replace(']]','');
+    ex_i = ex_i.replace('"','');
     ex_parts_i = ex_i.split(',');
 
+    var type = ex_parts_i[0];
+    var type_parts = type.split('_');
+    var content = ex_parts_i[1];
+    var link = ex_parts_i[2];
+
+    var str_pre = "";
+    //<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i>
+    if (type_parts[0]=='link') {
+      switch (type_parts[1]) {
+        case 'img':
+          switch (type_parts[2]) {
+            case 'link':
+              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="linkify big icon"></i>'+content+'</a>'
+              break;
+            case 'star':
+              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="star big icon"></i>'+content+'</a>'
+              break;
+            case 'git':
+              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="github alternate big icon"></i>'+content+'</a>'
+              break;
+            default:
+
+          }
+          break;
+        case 'text':
+          break;
+        default:
+
+      }
+    }
+
+
     var ext_obj = {}
-    ext_obj['type'] = ex_parts_i[0];
-    ext_obj['value'] = ex_parts_i[1];
-    ext_obj['link'] = ex_parts_i[2];
+    ext_obj['value'] = str_pre;
+    ext_obj['class'] = 'extra_elem';
+    //build value
+
     extra_obj_arr.push(ext_obj);
   }
 
