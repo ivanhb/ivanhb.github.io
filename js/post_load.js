@@ -1,4 +1,5 @@
 
+var pending = 0;
 populate_config_file();
 
 var resource_iri = null;
@@ -12,53 +13,48 @@ if (groups != null) {
   if (groups.length > 2) {res_req = groups[2];}
 }
 
-if (type_req != null) {
-  handle_req(res_req, type_req);
-}else {
-  $( ".a_list_menu").replaceWith(build_list(my_config['list_menu'],a_class= "item scroll"));
-  $(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
-  $('.an_entry').replaceWith(build_entry(my_config));
-  $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
-  $( ".a_section" ).each(function( i ) {
-    if(my_config['section'][i] != undefined){
-        $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
-    }
-  });
+function build_page() {
+  if (type_req != null) {
+    handle_req(res_req, type_req);
+  }else {
+    $( ".a_list_menu").replaceWith(build_list(my_config['list_menu'],a_class= "item scroll"));
+    $(".img_border").replaceWith(build_border_img(my_config['border_pattern']));
+    $('.an_entry').replaceWith(build_entry(my_config));
+    $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
+    $( ".a_section" ).each(function( i ) {
+      if(my_config['section'][i] != undefined){
+          $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
+      }
+    });
+  }
 }
 
 
-
 function populate_config_file() {
-  //Projects section
-  $(document).ready(function() {
-        $.ajax({
-            type: "GET",
-            url: "https://ivanhb.github.io/data/project.csv",
-            dataType: "text",
-            success: function(data) {
-                //console.log(data);
-                var csv_matrix = process_csv_data(data);
-                console.log(csv_matrix);
-                var list_obj = build_project_elem(csv_matrix);
-                console.log(list_obj);
-            }
-         });
-   });
+  if (my_config['section'] != undefined) {
+    for (var i = 0; i < my_config['section'].length; i++) {
+      var a_target_fun = my_config['section'][i]['target'];
+      if (a_target_fun != undefined) {
+        pending += 1;
+        Reflect.apply(a_target_fun,undefined,[]);
+      }
+    }
+  }
+}
 
-   function build_project_elem(csv_matrix) {
-     var list_obj = [];
-     for (var i = 1; i < csv_matrix.length; i++) {
-       var elem = csv_matrix[i];
-       var obj_elem = {};
+function call_bk_section(id,items) {
+  for (var i = 0; i < my_config['section'].length; i++) {
+    if (my_config['section'][i].id == id){
+      my_config['section'][i].items = items;
+    }
+  }
 
-       obj_elem['title'] = {'value':elem[0].replace('"',''), 'label': ''};
-       obj_elem['subtitle'] = {'value':elem[1], 'label': ''};
-       obj_elem['content'] = {'value':elem[3], 'label': ''};
-       obj_elem['extra'] = build_extra_arr_obj(elem[3]);
-       list_obj.push(obj_elem);
-     }
-     return list_obj;
-   }
+  //console.log(my_config['section']);
+
+  pending -= 1;
+  if (pending == 0) {
+    build_page();
+  }
 }
 
 function build_border_img(img_path){
@@ -256,6 +252,7 @@ function concat_arr_str(arr_str){
   return concatter;
 }
 
+//utility
 function process_csv_data(allText) {
     var record_num = 5;  // or however many elements there are in each row
     var all_rows = allText.split('\n');
@@ -266,7 +263,6 @@ function process_csv_data(allText) {
     }
     return all_rows;
 }
-
 function build_extra_arr_obj(a_text) {
 
   var arr_ext = a_text.split(']],[[')
@@ -296,14 +292,17 @@ function build_extra_arr_obj(a_text) {
             case 'star':
               str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="star big icon"></i>'+content+'</a>'
               break;
+            case 'eye':
+              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="eye big icon"></i>'+content+'</a>'
+              break;
             case 'git':
               str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="github alternate big icon"></i>'+content+'</a>'
               break;
             default:
-
           }
           break;
         case 'text':
+          str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'">'+content+'</a>'
           break;
         default:
 
@@ -318,6 +317,7 @@ function build_extra_arr_obj(a_text) {
 
     extra_obj_arr.push(ext_obj);
   }
-
-  return extra_obj_arr;
+  var final_res = [];
+  final_res.push(extra_obj_arr);
+  return final_res;
 }

@@ -40,234 +40,129 @@ var my_config = {
     {
       'id': 'projects',
       'title': 'Main projects',
-      'type': 'publication',
+      'type': 'project',
+      'target': populate_project_section,
       'items': [
-        {
-          'title': {'value':'OSCAR','label':'','class':'publication'},
-          'subtitle': {'value':'The general Search Application for Rdf data specially designed for Open Citations','label':'','class':'publication'},
-          'content':{'value': `
-            A user friendly search platform applicable for any triplestore endpoint.
-            This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface.
-            One of the main characteristics of OSCAR is its adaptability to work with any other RDF triplestore. It is possible to configure OSCAR to work with a particular endpoint by configuring a particular JSON document, which specifies how the SPARQL queries are sent to that endpoint, and how the returned query results should be visualized, according to the predefined tabular view that OSCAR provides.
-          `,'label':'','class':'publication'},
-          'extra': [
-            [
-              {
-                'value':'<a class="git_repo_link" target="_blank" href="http://opencitations.net/search"><i class="star big icon"></i> Try it on OpenCitations website</a>',
-                'class': 'extra_elem'
-              },
-              {
-                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i> Go to repository</a>',
-                'class': 'extra_elem'
-              },
-              /*
-              {
-                'value': `
-                  <span class="__oc_badge__" input="10.1186/1756-8722-6-59" type="br" preview="citation_count"></span>
-                  `
-              }*/
-            ]
-          ]
-          /*
-          'extra':[
-            ['','<a class="git_repo_link" style="float:right;" href="https://github.com/opencitations/oscar"><i class="github alternate medium icon"></i> Go to repository</a>']
-          ]
-          */
-        },
-        {
-          'title': {'value':'LUCINDA','label':'','class':'publication'},
-          'subtitle': {'value':'An RDF data browser Javascript-based application.','label':'','class':'publication'},
-          'content': {'value': `
-            This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. LUCINDA uses OSCAR and its features: which is a general search application for rdf data specially designed for open citations.
-            One of the main characteristics of LUCINDA is its adaptability to work with any other RDF triplestore. In order to do that there is a configuration file that could be adopted according to the SPARQL endpoint we wish to integrate.
-          `,'label':'','class':'publication'},
-          'extra': [
-            [
-              {
-                'value':'<a class="git_repo_link" target="_blank" href="http://opencitations.net/browser/ra/6932102"><i class="star big icon"></i> Try it on OpenCitations website</a>',
-                'class': 'extra_elem'
-              },
-              {
-                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/lucinda"><i class="github alternate big icon"></i> Go to repository</a>',
-                'class': 'extra_elem'
-              }
-            ]
-          ]
-        },
-        {
-          'title': {'value':'EMA','label':'','class':'publication'},
-          'subtitle': {'value':'The Email Mining Application','label':'','class':'publication'},
-          'content': {'value': `
-            A visual web-based framework meant for Email data analysis in digital and forensic investigation. The image legendOnion.png shows the general Framework architecture. Each different analysis will be contained in a unique folder inside the static/ folder. This architecture is meant to be flexible for updates and additional integration of new components and data analysis.
-          `,'label':'','class':'publication'},
-          'extra': [
-            [
-              {'value':''},
-              {
-                'value':'<a class="git_repo_link" target="_blank"  href="https://github.com/ivanhb/EMA"><i class="github alternate big icon"></i> Go to repository</a>',
-                'class': 'extra_elem'
-              }
-            ]
-          ]
-        }
-      ]
+      ],
     },
     {
       'id': 'publications',
       'title': 'Publications',
+      'type': 'publication',
+      'target': populate_publication_section,
       'items': [
-        {
-          'content':{
-            'value': 'Heibi I., Peroni S., Shotton D. (2018) OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints. In: González-Beltrán A., Osborne F., Peroni S., Vahdati S. (eds) Semantics, Analytics, Visualization. SAVE-SD 2017, SAVE-SD 2018. Lecture Notes in Computer Science, vol 10959. Springer, Cham </br><a class="git_repo_link" target="_blank"  href="https://doi.org/10.1007/978-3-030-01379-0_9">https://doi.org/10.1007/978-3-030-01379-0_9</a>'
-          },
-          'subtitle':{
-            'value': ''
-          }
-        },
-        {
-          'content':{
-            'value': '<u>Upcoming:</u> Heibi I., Peroni S., Shotton D. Enabling text search on SPARQL-endpoints through OSCAR. Data Science. </br><a class="git_repo_link" target="_blank"  href="data/paper/oscar-datascience2019/oscar-datascience2019.html">Preview version</a>'
-          },
-          'subtitle':{
-            'value': ''
-          }
-        }
       ],
     },
-
     {
-
       'id': 'activities',
       'title': 'Activities',
-      'items':
-        [
-          {
-              'title': {
-                'value': 'WikiCite 2018',
-                'label': 'Event: '
-              },
-              'subtitle': [
-                {
-                  'value': 'Berkeley, California, USA',
-                  'label': 'Location: '
-                },
-                {
-                  'value': '27 - 29 November 2018',
-                  'label': 'Date: '
-                },
-                {
-                  'value': `
-                  Presenting a talk about: OSCAR and LUCINDA with Wikidata
-                  `,
-                  'label': 'Contribution:'
-                }
-              ],
-              'content':[
-                {
-                  'value': `
-                      WikiCite 2018 is a 3-day conference, summit, and hack day dedicated to the vision of creating an open repository of bibliographic data to support the citation and fact-checking needs of Wikimedia projects, and possibly, to serve as an open infrastructure for research, education, and information quality across the web.
-                  `,
-                  'label': 'Description'
-                }
-              ],
-              'extra': [
-                [
-                  {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://meta.wikimedia.org/wiki/WikiCite_2018"><i class="linkify big icon"></i> Conference website</a>',
-                    'class': 'extra_elem'
-                  },
-                  {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://docs.google.com/presentation/d/1lM8HDFUytUEQ2vu603yJ0R1T8qTdsx8q50o5vP9y2so/edit?usp=sharing"><i class="eye big icon"></i> View the presentation</a>',
-                    'class': 'extra_elem'
-                  },
-                  {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q30536251"><i class="star big icon"></i> LUCINDA demo for Wikidata</a>',
-                    'class': 'extra_elem'
-                  },
-                  {
-                    'value':'<a class="git_repo_link" target="_blank" href="https://opencitations.github.io/oscar/example/v2/wikidata.html"><i class="star big icon"></i> OSCAR demo for Wikidata</a>',
-                    'class': 'extra_elem'
-                  }
-                ]
-              ]
-          },
-          {
-              'title': {
-                'value': 'Workshop on Open Citations',
-                'label': 'Event: '
-              },
-              'subtitle': [
-                {
-                  'value': 'Bologna, Italy',
-                  'label': 'Location: '
-                },
-                {
-                  'value': '3 - 5 September 2018',
-                  'label': 'Date: '
-                },
-                {
-                  'value': `
-                  Staff of the Workshop
-                  `,
-                  'label': 'Contribution:'
-                }
-              ],
-              'content':[
-                {
-                  'value': `
-                      About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.
-                  `,
-                  'label': 'Description'
-                }
-              ],
-              'extra': [
-                [
-                  {'value':''},
-                  {
-                    'value':'<a class="git_repo_link" target="_blank"  href="https://workshop-oc.github.io/index.html"><i class="linkify big icon"></i> Workshop website</a>',
-                    'class': 'extra_elem'
-                  }
-                ]
-              ]
-          },
-          {
-              'title': {
-                'value': 'The Semantics, Analytics, Visualisation: Enhancing Scholarly Dissemination (SAVE-SD) Workshop co-located with The Web Conference',
-                'label': 'Event: '
-              },
-              'subtitle': [
-                {
-                  'value': 'Lyon, France',
-                  'label': 'Location: '
-                },
-                {
-                  'value': '23 - 27 April 2018',
-                  'label': 'Date: '
-                },
-                {
-                  'value': `Presenting a talk about <a class="section_content_link" target="_blank" href="https://doi.org/10.1007/978-3-030-01379-0_9">OSCAR: A Customisable Tool for Free-Text Search over SPARQL Endpoints.</a>`,
-                  'label': 'Contribution:'
-                }
-              ],
-              'content':[
-                {
-                  'value': `
-                      The International World Wide Web Conference Committee (IW3C2), is the organization that manages The Web Conference (former WWW Conference) series. This series aims to provide the world a premier forum for discussion and debate about the evolution of the Web, the standardization of its associated technologies, and the impact of those technologies on society and culture.
-                  `,
-                  'label': 'Description'
-                }
-              ],
-              'extra': [
-                [
-                  {'value':''},
-                  {
-                    'value':'<a class="git_repo_link" target="_blank"  href="https://save-sd.github.io/2018/index.html"><i class="linkify big icon"></i> Workshop website</a>',
-                    'class': 'extra_elem'
-                  }
-                ]
-              ]
-          }
+      'type': 'activity',
+      'target': populate_activity_section,
+      'items': [
         ]
     }
   ]
+}
+
+function populate_activity_section() {
+  //Projects section
+  $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "https://ivanhb.github.io/data/activity.csv",
+            dataType: "text",
+            success: function(data) {
+                //console.log(data);
+                var csv_matrix = process_csv_data(data);
+                var list_obj = _build_items(csv_matrix);
+                call_bk_section('activities',list_obj);
+            }
+         });
+   });
+
+   function _build_items(csv_matrix) {
+     var list_obj = [];
+     for (var i = 1; i < csv_matrix.length; i++) {
+       var elem = csv_matrix[i];
+       var obj_elem = {};
+
+       obj_elem['title'] = [
+         {'value':elem[0].replace('"',''), 'label': 'Event: '}
+       ];
+       obj_elem['subtitle'] = [
+         {'value':elem[1], 'label': 'Location: '},
+         {'value':elem[2], 'label': 'Date: '},
+         {'value':elem[3], 'label': 'Contribution: '},
+       ];
+       obj_elem['content'] = [
+         {'value':elem[4], 'label': 'Description'}
+       ];
+       obj_elem['extra'] = build_extra_arr_obj(elem[5]);
+       console.log(obj_elem['extra']);
+       list_obj.push(obj_elem);
+     }
+     return list_obj;
+   }
+}
+
+function populate_publication_section() {
+  //Projects section
+  $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "https://ivanhb.github.io/data/publication.csv",
+            dataType: "text",
+            success: function(data) {
+                //console.log(data);
+                var csv_matrix = process_csv_data(data);
+                var list_obj = _build_publication_elem(csv_matrix);
+                call_bk_section('publications',list_obj);
+            }
+         });
+   });
+
+   function _build_publication_elem(csv_matrix) {
+     var list_obj = [];
+     for (var i = 1; i < csv_matrix.length; i++) {
+       var elem = csv_matrix[i];
+       var obj_elem = {};
+
+       obj_elem['content'] = [{'value':elem[0].replace('"',''), 'label': ''}];
+       obj_elem['extra'] = build_extra_arr_obj(elem[2]);
+       list_obj.push(obj_elem);
+     }
+     return list_obj;
+   }
+}
+
+function populate_project_section() {
+  //Projects section
+  $(document).ready(function() {
+        $.ajax({
+            type: "GET",
+            url: "https://ivanhb.github.io/data/project.csv",
+            dataType: "text",
+            success: function(data) {
+                //console.log(data);
+                var csv_matrix = process_csv_data(data);
+                var list_obj = build_project_elem(csv_matrix);
+                call_bk_section('projects',list_obj);
+            }
+         });
+   });
+
+   function build_project_elem(csv_matrix) {
+     var list_obj = [];
+     for (var i = 1; i < csv_matrix.length; i++) {
+       var elem = csv_matrix[i];
+       var obj_elem = {};
+
+       obj_elem['title'] = [{'value':elem[0].replace('"',''), 'label': ''}];
+       obj_elem['subtitle'] = [{'value':elem[1], 'label': ''}];
+       obj_elem['content'] = [{'value':elem[2], 'label': ''}];
+       obj_elem['extra'] = build_extra_arr_obj(elem[3]);
+       list_obj.push(obj_elem);
+     }
+     return list_obj;
+   }
 }
