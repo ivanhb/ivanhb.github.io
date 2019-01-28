@@ -1,0 +1,4 @@
+"name","description","extra"
+"OSCAR","The general Search Application for Rdf data specially designed for Open Citations","[[link_text_link,Try it on OpenCitations website,http://opencitations.net/search]],[[link_text_link,Go to repository,https://github.com/opencitations/oscar]]"
+"LUCINDA","An RDF data browser Javascript-based application.","[[link_text_link,Try it on OpenCitations website,http://opencitations.net/browser/ra/6932102]],[[link_text_link,Go to repository,https://github.com/opencitations/lucinda]]"
+"EMA","The Email Mining Application","[[link_text_link,Go to repository,https://github.com/ivanhb/EMA]]"
