@@ -84,7 +84,7 @@ function build_entry(my_config){
   str_html = str_html + "<h3 class='intro_eng_version'>"+my_config['intro_eng_text']+"</h3>";
   if ('preview_section' in my_config) {
       _get_preview_data();
-      str_html = str_html + '<div class="ui card"><div class="content"><div class="header"><h2>'+my_config.preview_section.title+'</h2></div><div class="meta"><span>2 days ago</span><a>Animals</a></div><p></p></div></div>';
+      str_html = str_html + '<div class="ui card"><div class="content"><div class="header"><h2>'+my_config.preview_section.title+'</h2></div><div class="meta"><span>2 days ago</span><a> ...</a></div><p></p></div></div>';
   }
   return str_html;
 
