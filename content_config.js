@@ -86,10 +86,27 @@ function handle_work_diary(data) {
   }
 
   console.log(res_data);
-  var html_data = httpGetAsync(res_data['link'], "res_data['link']", translate_html);
+  var html_data = httpGetAsync(res_data['link'], res_data['link'], translate_html, {'time': res_data['title'], 'link': res_data['link']});
 }
 function translate_html(data){
-  console.log(data);
+  var html_content = data.data.toString();
+  var subtitle_list = [];
+
+  var myRegexp = /\<h2.*id="(.*?)"\>/g;
+	var match = myRegexp.exec(html_content);
+	while (match) {
+    subtitle_list.push(match[1].replace(new RegExp('-', 'g'), " "));
+    html_content = html_content.replace(match[0], "");
+    match = myRegexp.exec(html_content);
+	}
+
+  var str_content = "";
+  for (var i = 0; i < subtitle_list.length; i++) {
+    str_content = str_content + "  - "+ subtitle_list[i] +"</br>";
+  }
+  str_content = str_content + "</br><a style='float:right' href="+data.call_param['link']+"> See more </a>";
+
+  update_page({'value':{'subtitle': data.call_param['time'],'content':str_content}});
 }
 
 //Build a section

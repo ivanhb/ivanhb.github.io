@@ -20,6 +20,9 @@ function build_page() {
     $( ".a_list_menu").replaceWith(build_list(my_config['entry_section']['list_menu'],a_class= "item scroll"));
     $(".img_border").replaceWith(build_border_img(my_config['entry_section']['border_pattern']));
     $('.an_entry').replaceWith(build_entry(my_config['entry_section']));
+    if ('preview_section' in my_config['entry_section']) {
+        get_preview_data(my_config['entry_section']);
+    }
     $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
     $( ".a_section" ).each(function( i ) {
       if(my_config['section'][i] != undefined){
@@ -28,7 +31,6 @@ function build_page() {
     });
   }
 }
-
 
 function populate_config_file() {
 
@@ -83,15 +85,13 @@ function build_entry(my_config){
   var str_html = '<h1 id="main_eng_title" class="ui inverted header" style="margin-top: 1em;">'+my_config['main_eng_title']+'</h1>';
   str_html = str_html + "<h3 class='intro_eng_version'>"+my_config['intro_eng_text']+"</h3>";
   if ('preview_section' in my_config) {
-      _get_preview_data();
-      str_html = str_html + '<div class="ui card"><div class="content"><div class="header"><h2>'+my_config.preview_section.title+'</h2></div><div class="meta"><span>2 days ago</span><a> ...</a></div><p></p></div></div>';
+      str_html = str_html + '<div id="preview_card" class="ui card"><div class="content"><div class="header"><h2>'+my_config.preview_section.title+'</h2></div><div class="meta"><span id="prev_subtitle">2 days ago</span><p id="prev_content"> ...</p></div><p></p></div></div>';
   }
   return str_html;
-
-  function _get_preview_data() {
-    var prev_conf = my_config.preview_section;
-    httpGetAsync(prev_conf.url, prev_conf.id, prev_conf.handle, call_param = null);
-  }
+}
+function get_preview_data(my_config) {
+  var prev_conf = my_config.preview_section;
+  httpGetAsync(prev_conf.url, prev_conf.id, prev_conf.handle, call_param = null);
 }
 
 function build_list(obj, a_class= "") {
@@ -265,6 +265,14 @@ function handle_req(res, type) {
   }
 }
 
+
+function update_page(data) {
+  console.log(data);
+  document.getElementById("prev_subtitle").innerHTML = "<h3>"+data.value.subtitle+"</h3>";
+  document.getElementById("prev_content").innerHTML = data.value.content;
+}
+
+
 //UTIL
 function concat_arr_str(arr_str){
   var concatter = "";
@@ -303,7 +311,6 @@ function httpGetAsync(theUrl, key, callback, call_param = null){
 		};
 		xhr.send();
 	}
-
 function process_csv_data(allText) {
     var record_num = 5;  // or however many elements there are in each row
     var all_rows = allText.split('\n');
