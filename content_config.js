@@ -1,23 +1,28 @@
 var my_config = {
-  'border_pattern': 'img/circle_pattern.png',
-  'main_eng_title': "Ivan Heibi's website",
-  'intro_eng_text' : `
-      This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
-      <p>In case you want to ask me for any further info, just feel free to contact me.</p>
-    `,
 
-  'intro_arabic_text' : `
-"هذا هو موقع إيفان هيبي ، وسوف تجد كل المعلومات الأساسية عنه في هذه الصفحة ... وهذا لا يعطيك الكثير من التفاصيل ، أليس كذلك؟ اقرأ المزيد عن: السيرة الذاتية الخاصة بي هنا ، أو انتقل لرؤية ما أعمل عليه هنا ، أو حتى تحقق من مدى رغبتي في قضاء وقت انتشاري هنا. نعم ، هناك شيء هناك للجميع. بعد هذه الروابط والتنقل في هذه الصفحة ستقودك خلال كل ما تحتاج إلى معرفته عني."
-  `,
-
-  'list_menu' : {
-    'items': {
-      'Page Top':{'href': '#_top', 'default':true},
-      'Short Biography':{'href': '#short_bio_top'},
-      'Main Projects':{'href': '#projects_list_top'},
-      'Publications':{'href': '#publications_list_top'},
-      'Activities':{'href': '#activities_list_top'}
-    }
+  'entry_section' : {
+    'border_pattern': 'img/circle_pattern.png',
+    'main_eng_title': "Ivan Heibi's website",
+    'intro_eng_text' : `
+        This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
+        <p>In case you want to ask me for any further info, just feel free to contact me.</p>
+      `,
+    'list_menu' : {
+      'items': {
+        'Page Top':{'href': '#_top', 'default':true},
+        'Short Biography':{'href': '#short_bio_top'},
+        'Main Projects':{'href': '#projects_list_top'},
+        'Publications':{'href': '#publications_list_top'},
+        'Activities':{'href': '#activities_list_top'}
+      }
+    },
+    'preview_section': {
+      'title': "Last work report",
+      'id': 'diary',
+      //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
+      'url': 'https://ivanhb.github.io/phd/doc/diary.csv',
+      'handle': handle_work_diary
+    },
   },
 
   'bio_section': {
@@ -61,6 +66,31 @@ var my_config = {
   ]
 }
 
+
+function handle_work_diary(data) {
+  var res_data = {}
+  var csv_str = data.data.toString();
+  var rows = csv_str.split('\n');
+
+  matrix = []
+  for (var i = 0; i < rows.length; i++) {
+    matrix.push(rows[i].split(','));
+  }
+
+  for (var i = matrix.length-1; i >= 0; i--) {
+    if((matrix[i].length != 0) && (matrix[i] != "")) {
+      res_data['title'] = matrix[i][0];
+      res_data['link'] = matrix[i][1];
+      break;
+    }
+  }
+
+  console.log(res_data);
+  var html_data = httpGetAsync(res_data['link'], "res_data['link']", translate_html);
+}
+function translate_html(data){
+  console.log(data);
+}
 
 //Build a section
 function populate_bio_section_contacts() {
