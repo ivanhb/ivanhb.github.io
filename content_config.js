@@ -104,7 +104,7 @@ function translate_html(data){
   for (var i = 0; i < subtitle_list.length; i++) {
     str_content = str_content + "  - "+ subtitle_list[i] +"</br>";
   }
-  str_content = str_content + "</br><a id='link_last_workreport' style='float:right' href="+data.call_param['link']+"> See more </a>";
+  str_content = str_content + "</br><a id='link_last_workreport' style='float:right' href="+data.call_param['link']+"> Read more on the full report </a>";
 
   update_page({'value':{'subtitle': data.call_param['time'],'content':str_content}});
 }
