@@ -26,15 +26,33 @@
   font-size: 3.2rem;
 }
 
-#preview_card{
+.web_card{
   margin-top: -0.3%;
-  float: right;
-  margin-right: 12%;
   border-top: solid;
 }
-#preview_card a{
+.web_card a{
   color: white;
   border-bottom: solid thin;
+}
+.prev_subtitle{
+  font-size: 120%;
+  font-weight:200;
+}
+
+#preview_card_news{
+  float: left;
+  width: 50%;
+  margin-right: 5%;
+  margin-left: 8%;
+}
+
+#preview_card_diary{
+  width: 30%;
+  float: left;
+}
+
+.add_img{
+  width: 20%;
 }
 
 
@@ -144,6 +162,21 @@ a.section_content_link{
 
 
 @media only screen and (max-width: 700px) {
+
+
+  #preview_card_news{
+    width: 100%;
+    float:left;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-top: 8%;
+  }
+
+  #preview_card_diary{
+    margin-top: 15%;
+    width: 100%;
+    float:none;
+  }
 
   .section_vertical_title{
     writing-mode: unset;

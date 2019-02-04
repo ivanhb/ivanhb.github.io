@@ -21,6 +21,7 @@ function build_page() {
     if ('preview_section' in my_config['entry_section']) {
         get_preview_data(my_config['entry_section']);
     }
+
     $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
     $( ".a_section" ).each(function( i ) {
       if(my_config['section'][i] != undefined){
@@ -80,19 +81,38 @@ function build_border_img(img_path){
   return '<div class="img_border"><img class="ui fluid image" src="'+img_path+'"></div>'
 }
 
+function build_add_img(img_path){
+  return '<div class="add_img"><img class="ui fluid image" src="'+img_path+'"></div>'
+}
 
 function build_entry(my_config){
   var str_html = '<h1 id="main_eng_title" class="ui inverted header" style="margin-top: 1em;">'+my_config['main_eng_title']+'</h1>';
   str_html = str_html + "<h3 class='intro_eng_version'>"+my_config['intro_eng_text']+"</h3>";
+
+
+  str_html = str_html + "<div class='cards_section'>";
+  //str_html = str_html +build_add_img(my_config['add_img']);
   if ('preview_section' in my_config) {
-      str_html = str_html + '<div id="preview_card" class="ui card"><div class="content"><div class="header"><h2>'+my_config.preview_section.title+'</h2></div><div class="meta"><span id="prev_subtitle">2 days ago</span><p id="prev_content"> ...</p></div><p></p></div></div>';
+      for (var i = 0; i < my_config.preview_section.length; i++) {
+        var ele_obj = my_config.preview_section[i];
+
+        var class_str = "";
+        if ('class' in ele_obj) {
+          class_str = ele_obj['class'];
+        }
+
+        str_html = str_html + '<div id="preview_card_'+ele_obj.id+'" class="ui card '+class_str+'"><div class="content"><div class="header"><h2>'+ele_obj.title+'</h2></div><div class="meta"><span id="prev_subtitle_'+ele_obj.id+'">Time</span><p id="prev_content_'+ele_obj.id+'"> ...</p></div><p></p></div></div>';
+      }
   }
-  return str_html;
+  return str_html+"</div>";
 }
 function get_preview_data(my_config) {
   var prev_conf = my_config.preview_section;
-  pending += 1;
-  httpGetAsync(prev_conf.url, prev_conf.id, prev_conf.handle, call_param = null);
+  for (var i = 0; i < prev_conf.length; i++) {
+    var prev_i = prev_conf[i];
+    pending += 1;
+    httpGetAsync(prev_i.url, prev_i.id, prev_i.handle, call_param = {'id':prev_i.id});
+  }
 }
 
 function build_list(obj, a_class= "") {
@@ -253,7 +273,7 @@ function build_bio_section(obj) {
 }
 
 function handle_req() {
-  console.log(res_req, type_req);
+  //console.log(res_req, type_req);
   switch (type_req) {
     case 'workdiary':
       if (res_req == 'last') {
@@ -268,8 +288,8 @@ function handle_req() {
 
 function update_page(data) {
   pending -= 1;
-  document.getElementById("prev_subtitle").innerHTML = "<h3>"+data.value.subtitle+"</h3>";
-  document.getElementById("prev_content").innerHTML = data.value.content;
+  document.getElementById("prev_subtitle_"+data.call_param.id).innerHTML = "<h3>"+data.value.subtitle+"</h3>";
+  document.getElementById("prev_content_"+data.call_param.id).innerHTML = data.value.content;
   handle_req();
 }
 

@@ -2,6 +2,7 @@ var my_config = {
 
   'entry_section' : {
     'border_pattern': 'img/circle_pattern.png',
+    'add_img': 'img/cat.png',
     'main_eng_title': "Ivan Heibi's website",
     'intro_eng_text' : `
         This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
@@ -16,13 +17,25 @@ var my_config = {
         'Activities':{'href': '#activities_list_top'}
       }
     },
-    'preview_section': {
-      'title': "Last work report",
-      'id': 'diary',
-      //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
-      'url': 'https://ivanhb.github.io/phd/doc/diary.csv',
-      'handle': handle_work_diary
-    },
+    'preview_section':[
+      {
+        'title': "Last work report",
+        'id': 'diary',
+        'class': 'web_card',
+        //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
+        'url': 'https://ivanhb.github.io/phd/doc/diary.csv',
+        'handle': handle_work_diary
+      },
+      {
+        'title': "News",
+        'id': 'news',
+        'class': 'web_card',
+        'max': 1,
+        //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
+        'url': 'https://ivanhb.github.io/phd/doc/news.md',
+        'handle': handle_news
+      }
+    ]
   },
 
   'bio_section': {
@@ -66,6 +79,46 @@ var my_config = {
   ]
 }
 
+function handle_news(data) {
+  var md_str = data.data.toString();
+  var html_content = _translate_it_html();
+  update_page({'value':{'subtitle': '','content':html_content.content},'call_param':data.call_param});
+
+  function _translate_it_html() {
+
+    var MAXINLIST = 2;
+
+    var subtitle_list = [];
+    var content_list = [];
+    var parts = md_str.split("** ");
+    for (var i = 0; i < parts.length; i++) {
+
+      if (parts[i] != ""){
+        var content_parts = parts[i].split('\n');
+        subtitle_list.push(content_parts[0]);
+
+        var rest_content = content_parts.slice(0);
+        var a_content = "";
+        for (var j = 0; j < rest_content.length; j++) {
+          a_content = a_content + rest_content[j];
+        }
+        content_list.push(a_content);
+      }
+      if (MAXINLIST <= 0) {
+        break;
+      }
+      MAXINLIST = MAXINLIST -1;
+    }
+
+    var content_str = "";
+    for (var i = 0; i < subtitle_list.length; i++) {
+      content_str = content_str + '<p class="prev_subtitle">' + subtitle_list[i] + '<p>' + content_list[i];
+    }
+
+    return {'subtitle': subtitle_list, 'content':content_str}
+
+  }
+}
 
 function handle_work_diary(data) {
   var res_data = {}
@@ -84,9 +137,7 @@ function handle_work_diary(data) {
       break;
     }
   }
-
-  console.log(res_data);
-  var html_data = httpGetAsync(res_data['link'], res_data['link'], translate_html, {'time': res_data['title'], 'link': res_data['link']});
+  var html_data = httpGetAsync(res_data['link'], res_data['link'], translate_html, {'time': res_data['title'], 'link': res_data['link'], 'id': data.call_param.id});
 }
 function translate_html(data){
   var html_content = data.data.toString();
@@ -106,7 +157,7 @@ function translate_html(data){
   }
   str_content = str_content + "</br><a id='link_last_workreport' style='float:right' href="+data.call_param['link']+"> Read more on the full report </a>";
 
-  update_page({'value':{'subtitle': data.call_param['time'],'content':str_content}});
+  update_page({'value':{'subtitle': data.call_param['time'],'content':str_content},'call_param':data.call_param});
 }
 
 //Build a section
@@ -120,7 +171,6 @@ function populate_bio_section_contacts() {
                 //console.log(data);
                 var csv_matrix = process_csv_data(data);
                 var list_obj = _build_items(csv_matrix);
-                console.log(list_obj);
                 call_bk_prof_section(list_obj);
             }
          });
@@ -197,7 +247,6 @@ function populate_activity_section() {
          {'value':elem[4], 'label': 'Description'}
        ];
        obj_elem['extra'] = build_extra_arr_obj(elem[5]);
-       console.log(obj_elem['extra']);
        list_obj.push(obj_elem);
      }
      return list_obj;
