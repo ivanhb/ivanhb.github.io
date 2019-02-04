@@ -1,4 +1,5 @@
 
+
 var pending = 0;
 populate_config_file();
 
@@ -14,9 +15,6 @@ if (groups != null) {
 }
 
 function build_page() {
-  if (type_req != null) {
-    handle_req(res_req, type_req);
-  }else {
     $( ".a_list_menu").replaceWith(build_list(my_config['entry_section']['list_menu'],a_class= "item scroll"));
     $(".img_border").replaceWith(build_border_img(my_config['entry_section']['border_pattern']));
     $('.an_entry').replaceWith(build_entry(my_config['entry_section']));
@@ -29,7 +27,9 @@ function build_page() {
           $( this ).replaceWith(build_section_skeleton(my_config['section'][i]));
       }
     });
-  }
+    if (type_req != null) {
+      handle_req(res_req, type_req);
+    }
 }
 
 function populate_config_file() {
@@ -91,6 +91,7 @@ function build_entry(my_config){
 }
 function get_preview_data(my_config) {
   var prev_conf = my_config.preview_section;
+  pending += 1;
   httpGetAsync(prev_conf.url, prev_conf.id, prev_conf.handle, call_param = null);
 }
 
@@ -251,13 +252,12 @@ function build_bio_section(obj) {
 
 }
 
-function handle_req(res, type) {
-  switch (type) {
-    case 'lib':
-      switch (res) {
-        case 'badge':
-          break;
-        default:
+function handle_req() {
+  console.log(res_req, type_req);
+  switch (type_req) {
+    case 'workdiary':
+      if (res_req == 'last') {
+        document.getElementById("link_last_workreport").click();
       }
       break;
     default:
@@ -267,9 +267,10 @@ function handle_req(res, type) {
 
 
 function update_page(data) {
-  console.log(data);
+  pending -= 1;
   document.getElementById("prev_subtitle").innerHTML = "<h3>"+data.value.subtitle+"</h3>";
   document.getElementById("prev_content").innerHTML = data.value.content;
+  handle_req();
 }
 
 
