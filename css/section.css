@@ -27,7 +27,8 @@
 }
 
 .web_card{
-  margin-top: -0.3%;
+  margin-top: 1%;
+  margin-bottom: 2%;
   border-top: solid;
 }
 .web_card a{
@@ -49,15 +50,13 @@
 #preview_card_diary{
   width: 30%;
   float: left;
-  margin-top: 4%;
 }
 
 .add_img{
   float: left;
   margin-right: -5%;
-  margin-top: 3%;
-
   transform: scaleX(-1);
+  margin-top: 1%;
 }
 .add_inner_img{
   width: 70%;
