@@ -2,7 +2,7 @@ var my_config = {
 
   'entry_section' : {
     'border_pattern': 'img/circle_pattern.png',
-    'add_img': 'img/cat.png',
+    'add_img': 'img/cat2.png',
     'main_eng_title': "Ivan Heibi's website",
     'intro_eng_text' : `
         This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
@@ -86,12 +86,13 @@ function handle_news(data) {
 
   function _translate_it_html() {
 
+    var FROM = 0;
     var MAXINLIST = 2;
 
     var subtitle_list = [];
     var content_list = [];
     var parts = md_str.split("** ");
-    for (var i = 0; i < parts.length; i++) {
+    for (var i = FROM; i < parts.length; i++) {
 
       if (parts[i] != ""){
         var content_parts = parts[i].split('\n');
@@ -114,6 +115,8 @@ function handle_news(data) {
     for (var i = 0; i < subtitle_list.length; i++) {
       content_str = content_str + '<p class="prev_subtitle">' + subtitle_list[i] + '<p>' + content_list[i];
     }
+
+    content_str = content_str + "</br></br><a id='link_previous_news' style='float:right' href="+""+"> Load Previous news </a>";
 
     return {'subtitle': subtitle_list, 'content':content_str}
 

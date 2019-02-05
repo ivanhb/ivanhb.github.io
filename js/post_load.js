@@ -82,7 +82,7 @@ function build_border_img(img_path){
 }
 
 function build_add_img(img_path){
-  return '<div class="add_img"><img class="ui fluid image" src="'+img_path+'"></div>'
+  return '<div class="add_img"><img class="add_inner_img" src="'+img_path+'"></div>'
 }
 
 function build_entry(my_config){
@@ -91,7 +91,7 @@ function build_entry(my_config){
 
 
   str_html = str_html + "<div class='cards_section'>";
-  //str_html = str_html +build_add_img(my_config['add_img']);
+  str_html = str_html + build_add_img(my_config['add_img']);
   if ('preview_section' in my_config) {
       for (var i = 0; i < my_config.preview_section.length; i++) {
         var ele_obj = my_config.preview_section[i];
