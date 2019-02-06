@@ -1,6 +1,7 @@
 
 
 var pending = 0;
+var ext_calls = {}
 populate_config_file();
 
 var resource_iri = null;
@@ -19,7 +20,7 @@ function build_page() {
     $(".img_border").replaceWith(build_border_img(my_config['entry_section']['border_pattern']));
     $('.an_entry').replaceWith(build_entry(my_config['entry_section']));
     if ('preview_section' in my_config['entry_section']) {
-        get_preview_data(my_config['entry_section']);
+        get_preview_data();
     }
 
     $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
@@ -106,12 +107,29 @@ function build_entry(my_config){
   }
   return str_html+"</div>";
 }
-function get_preview_data(my_config) {
-  var prev_conf = my_config.preview_section;
+function get_preview_data(load_prev = null) {
+  var prev_conf = my_config['entry_section'].preview_section;
   for (var i = 0; i < prev_conf.length; i++) {
     var prev_i = prev_conf[i];
     pending += 1;
-    httpGetAsync(prev_i.url, prev_i.id, prev_i.handle, call_param = {'id':prev_i.id});
+
+    if (!(prev_i.id in ext_calls)) {
+        ext_calls[prev_i.id] = {'ifrom': 0,'ito': 2};
+        if ('max' in prev_i) {
+          ext_calls[prev_i.id] = {'ifrom': 0,'ito': prev_i.max};
+        }
+    }else {
+      var toadd = ext_calls[prev_i.id].ito - ext_calls[prev_i.id].ifrom;
+      if (load_prev) {
+        ext_calls[prev_i.id].ifrom += toadd;
+        ext_calls[prev_i.id].ito += toadd;
+      }else {
+        ext_calls[prev_i.id].ifrom -= toadd;
+        ext_calls[prev_i.id].ito -= toadd;
+      }
+    }
+
+    httpGetAsync(prev_i.url, prev_i.id, prev_i.handle, call_param = {'id':prev_i.id,'ifrom':ext_calls[prev_i.id].ifrom,'ito':ext_calls[prev_i.id].ito});
   }
 }
 

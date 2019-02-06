@@ -30,7 +30,7 @@ var my_config = {
         'title': "News",
         'id': 'news',
         'class': 'web_card',
-        'max': 1,
+        'max': 2,
         //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
         'url': 'https://ivanhb.github.io/phd/doc/news.md',
         'handle': handle_news
@@ -86,13 +86,21 @@ function handle_news(data) {
 
   function _translate_it_html() {
 
-    var FROM = 0;
-    var MAXINLIST = 2;
+    var FROM = data.call_param.ifrom;
+    var MAXINLIST = data.call_param.ito;
 
     var subtitle_list = [];
     var content_list = [];
     var parts = md_str.split("** ");
+    parts = parts.filter(function (el) {
+        return el != "";
+    });
+
     for (var i = FROM; i < parts.length; i++) {
+
+      if (MAXINLIST == 0) {
+        break;
+      }
 
       if (parts[i] != ""){
         var content_parts = parts[i].split('\n');
@@ -104,11 +112,8 @@ function handle_news(data) {
           a_content = a_content + rest_content[j];
         }
         content_list.push(a_content);
+        MAXINLIST = MAXINLIST -1;
       }
-      if (MAXINLIST <= 0) {
-        break;
-      }
-      MAXINLIST = MAXINLIST -1;
     }
 
     var content_str = "";
@@ -116,7 +121,19 @@ function handle_news(data) {
       content_str = content_str + '<p class="prev_subtitle">' + subtitle_list[i] + '<p>' + content_list[i];
     }
 
-    content_str = content_str + "</br></br><a id='link_previous_news' style='float:right' href="+""+"> Load Previous news </a>";
+    var show_prev_link = 'block';
+    var show_next_link = 'block';
+    if (data.call_param.ito == parts.length) {
+      show_next_link = 'none';
+    }
+    if (FROM == 0) {
+      show_prev_link = 'none';
+    }
+
+
+
+    content_str = content_str + "</br></br><a id='link_previous_news' style='display:"+show_prev_link+"; float:left' href='javascript:get_preview_data(load_prev=true);'> Previous news </a>";
+    content_str = content_str + "<a id='link_next_news' style='display:"+show_next_link+"; float:right' href='javascript:get_preview_data(load_prev=false);'> Most recent news </a>";
 
     return {'subtitle': subtitle_list, 'content':content_str}
 
