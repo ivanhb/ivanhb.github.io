@@ -41,9 +41,8 @@
 }
 
 #preview_card_news{
-  float: right;
-  width: 42%;
-  margin-right: 5%;
+  float: left;
+  width: 50%;
   margin-left: 2%;
 }
 
@@ -53,14 +52,11 @@
 }
 
 .add_img{
-  float: left;
-  margin-right: -5%;
-  transform: scaleX(-1);
-  margin-top: 1%;
+  float: right;
+  margin-top: 5%;
 }
 .add_inner_img{
-  width: 70%;
-  float:right;
+  width: 200px;
 }
 
 
@@ -138,19 +134,21 @@ a.section_content_link{
 
   #preview_card_news{
     float: left;
-    width: 85%;
+    width: 100%;
     margin-top:5%;
+    margin-left:0%;
   }
 
   #preview_card_diary{
-    width: 48%;
+    width: 67%;
     float: left;
     margin-top: 4%;
   }
 
   .add_img{
-    float: left;
-    margin-left: 5%;
+    float: right;
+    width: 33%;
+    margin-top: 5%;
   }
 
   #pro_img{
@@ -195,11 +193,11 @@ a.section_content_link{
     float:left;
     margin-right: 0%;
     margin-left: 0%;
-    margin-top: 8%;
+    margin-top: 10%;
   }
 
   #preview_card_diary{
-    margin-top: 15%;
+    margin-top: 5%;
     width: 100%;
     float:left;
   }
