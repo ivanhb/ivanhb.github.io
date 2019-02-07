@@ -106,7 +106,7 @@ function handle_news(data) {
         var content_parts = parts[i].split('\n');
         subtitle_list.push(content_parts[0]);
 
-        var rest_content = content_parts.slice(0);
+        var rest_content = content_parts.slice(1);
         var a_content = "";
         for (var j = 0; j < rest_content.length; j++) {
           a_content = a_content + rest_content[j];
@@ -129,7 +129,6 @@ function handle_news(data) {
     if (FROM == 0) {
       show_prev_link = 'none';
     }
-
 
 
     content_str = content_str + "</br></br><a id='link_previous_news' style='display:"+show_prev_link+"; float:left' href='javascript:get_preview_data(load_prev=true);'> Previous news </a>";
