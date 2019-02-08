@@ -44,6 +44,9 @@
   float: left;
   width: 50%;
   margin-left: 2%;
+  min-height: 300px;
+  /*overflow: scroll;*/
+  /*max-height: 300px;*/
 }
 
 #preview_card_diary{

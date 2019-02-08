@@ -132,8 +132,6 @@ function handle_news(data) {
       content_str = content_str + "<a id='link_previous_news' style='display:"+show_prev_link+"; float:left' href='javascript:get_preview_data(load_prev=true);'> Previous news </a>";
     }
 
-    console.log(data.call_param.ito, FROM);
-
     return {'subtitle': subtitle_list, 'content':content_str}
 
   }
