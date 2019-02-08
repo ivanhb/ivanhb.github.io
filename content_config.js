@@ -123,16 +123,16 @@ function handle_news(data) {
 
     var show_prev_link = 'block';
     var show_next_link = 'block';
-    if (data.call_param.ito == parts.length) {
-      show_next_link = 'none';
-    }
-    if (FROM == 0) {
-      show_prev_link = 'none';
+    content_str = content_str + "</br></br>";
+    if (FROM != 0) {
+      content_str = content_str + "<a id='link_next_news' style='display:"+show_next_link+"; float:right' href='javascript:get_preview_data(load_prev=false);'> Most recent news </a>";
     }
 
+    if (data.call_param.ito < parts.length) {
+      content_str = content_str + "<a id='link_previous_news' style='display:"+show_prev_link+"; float:left' href='javascript:get_preview_data(load_prev=true);'> Previous news </a>";
+    }
 
-    content_str = content_str + "</br></br><a id='link_previous_news' style='display:"+show_prev_link+"; float:left' href='javascript:get_preview_data(load_prev=true);'> Previous news </a>";
-    content_str = content_str + "<a id='link_next_news' style='display:"+show_next_link+"; float:right' href='javascript:get_preview_data(load_prev=false);'> Most recent news </a>";
+    console.log(data.call_param.ito, FROM);
 
     return {'subtitle': subtitle_list, 'content':content_str}
 
