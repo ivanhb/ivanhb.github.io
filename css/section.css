@@ -31,13 +31,20 @@
   margin-bottom: 2%;
   border-top: solid;
 }
-.web_card a{
-  color: white;
-  border-bottom: solid thin;
-}
 .prev_subtitle{
   font-size: 120%;
   font-weight:200;
+}
+
+#_top a{
+  color: white;
+  border-bottom: solid thin;
+}
+
+.intro_eng_version{
+  width: 85%;
+  font-weight: 420;
+  margin-bottom: 2%;
 }
 
 #preview_card_news{
@@ -137,7 +144,7 @@ a.section_content_link{
 
   #preview_card_news{
     float: left;
-    width: 100%;
+    width: 90%;
     margin-top:5%;
     margin-left:0%;
   }

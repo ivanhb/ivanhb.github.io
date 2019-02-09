@@ -5,9 +5,12 @@ var my_config = {
     'add_img': 'img/cat2.png',
     'main_eng_title': "Ivan Heibi's website",
     'intro_eng_text' : `
-        This is Ivan Heibi's website, and you will find all the essential info about him in this page ... That's not giving you a lot of detail, is it? So in case you are still here and interested, just move down on this page and check out all the information you want.
-        <p>In case you want to ask me for any further info, just feel free to contact me.</p>
+      <p>This is Ivan Heibi’s website, Ivan is currently a Phd student at the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>, <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies</a>.
+      Here you can find all you need regarding his past, present, and future works. Below this intro there is a preview of the last Phd weekly report made, and the most recent news regarding his subjects of interest.
+      <p>Scroll this page and look at his main <a href="#projects_list_top">projects</a>,<a href="#activities_list_top">activities</a>, and <a href="#publications_list_top">publications</a> made. In case you want any further information, don’t hesitate to contact him through any of his social media accounts.
       `,
+
+
     'list_menu' : {
       'items': {
         'Page Top':{'href': '#_top', 'default':true},
