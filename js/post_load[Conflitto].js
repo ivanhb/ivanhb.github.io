@@ -350,20 +350,25 @@ function httpGetAsync(theUrl, key, callback, call_param = null){
 		};
 		xhr.send();
 	}
-  function process_csv_data(allText) {
-      var record_num = 5;  // or however many elements there are in each row
-      var all_rows = allText.split('\n');
+function process_csv_data(allText) {
+    var record_num = 5;  // or however many elements there are in each row
+    var all_rows = allText.split('\n');
 
-      for (var i = 0; i < all_rows.length; i++) {
-        if (all_rows[i][all_rows[i].length-1] == "") {
-          all_rows[i] = all_rows[i] + '"';
-        }
+    for (var i = 0; i < all_rows.length; i++) {
+      if (all_rows[i].length != 0) {
+
+        console.log(all_rows[i][all_rows[i].length - 1]);
+        all_rows[i] = all_rows[i].slice(1,all_rows[i].length - 2);
+        console.log(all_rows[i]);
 
         all_cells_i = all_rows[i].split('","');
+
+        var last_str = all_cells_i[all_cells_i.length -1];
         all_rows[i] = all_cells_i;
       }
-      return all_rows;
-  }
+    }
+    return all_rows;
+}
 function build_extra_arr_obj(a_text) {
 
   var arr_ext = a_text.split(']],[[')
