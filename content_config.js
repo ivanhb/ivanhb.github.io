@@ -9,8 +9,6 @@ var my_config = {
       Here you can find all you need regarding his past, present, and future works. Below this intro there is a preview of the last Phd weekly report made, and the most recent news regarding his subjects of interest.
       <p>Scroll this page and look at his main <a href="#projects_list_top">projects</a>,<a href="#activities_list_top">activities</a>, and <a href="#publications_list_top">publications</a> made. In case you want any further information, don’t hesitate to contact him through any of his social media accounts.
       `,
-
-
     'list_menu' : {
       'items': {
         'Page Top':{'href': '#_top', 'default':true},
@@ -44,7 +42,7 @@ var my_config = {
   'bio_section': {
     'title': "A  short  Bio",
     'content': `
-      <p> I'm Ivan, a computer scientist and a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/it">University of Bologna</a> mostly dealing with Semantic web technologies specially in scholarly publishing contexts. I am working under The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and specially involved in the new <a class="section_content_link" href="https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge">Digital Humanities course</a>.</p>
+      <p> I'm Ivan, a computer scientist and currently a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/sitoweb/ivan.heibi2/">University of Bologna</a> mostly dealing with Semantic web technologies in scholarly publishing contexts. I am working at The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and at the <a class="section_content_link" href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>.</p>
       <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
       <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
       <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
@@ -141,6 +139,7 @@ function handle_news(data) {
 }
 
 function handle_work_diary(data) {
+  console.log(data);
   var res_data = {}
   var csv_str = data.data.toString();
   var rows = csv_str.split('\n');
@@ -151,6 +150,8 @@ function handle_work_diary(data) {
   }
 
   for (var i = matrix.length-1; i >= 0; i--) {
+    console.log(i);
+    console.log(matrix[i]);
     if((matrix[i].length != 0) && (matrix[i] != "")) {
       res_data['title'] = matrix[i][0];
       res_data['link'] = matrix[i][1];
