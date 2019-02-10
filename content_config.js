@@ -226,7 +226,7 @@ function populate_bio_section_contacts() {
          default:
            push_it = false;
        }
-       obj_elem['href'] = elem[1];
+       obj_elem['href'] = elem[1].replace('"','');
        if (push_it) {
           list_obj.push(obj_elem);
        }
