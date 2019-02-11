@@ -106,12 +106,6 @@ a.section_content_link{
   font-weight: 520;
 }
 
-.bio_content,
-tbody {
-    display:block;
-    word-wrap:break-word;
-  }
-
 .section_value.section_title.publication{
   font-size: 2.4rem;
 }
@@ -203,6 +197,11 @@ tbody {
 
   .extra_bio{
     text-align: center;
+  }
+  .bio_content,
+  tbody {
+    display:block;
+
   }
 
 
