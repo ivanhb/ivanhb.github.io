@@ -115,6 +115,10 @@ a.section_content_link{
 
 .extra_elem{
   float:left;
+  opacity: 0.75;
+}
+.extra_elem:hover{
+  opacity: 1;
 }
 
 .section_extra{
@@ -138,6 +142,13 @@ a.section_content_link{
 }
 .bio_content{
   width:70%;
+}
+
+.bio_extra_elem a{
+  opacity: 0.75;
+}
+.bio_extra_elem a:hover{
+  opacity: 1;
 }
 
 @media only screen and (max-width: 1200px) {

@@ -206,6 +206,7 @@ function populate_bio_section_contacts() {
 
        obj_elem["a_class"] = "";
        obj_elem["content"] = "";
+       obj_elem['href'] = "";
        switch (elem[0].replace('"','')) {
          case 'twitter':
            obj_elem["a_class"] = "ui circular blue twitter icon button";
@@ -223,10 +224,16 @@ function populate_bio_section_contacts() {
            obj_elem["a_class"] = "ui circular blue linkedin icon button";
            obj_elem["content"] = '<i class="linkedin big icon"></i>';
            break;
+         case 'university email':
+           obj_elem["a_class"] = "ui circular blue envelope outline icon button";
+           obj_elem["content"] = '<i class="envelope outline icon big"></i>';
+           obj_elem['href'] = obj_elem['href'] +"mailto:";
+           break;
+
          default:
            push_it = false;
        }
-       obj_elem['href'] = elem[1].replace('"','');
+       obj_elem['href'] = obj_elem['href'] + elem[1].replace('"','');
        if (push_it) {
           list_obj.push(obj_elem);
        }
