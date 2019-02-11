@@ -242,9 +242,9 @@ function populate_bio_section_contacts() {
            obj_elem['href'] = obj_elem['href'] +"mailto:";
            break;
          case 'telegram bot':
-           obj_elem["a_class"] = "ui circular blue telegram icon button";
-           obj_elem["content"] = '<i class="telegram icon big"></i>';
-           //obj_elem['href'] = obj_elem['href'] +"mailto:";
+           obj_elem["a_class"] = "ui circular blue comment outline icon button";
+           obj_elem["content"] = '<i class="comment outline icon big"></i>';
+           obj_elem['href'] = obj_elem['href'] +"https://t.me/";
 
            break;
 
