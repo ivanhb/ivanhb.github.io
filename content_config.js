@@ -45,7 +45,19 @@ var my_config = {
       <p> I'm Ivan, a computer scientist and currently a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/sitoweb/ivan.heibi2/">University of Bologna</a> mostly dealing with Semantic web technologies in scholarly publishing contexts. I am working at The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and at the <a class="section_content_link" href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>.</p>
       <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
       <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
-      <table width="100%" class="ui celled table"><tbody><tr><td></div></div></td><td><div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div></div></div></td></tr></tbody></table>
+      <table width="100%" class="ui celled table"><tbody>
+        <tr>
+        <td>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div>
+        </td>
+        <td>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/phd"><i class="linkify big icon"></i>My Ph.D page</a><div>
+        </td>
+        <td>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/OpenCitations/"><i class="linkify big icon"></i>My OpenCitations page</a><div>
+        </td>
+        </tr>
+      </tbody></table>
     `,
     'target': populate_bio_section_contacts,
     'links':[
