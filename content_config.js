@@ -48,7 +48,10 @@ var my_config = {
       <table width="100%" class="ui celled table"><tbody>
         <tr>
         <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://www.slideshare.net/slideshow/embed_code/key/BHStiTN572u9ju"><i class="file big icon"></i> Take a look at my CV</a><div>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="data/CV-Professional.pdf"><i class="file big icon"></i> Curriculum vitae </a><div>
+        </td>
+        <td>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="data/CV-Europass.pdf"><i class="file big icon"></i> Curriculum vitae (Europass)</a><div>
         </td>
         <td>
           <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/phd"><i class="linkify big icon"></i>My Ph.D page</a><div>
