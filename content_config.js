@@ -57,7 +57,7 @@ var my_config = {
           <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/phd"><i class="linkify big icon"></i>My Ph.D page</a><div>
         </td>
         <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/OpenCitations/"><i class="linkify big icon"></i>My OpenCitations page</a><div>
+          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/opencitations-doc"><i class="linkify big icon"></i>My OpenCitations page</a><div>
         </td>
         </tr>
       </tbody></table>
