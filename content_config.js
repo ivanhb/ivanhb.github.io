@@ -231,10 +231,12 @@ function populate_bio_section_contacts() {
            obj_elem["a_class"] = "ui circular blue facebook icon button";
            obj_elem["content"] = '<i class="facebook big icon"></i>';
            break;
+         /*
          case 'orcid':
              obj_elem["a_class"] = "ui circular blue orcid icon button";
              obj_elem["content"] = '<i class="ai-orcid big icon"></i>';
              break;
+         */
          case 'git':
            obj_elem["a_class"] = "ui circular blue github icon button";
            obj_elem["content"] = '<i class="github big icon"></i>';
