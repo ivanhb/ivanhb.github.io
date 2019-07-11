@@ -70,30 +70,123 @@ var my_config = {
   'section': [
     {
       'id': 'projects',
-      'title': 'Main projects',
-      'type': 'project',
-      'target': populate_project_section,
-      'items': [
-      ],
+      'source': 'https://ivanhb.github.io/phd/project',
+      'section_title': 'Main Projects',
+      'section_type': 'gen',
+      'section_class': 'project',
+      'normalize': {},
+      //define the DOM layout pattern of each entity
+      'layout':{
+        "title": ['[[name]]'],
+        "subtitle": ['[[subtitle]]'],
+        "content": ['[[description]]'],
+        "extra": ['[[extra]]']
+      }
     },
     {
       'id': 'publications',
-      'title': 'Publications',
-      'type': 'publication',
-      'target': populate_publication_section,
-      'items': [
-      ],
+      'source': 'https://ivanhb.github.io/phd/paper',
+      'section_title': 'Publications',
+      'section_type': 'gen',
+      'section_class': 'publication',
+      'normalize': {
+        'date': normalize_date,
+      },
+      //define the DOM layout pattern of each entity
+      'layout':{
+        "title": ['[[name]]'],
+        "extra": ['[[extra]]']
+      }
     },
     {
       'id': 'activities',
-      'title': 'Activities',
-      'type': 'activity',
-      'target': populate_activity_section,
-      'items': [
-      ]
+      'source': 'https://ivanhb.github.io/data/index/activity.json',
+      'section_title': 'Activities',
+      'section_type': 'gen',
+      'section_class': 'activity',
+      'normalize': {
+        'date': normalize_date_range,
+      },
+      //define the DOM layout pattern of each entity
+      'layout':{
+        "title": [
+          '<div class="section_label">Event: </div>[[name]]'
+        ],
+        "subtitle": [
+          '<div class="section_label">Location: </div>[[location]]',
+          '<div class="section_label">Date: </div>[[date]]',
+          '<div class="section_label">Contribution: </div>[[contribution]]'
+        ],
+        "content": [
+          '<div class="section_label">Description </div>[[description]]'
+        ],
+        "extra": ['[[extra]]']
+      }
     }
   ]
 }
+
+
+function normalize_date_range(date_range){
+  if (date_range == null) {
+    return date_range;
+  }
+  var date_range_parts = date_range.split("-");
+  console.log(date_range_parts);
+  for (var i = 0; i < date_range_parts.length; i++) {
+    date_range_parts[i] = normalize_date(date_range_parts[i]);
+  }
+  var str_splitter = "";
+  var str_date_range = "";
+  if (date_range_parts.length > 0) {
+    str_date_range = date_range_parts[0];
+  }
+  if (date_range_parts.length > 1) {
+    str_date_range = str_date_range + "  to "+ date_range_parts[1];
+  }
+  return str_date_range;
+}
+function normalize_date(d) {
+  // e.g. 02/15/2017
+  const months = {
+    "01": "Jan.",
+    "02": "Feb.",
+    "03": "Mar.",
+    "04": "Apr.",
+    "05": "May.",
+    "06": "Jun.",
+    "07": "Jul.",
+    "08": "Aug.",
+    "09": "Sep.",
+    "10": "Oct.",
+    "11": "Nov.",
+    "12": "Dec."
+  };
+
+  var str_date = "";
+  if (d != "") {
+      var d_parts = d.split("/");
+      if(d_parts.length > 1){
+        d_parts[1] = months[d_parts[1]];
+      }
+      for (var i = d_parts.length - 1; i >= 0; i--) {
+        str_date = " "+d_parts[i] + str_date;
+      }
+  }
+  return str_date;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 function handle_news(data) {
   var md_str = data.data.toString();
