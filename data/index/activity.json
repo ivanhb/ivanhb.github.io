@@ -14,17 +14,6 @@
       "include_in_webpage": 1
     },
     {
-      "name": "",
-      "location": "",
-      "date": "",
-      "contribution": "",
-      "description": "",
-      "extra": [
-      ],
-      "source":, "https://ivanhb.github.io/phd/activities",
-      "include_in_webpage": 0
-    },
-    {
       "name": "WikiCite 2018",
       "location": "Berkeley, California, USA",
       "date": "27/11/2018-29/11/2018",
@@ -61,18 +50,6 @@
       "description": "ISWS is a full immersion, super intensive one-week experience including lectures and keynotes from outstanding speakers, a -learning by doing- teamwork program on open research problems, under the guidance of the best scientists in the field, with whom you will co-author a white paper of high potential impact",
       "extra": [
         {"type":"presentation","label":"The poster","value":"https://ivanhb.github.io/phd/activities/ISWS(summer_schooll)/poster.pdf"}
-      ],
-      "source": "https://ivanhb.github.io/phd/activities",
-      "project": "phd",
-      "include_in_webpage": 1
-    },
-    {
-      "name": "ISSI 2019",
-      "location": "Rome, Italy",
-      "date": "01/09/2019-04/09/2019",
-      "contribution": "",
-      "description": "",
-      "extra": [
       ],
       "source": "https://ivanhb.github.io/phd/activities",
       "project": "phd",

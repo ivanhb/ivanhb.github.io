@@ -54,9 +54,9 @@ function populate_config_file() {
 
 
   if (my_config['section'] != undefined) {
+    pending = my_config['section'].length;
     for (var i = 0; i < my_config['section'].length; i++) {
-        pending += 1;
-        get_entities_and_build_sec(my_config['section'][2]);
+        get_entities_and_build_sec(my_config['section'][i]);
     }
   }
 }
@@ -68,8 +68,9 @@ function get_entities_and_build_sec(sec_obj){
       url: sec_obj["source"],
       dataType: "json",
       success: function(data) {
-        var str_html = build_sec_dom(data["items"]);
-        SECTIONS_DOM[id] = str_html;
+        console.log(data);
+        var str_html = build_sec_dom(sec_obj, data["items"]);
+        SECTIONS_DOM[sec_obj["id"]] = str_html;
         pending -= 1;
         if (pending == 0) {
           console.log(SECTIONS_DOM);
@@ -78,7 +79,7 @@ function get_entities_and_build_sec(sec_obj){
       }
    });
    //returns the HTML string of all the section
-   function build_sec_dom(list_obj){
+   function build_sec_dom(sec_obj, list_obj){
       const sec_order = ["title","subtitle","content","extra"];
 
       var layout = sec_obj["layout"];
