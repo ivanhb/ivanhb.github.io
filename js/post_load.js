@@ -1,6 +1,6 @@
 
 
-var pending = 0;
+
 var ext_calls = {}
 populate_config_file();
 
@@ -15,6 +15,7 @@ if (groups != null) {
   if (groups.length > 2) {res_req = groups[2];}
 }
 
+var pending = 0;
 var PROF_SEC = "";
 var SECTIONS_DOM = {};
 
@@ -62,35 +63,20 @@ function populate_config_file() {
 
 
 function get_entities_and_build_sec(sec_obj){
-
   $.ajax({
       type: "GET",
       url: sec_obj["source"],
       dataType: "json",
       success: function(data) {
-        _rec_call(0,data["dir"],[])
+        var str_html = build_sec_dom(data["items"]);
+        SECTIONS_DOM[id] = str_html;
+        pending -= 1;
+        if (pending == 0) {
+          console.log(SECTIONS_DOM);
+          build_page();
+        }
       }
    });
-
-   function _rec_call(i,arr_dir,list_obj) {
-     if (i >= arr_dir.length) {
-       var str_html = build_sec_dom(list_obj);
-       call_bk_section_ready(sec_obj["id"], str_html);
-     }
-
-     var inner_url = arr_dir[i]+"/index.json";
-     var request = $.ajax({
-         type: "GET",
-         url: inner_url,
-         dataType: "json"
-     });
-     request.done(function(data) {
-          list_obj.push(data);
-          _rec_call(i+1,arr_dir,list_obj);
-     }).always(function() {
-     });
-   }
-
    //returns the HTML string of all the section
    function build_sec_dom(list_obj){
       const sec_order = ["title","subtitle","content","extra"];
@@ -150,15 +136,6 @@ function get_entities_and_build_sec(sec_obj){
    }
 }
 
-
-function call_bk_section_ready(id, str_html) {
-  SECTIONS_DOM[id] = str_html;
-  pending -= 1;
-  if (pending == 0) {
-    console.log(SECTIONS_DOM);
-    build_page();
-  }
-}
 
 
 

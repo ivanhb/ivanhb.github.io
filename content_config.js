@@ -70,7 +70,7 @@ var my_config = {
   'section': [
     {
       'id': 'projects',
-      'source': 'https://ivanhb.github.io/phd/project',
+      'source': 'https://ivanhb.github.io/data/index/project.json',
       'section_title': 'Main Projects',
       'section_type': 'gen',
       'section_class': 'project',
@@ -85,7 +85,7 @@ var my_config = {
     },
     {
       'id': 'publications',
-      'source': 'https://ivanhb.github.io/phd/paper',
+      'source': 'https://ivanhb.github.io/data/index/publication.json',
       'section_title': 'Publications',
       'section_type': 'gen',
       'section_class': 'publication',
