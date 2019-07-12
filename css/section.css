@@ -2,6 +2,35 @@
   --main-theme-color: #7c464a;
 }
 
+#entry{
+  background-color: var(--main-theme-color);
+}
+
+#sections{
+}
+
+#sections .gen-sec{
+  margin-top: 5%;
+}
+
+#sections .gen-sec .sec-header{
+  font-size: 20pt;
+}
+
+#sections .sec-item{
+  margin-top: 1%;
+}
+
+#sections .gen-sec .sec-header{
+  font-size: 20pt;
+}
+
+.section_label{
+  display: inline-block;
+}
+
+
+
 
 .section_item + .section_item{
   margin-top: 5%;

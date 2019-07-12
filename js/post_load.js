@@ -1,13 +1,20 @@
 
 
+var pending = 0;
+var PROF_SEC = "";
+var SECTIONS_DOM = {};
 
-var ext_calls = {}
-populate_config_file();
+//BUILD SECTIONS
+if (my_config['section'] != undefined) {
+  pending = my_config['section'].length;
+  for (var i = 0; i < my_config['section'].length; i++) {
+      get_entities_and_build_sec(my_config['section'][i]);
+  }
+}
 
-var resource_iri = null;
+//Check if I am requesting another resource
 var myRegexp = /index\.html\?(.*)=(.*)/g;
 var groups = myRegexp.exec(String(window.location.href));
-
 var type_req = null;
 var res_req = null;
 if (groups != null) {
@@ -15,63 +22,58 @@ if (groups != null) {
   if (groups.length > 2) {res_req = groups[2];}
 }
 
-var pending = 0;
-var PROF_SEC = "";
-var SECTIONS_DOM = {};
+
 
 function build_page() {
-    $( ".a_list_menu").replaceWith(build_list(my_config['entry_section']['list_menu'],a_class= "item scroll"));
-    $(".img_border").replaceWith(build_border_img(my_config['entry_section']['border_pattern']));
-    $('.an_entry').replaceWith(build_entry(my_config['entry_section']));
-    if ('preview_section' in my_config['entry_section']) {
-        get_preview_data();
-    }
 
-    $('.a_bio_section').replaceWith(build_bio_section(my_config['bio_section']))
+    if (type_req != null) {
+      handle_req(res_req, type_req);
+    }
 
     //Populate the GENRAL SECTION div
     var str_gen_section_str = "";
     for (var sec_id in SECTIONS_DOM) {
         str_gen_section_str = str_gen_section_str + SECTIONS_DOM[sec_id];
     }
-    document.getElementById("gen_section").innerHTML = str_gen_section_str;
-
-
-    if (type_req != null) {
-      handle_req(res_req, type_req);
-    }
+    document.getElementById("sections").innerHTML = str_gen_section_str;
 }
 
-function populate_config_file() {
-
-  if (my_config['bio_section'] != undefined) {
-      var a_target_fun = my_config['bio_section']['target'];
-      if (a_target_fun != undefined) {
-        pending += 1;
-        Reflect.apply(a_target_fun,undefined,[]);
+function handle_req() {
+  //console.log(res_req, type_req);
+  switch (type_req) {
+    case 'workdiary':
+      if (res_req == 'last') {
+        document.getElementById("link_last_workreport").click();
       }
-  }
-
-
-  if (my_config['section'] != undefined) {
-    pending = my_config['section'].length;
-    for (var i = 0; i < my_config['section'].length; i++) {
-        get_entities_and_build_sec(my_config['section'][i]);
-    }
+      break;
+    default:
   }
 }
-
 
 function get_entities_and_build_sec(sec_obj){
   $.ajax({
       type: "GET",
       url: sec_obj["source"],
       dataType: "json",
-      success: function(data) {
-        console.log(data);
-        var str_html = build_sec_dom(sec_obj, data["items"]);
-        SECTIONS_DOM[sec_obj["id"]] = str_html;
+      error: function() {
         pending -= 1;
+      },
+      success: function(data) {
+        pending -= 1;
+        console.log(data);
+
+        var str_html = "";
+        switch (sec_obj["section_type"]) {
+          case "gen-sec":
+            str_html = build_sec_dom(sec_obj, data["items"]);
+            break;
+          case "profile":
+            break;
+        }
+
+        console.log(str_html);
+        SECTIONS_DOM[sec_obj["id"]] = str_html;
+        console.log(pending);
         if (pending == 0) {
           console.log(SECTIONS_DOM);
           build_page();
@@ -91,7 +93,7 @@ function get_entities_and_build_sec(sec_obj){
         var an_entity = list_obj[i];
         var str_all_subsec = "";
 
-        //check all sections and buil the final HTML string
+        //check all sections and build the final HTML string
         for (var j = 0; j < sec_order.length; j++) {
           if(sec_order[j] in layout){
             var str_subsec = "";
@@ -128,7 +130,7 @@ function get_entities_and_build_sec(sec_obj){
           }
         }
         //add the new entity here
-        str_list_items = str_list_items + str_all_subsec;
+        str_list_items = str_list_items + "<div class='sec-item'>"+str_all_subsec+"</div>";
       }
       str_list_items = str_list_items + "</div>";
 
@@ -143,16 +145,6 @@ function get_entities_and_build_sec(sec_obj){
 
 
 
-
-
-
-function call_bk_prof_section(items) {
-      my_config['bio_section'].links = items;
-      pending -= 1;
-      if (pending == 0) {
-        build_page();
-      }
-}
 
 
 
@@ -189,7 +181,7 @@ function get_preview_data(load_prev = null) {
   var prev_conf = my_config['entry_section'].preview_section;
   for (var i = 0; i < prev_conf.length; i++) {
     var prev_i = prev_conf[i];
-    pending += 1;
+    //pending += 1;
 
     if (!(prev_i.id in ext_calls)) {
         ext_calls[prev_i.id] = {'ifrom': 0,'ito': 2};
@@ -368,18 +360,7 @@ function build_bio_section(obj) {
 
 }
 
-function handle_req() {
-  //console.log(res_req, type_req);
-  switch (type_req) {
-    case 'workdiary':
-      if (res_req == 'last') {
-        document.getElementById("link_last_workreport").click();
-      }
-      break;
-    default:
 
-  }
-}
 
 
 function update_page(data) {

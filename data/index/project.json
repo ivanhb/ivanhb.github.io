@@ -1,8 +1,8 @@
 {
   "items": [
     {
-      "title": "MITAO",
-      "subtitle": "A Mashup Interface for Text Analysis Operations",
+      "name": "MITAO",
+      "sub_name": "A Mashup Interface for Text Analysis Operations",
       "description": "A web application tool for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the CATARSI Project. It was developed using DIPAM: A Dashboard Interface for Python-based Applications Mashup. Which has been configured for the application of text analysis methods based on popular python natural language libraries.",
       "date": "04/2019-07/2019",
       "extra": [
@@ -13,8 +13,8 @@
       "include_in_webpage": 1
     },
     {
-      "title": "DIPAM",
-      "subtitle": "A Dashboard Interface for Python-based Applications Mashup",
+      "name": "DIPAM",
+      "sub_name": "A Dashboard Interface for Python-based Applications Mashup",
       "description": "A Web-based application for mashing up Python-based Applications. Created for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the CATARSI Project",
       "date": "04/2019-05/2019",
       "extra": [
@@ -25,8 +25,8 @@
       "include_in_webpage": 1
     },
     {
-      "title": "OSCAR",
-      "subtitle": "The OpenCitations RDF Search Application",
+      "name": "OSCAR",
+      "sub_name": "The OpenCitations RDF Search Application",
       "description": "A user friendly search platform applicable for any triplestore endpoint. This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface. opencitations.net/search",
       "date": "01/2018-11/2018",
       "extra": [
@@ -37,8 +37,8 @@
       "include_in_webpage": 1
     },
     {
-      "title": "LUCINDA",
-      "subtitle": "The OpenCitations RDF Resource Browser",
+      "name": "LUCINDA",
+      "sub_name": "The OpenCitations RDF Resource Browser",
       "description": "Lucinda is a general RDF-resource browser which could be configured to work with any triplestore providing a SPARQL-endpoint address. LUCINDA can also integrate in it OSCAR, The OpenCitations RDF Search Application. In this repository you can find few examples of Lucinda usage. Currently we have tested Lucinda with two different projects: OpenCitations, and Wikidata. For each one of these projects we have its corresponding .html main entry, try the Wikidata example, presented at Wikicite2018, at example/wikidata/browser.html .",
       "date": "01/2018-11/2018",
       "extra": [

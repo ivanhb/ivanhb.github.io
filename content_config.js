@@ -1,84 +1,44 @@
 var my_config = {
 
-  'entry_section' : {
-    'border_pattern': 'img/circle_pattern.png',
-    'add_img': 'img/cat2.png',
-    'main_eng_title': "Ivan Heibi's website",
-    'intro_eng_text' : `
-      <p>This is Ivan Heibi’s website, Ivan is currently a Phd student at the <a href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>, <a href="http://www.ficlit.unibo.it/it">Department of Classical Philology and Italian Studies</a>.
-      Here you can find all you need regarding his past, present, and future works. Below this intro there is a preview of the last Phd weekly report made, and the most recent news regarding his subjects of interest.
-      <p>Scroll this page and look at his main <a href="#projects_list_top">projects</a>,<a href="#activities_list_top">activities</a>, and <a href="#publications_list_top">publications</a> made. In case you want any further information, don’t hesitate to contact him through any of his social media accounts.
-      `,
-    'list_menu' : {
-      'items': {
-        'Page Top':{'href': '#_top', 'default':true},
-        'Short Biography':{'href': '#short_bio_top'},
-        'Main Projects':{'href': '#projects_list_top'},
-        'Publications':{'href': '#publications_list_top'},
-        'Activities':{'href': '#activities_list_top'}
+  'section': [
+    {
+      'id': 'diary',
+      'section_title': "Last work report",
+      'section_type': 'report',
+      'section_class': 'card',
+      'url': 'https://ivanhb.github.io/phd/doc/diary.csv'
+    },
+    {
+      'id': 'news',
+      'section_title': "News",
+      'section_type': 'news',
+      'section_class': 'card',
+      'max': 2,
+      'url': 'https://ivanhb.github.io/phd/doc/news.md'
+    },
+    {
+      'id': 'profile',
+      'source': 'https://ivanhb.github.io/data/index/bio.json',
+      'section_title': 'About me',
+      'section_type': 'profile',
+      'section_class': 'profile',
+      'normalize': {},
+      'layout':{
+        "content": ['[[description]]'],
+        "extra": ['[[extra]]']
       }
     },
-    'preview_section':[
-      {
-        'title': "Last work report",
-        'id': 'diary',
-        'class': 'web_card',
-        //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
-        'url': 'https://ivanhb.github.io/phd/doc/diary.csv',
-        'handle': handle_work_diary
-      },
-      {
-        'title': "News",
-        'id': 'news',
-        'class': 'web_card',
-        'max': 2,
-        //'url': "https://github.com/ivanhb/phd/blob/master/doc/diary.csv",
-        'url': 'https://ivanhb.github.io/phd/doc/news.md',
-        'handle': handle_news
-      }
-    ]
-  },
-
-  'bio_section': {
-    'title': "A  short  Bio",
-    'content': `
-      <p> I'm Ivan, a computer scientist and currently a Ph.D student at the <a class="section_content_link" href="https://www.unibo.it/sitoweb/ivan.heibi2/">University of Bologna</a> mostly dealing with Semantic web technologies in scholarly publishing contexts. I am working at The <a class="section_content_link" href="http://www.ficlit.unibo.it/it">Department of Classic Philology and Italian Studies (FICLIT)</a> and at the <a class="section_content_link" href="https://centri.unibo.it/dharc/en">Digital Humanities Advanced Research Centre (DHARC)</a>.</p>
-      <p>I was born in Israel, my father is arab and my mother is Italian. Luckily, I gained both as mother languages and I like to maintain both the cultures active in my lifestyle. After my high school graduation at the age of 18, I moved to Italy and to the University of Bologna to study computer science, and I have successfully completed my bachelor and master degree.</p>
-      <p>On the last year I worked with David Shotton from the University of Oxford, and Silvio Peroni of the University of Bologna as a research fellow under the <a class="section_content_link" href="http://opencitations.net/">OpenCitations project</a>: a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. My contribution was basically based on studying and developing applications for data visualization and data querying of RDF datasets of scholarly articles/papers. Here you will find a link to my CV in case you want to have more details about me.</p>
-      <table width="100%" class="ui celled table"><tbody>
-        <tr>
-        <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="data/CV-Professional.pdf"><i class="file big icon"></i> Curriculum vitae </a><div>
-        </td>
-        <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="data/CV-Europass.pdf"><i class="file big icon"></i> Curriculum vitae (Europass)</a><div>
-        </td>
-        <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/phd"><i class="linkify big icon"></i>My Ph.D page</a><div>
-        </td>
-        <td>
-          <div class="extra_elem"><a class="git_repo_link" target="_blank" href="https://ivanhb.github.io/opencitations-doc"><i class="linkify big icon"></i>My OpenCitations page</a><div>
-        </td>
-        </tr>
-      </tbody></table>
-    `,
-    'target': populate_bio_section_contacts,
-    'links':[
-    ]
-  },
-
-  'section': [
     {
       'id': 'projects',
       'source': 'https://ivanhb.github.io/data/index/project.json',
       'section_title': 'Main Projects',
-      'section_type': 'gen',
+      'section_type': 'gen-sec',
       'section_class': 'project',
       'normalize': {},
       //define the DOM layout pattern of each entity
       'layout':{
         "title": ['[[name]]'],
-        "subtitle": ['[[subtitle]]'],
+        "subtitle": ['[[sub_name]]'],
         "content": ['[[description]]'],
         "extra": ['[[extra]]']
       }
@@ -87,7 +47,7 @@ var my_config = {
       'id': 'publications',
       'source': 'https://ivanhb.github.io/data/index/publication.json',
       'section_title': 'Publications',
-      'section_type': 'gen',
+      'section_type': 'gen-sec',
       'section_class': 'publication',
       'normalize': {
         'date': normalize_date,
@@ -102,7 +62,7 @@ var my_config = {
       'id': 'activities',
       'source': 'https://ivanhb.github.io/data/index/activity.json',
       'section_title': 'Activities',
-      'section_type': 'gen',
+      'section_type': 'gen-sec',
       'section_class': 'activity',
       'normalize': {
         'date': normalize_date_range,
@@ -132,7 +92,7 @@ function normalize_date_range(date_range){
     return date_range;
   }
   var date_range_parts = date_range.split("-");
-  console.log(date_range_parts);
+  //console.log(date_range_parts);
   for (var i = 0; i < date_range_parts.length; i++) {
     date_range_parts[i] = normalize_date(date_range_parts[i]);
   }
