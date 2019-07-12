@@ -15,26 +15,25 @@ function build_page() {
     document.getElementById("sections").innerHTML = str_gen_section_str;
 }
 
-function handle_req(type_req, res_req) {
+function handle_req(type_req, res_req, request_obj) {
+  if (request_obj != undefined) {
+    if (type_req in request_obj) {
+      var link = request_obj[type_req]["link"];
 
-  if ('request' in sec_obj) {
-    if (type_req in sec_obj['request']) {
-      var link = sec_obj['request'][type_req];
-      var q_index = sec_obj['request'][type_req]["query"].indexOf(res_req);
-      if (q_index != -1) {
-        var fun_to_call = sec_obj['request'][type_req]["query"][q_index];
+      if (res_req in request_obj[type_req]["query"]) {
+        var fun_to_call = request_obj[type_req]["query"][res_req];
         $.ajax({
             type: "GET",
             url: link,
             dataType: "json",
             success: function(data) {
+              console.log(data);
               var redirect_href = Reflect.apply(fun_to_call,undefined,[data]);
               if (redirect_href != -1) {
                 window.location.replace(redirect_href);
               }
             }
          });
-
       }
     }
   }

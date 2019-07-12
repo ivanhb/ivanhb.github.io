@@ -18,5 +18,5 @@ if (groups != null) {
 }
 
 if (type_req != null) {
-  handle_req(res_req, type_req);
+  handle_req(type_req, res_req, my_config['request']);
 }
