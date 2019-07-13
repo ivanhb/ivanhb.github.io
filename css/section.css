@@ -1,5 +1,5 @@
 :root {
-  --main-theme-color: #7c464a;
+  --main-theme-color: #081526;
   --link-color: #68cae8;
 }
 a{
@@ -42,6 +42,9 @@ a{
 }
 
 
+.slider-filter + .slider-filter{
+  margin-top: 35px;
+}
 
 .rs-container{
   width: 100%;

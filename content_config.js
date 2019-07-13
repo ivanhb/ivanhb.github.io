@@ -86,7 +86,9 @@ var my_config = {
       }
   ],
   'add_filter': true,
-  'section_filter': {'date': {'label':"Date", "range":true}},
+  'section_filter': {
+    'date': {'label':"Date", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
+  },
   'request': {
     'workdiary':{
       'link': "https://ivanhb.github.io/data/index/diary.json",
@@ -146,6 +148,21 @@ function normalize_date(d) {
   }
   return str_date;
 }
+//*must return an array of values*//
+function normalize_filter_date(val){
+  //05/07/2018
+  var res = [];
+  var parts = val.split("-");
+  for (var i = 0; i < parts.length; i++) {
+    res.push(_get_year(parts[i]));
+  }
+  return res;
+  function _get_year(val_date) {
+    var parts = val.split("/");
+    return parts[parts.length-1];
+  }
+}
+
 
 function last_diary(diary_obj) {
   var items = diary_obj["items"];
