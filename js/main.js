@@ -7,6 +7,9 @@ if (my_config['section'] != undefined) {
   }
 }
 
+
+
+
 //Check if I am requesting another resource
 var myRegexp = /index\.html\?(.*)=(.*)/g;
 var groups = myRegexp.exec(String(window.location.href));

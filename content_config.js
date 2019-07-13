@@ -1,5 +1,5 @@
 var my_config = {
-  'section': [
+  'dynamic_section':[
     {
       'id': 'diary',
       'section_title': "Last work report",
@@ -14,75 +14,79 @@ var my_config = {
       'section_class': 'card',
       'max': 2,
       'url': 'https://ivanhb.github.io/phd/doc/news.md'
-    },
-    {
-      'id': 'profile',
-      'source': 'https://ivanhb.github.io/data/index/bio.json',
-      'section_title': 'About me',
-      'section_type': 'profile',
-      'section_class': 'profile',
-      'normalize': {},
-      'layout':{
-        "content": ['[[description]]'],
-        "extra": ['[[extra]]']
-      }
-    },
-    {
-      'id': 'projects',
-      'source': 'https://ivanhb.github.io/data/index/project.json',
-      'section_title': 'Main Projects',
-      'section_type': 'gen-sec',
-      'section_class': 'project',
-      'normalize': {},
-      //define the DOM layout pattern of each entity
-      'layout':{
-        "title": ['[[name]]'],
-        "subtitle": ['[[sub_name]]'],
-        "content": ['[[description]]'],
-        "extra": ['[[extra]]']
-      }
-    },
-    {
-      'id': 'publications',
-      'source': 'https://ivanhb.github.io/data/index/publication.json',
-      'section_title': 'Publications',
-      'section_type': 'gen-sec',
-      'section_class': 'publication',
-      'normalize': {
-        'date': normalize_date,
-      },
-      //define the DOM layout pattern of each entity
-      'layout':{
-        "title": ['[[reference]]'],
-        "subtitle": ['<a href="[[link]]">Go to publication resource</a>']
-      }
-    },
-    {
-      'id': 'activities',
-      'source': 'https://ivanhb.github.io/data/index/activity.json',
-      'section_title': 'Activities',
-      'section_type': 'gen-sec',
-      'section_class': 'activity',
-      'normalize': {
-        'date': normalize_date_range,
-      },
-      //define the DOM layout pattern of each entity
-      'layout':{
-        "title": [
-          '<div class="section_label">Event: </div>[[name]]'
-        ],
-        "subtitle": [
-          '<div class="section_label">Location: </div>[[location]]',
-          '<div class="section_label">Date: </div>[[date]]',
-          '<div class="section_label">Contribution: </div>[[contribution]]'
-        ],
-        "content": [
-          '<div class="section_label">Description </div>[[description]]'
-        ],
-        "extra": ['[[extra]]']
-      }
     }
   ],
+  'section':[
+      {
+        'id': 'profile',
+        'source': 'https://ivanhb.github.io/data/index/bio.json',
+        'section_title': 'About me',
+        'section_type': 'profile',
+        'section_class': 'profile',
+        'normalize': {},
+        'layout':{
+          "content": ['[[description]]'],
+          "extra": ['[[extra]]']
+        }
+      },
+      {
+        'id': 'projects',
+        'source': 'https://ivanhb.github.io/data/index/project.json',
+        'section_title': 'Main Projects',
+        'section_type': 'gen-sec',
+        'section_class': 'project',
+        'normalize': {},
+        //define the DOM layout pattern of each entity
+        'layout':{
+          "title": ['[[name]]'],
+          "subtitle": ['[[sub_name]]'],
+          "content": ['[[description]]'],
+          "extra": ['[[extra]]']
+        }
+      },
+      {
+        'id': 'publications',
+        'source': 'https://ivanhb.github.io/data/index/publication.json',
+        'section_title': 'Publications',
+        'section_type': 'gen-sec',
+        'section_class': 'publication',
+        'normalize': {
+          'date': normalize_date,
+        },
+        //define the DOM layout pattern of each entity
+        'layout':{
+          "title": ['[[reference]]'],
+          "subtitle": ['<a href="[[link]]">Go to publication resource</a>']
+        }
+      },
+      {
+        'id': 'activities',
+        'source': 'https://ivanhb.github.io/data/index/activity.json',
+        'section_title': 'Activities',
+        'section_type': 'gen-sec',
+        'section_class': 'activity',
+        'normalize': {
+          'date': normalize_date_range,
+        },
+        //define the DOM layout pattern of each entity
+        'layout':{
+          "title": [
+            '<div class="section_label">Event: </div>[[name]]'
+          ],
+          "subtitle": [
+            '<div class="section_label">Location: </div>[[location]]',
+            '<div class="section_label">Date: </div>[[date]]',
+            '<div class="section_label">Contribution: </div>[[contribution]]'
+          ],
+          "content": [
+            '<div class="section_label">Description </div>[[description]]'
+          ],
+          "extra": ['[[extra]]']
+        }
+      }
+  ],
+  'add_filter': true,
+  'section_filter': {'date': {'label':"Date", "range":true}},
   'request': {
     'workdiary':{
       'link': "https://ivanhb.github.io/data/index/diary.json",

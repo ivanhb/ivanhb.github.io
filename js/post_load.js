@@ -1,19 +1,10 @@
 
-
 var pending = 0;
 var PROF_SEC = "";
 var SECTIONS_DOM = {};
-
-
-function build_page() {
-
-    //Populate the GENRAL SECTION div
-    var str_gen_section_str = "";
-    for (var sec_id in SECTIONS_DOM) {
-        str_gen_section_str = str_gen_section_str + SECTIONS_DOM[sec_id];
-    }
-    document.getElementById("sections").innerHTML = str_gen_section_str;
-}
+var SECTIONS_OBJ = {};
+var SLIDERS = {};
+var SECTIONS_ITEMS_SUITABLE = {}
 
 function handle_req(type_req, res_req, request_obj) {
   if (request_obj != undefined) {
@@ -38,7 +29,6 @@ function handle_req(type_req, res_req, request_obj) {
     }
   }
 }
-
 function get_entities_and_build_sec(sec_obj){
   $.ajax({
       type: "GET",
@@ -49,7 +39,7 @@ function get_entities_and_build_sec(sec_obj){
       },
       success: function(data) {
         pending -= 1;
-        console.log(data);
+        SECTIONS_OBJ[sec_obj["id"]] = data["items"];
 
         var str_html = "";
         switch (sec_obj["section_type"]) {
@@ -59,12 +49,8 @@ function get_entities_and_build_sec(sec_obj){
           case "profile":
             break;
         }
-
-        console.log(str_html);
         SECTIONS_DOM[sec_obj["id"]] = str_html;
-        console.log(pending);
         if (pending == 0) {
-          console.log(SECTIONS_DOM);
           build_page();
         }
       }
@@ -150,118 +136,101 @@ function get_entities_and_build_sec(sec_obj){
       }
    }
 }
-
-
-//utility
-function build_extra_arr_obj(a_text) {
-
-  var arr_ext = a_text.split(']],[[')
-  var extra_obj_arr = []
-
-  for (var i = 0; i < arr_ext.length; i++) {
-    var ex_i = arr_ext[i];
-    ex_i = ex_i.replace('[[','');
-    ex_i = ex_i.replace(']]','');
-    ex_i = ex_i.replace('"','');
-    ex_parts_i = ex_i.split(',');
-
-    var type = ex_parts_i[0];
-    var type_parts = type.split('_');
-    var content = ex_parts_i[1];
-    var link = ex_parts_i[2];
-
-    var str_pre = "";
-    //<a class="git_repo_link" target="_blank"  href="https://github.com/opencitations/oscar"><i class="github alternate big icon"></i>
-    if (type_parts[0]=='link') {
-      switch (type_parts[1]) {
-        case 'img':
-          switch (type_parts[2]) {
-            case 'link':
-              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="linkify big icon"></i>'+content+'</a>'
-              break;
-            case 'star':
-              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="star big icon"></i>'+content+'</a>'
-              break;
-            case 'eye':
-              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="eye big icon"></i>'+content+'</a>'
-              break;
-            case 'git':
-              str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'"><i class="github alternate big icon"></i>'+content+'</a>'
-              break;
-            default:
-          }
-          break;
-        case 'text':
-          str_pre = '<a class="git_repo_link" target="_blank"  href="'+link+'">'+content+'</a>'
-          break;
-        default:
-
-      }
+function build_page() {
+    //Populate the GENRAL SECTION div
+    var str_gen_section_str = "";
+    for (var sec_id in SECTIONS_DOM) {
+        str_gen_section_str = str_gen_section_str + SECTIONS_DOM[sec_id];
     }
+    document.getElementById("sections").innerHTML = str_gen_section_str;
+
+    //BUILD Dynamic sections
 
 
-    var ext_obj = {}
-    ext_obj['value'] = str_pre;
-    ext_obj['class'] = 'extra_elem';
-    //build value
+    /*BUILD slider filters*/
+    var add_filter = null;
+    if ("add_filter" in my_config) {
+      add_filter = my_config["add_filter"]
+    }
+    if (add_filter) {
+      /*First the sections filter*/
+      var str_slider_section = "";
+      if (Object.keys(SECTIONS_OBJ).length > 1) {
+        str_slider_section = str_slider_section + '<div class="slider-filter"><div class="input-label">Section</div><div class="input-slider"><input type="text" id="slider_section" class="slider"></div></div>';
+      }
+      document.getElementById("sliders").innerHTML = str_slider_section;
 
-    extra_obj_arr.push(ext_obj);
+      var sec_ids = get_arr_val_from_arr_obj(my_config["section"],"id");
+      var sec_lbls = get_arr_val_from_arr_obj(my_config["section"],"section_title");
+      var values_map = {};
+      for (var i = 0; i < sec_lbls.length; i++) {
+        values_map[sec_lbls[i]] = sec_ids[i];
+      }
+      values_map["All"] = sec_ids;
+
+      SLIDERS["slider_section"] = {
+                "slider_obj": new rSlider({
+                        target: '#slider_section',
+                        values: ["All"].concat(sec_lbls),
+                        range: false,
+                        set:    null, // an array of preselected values
+                        width:    null,
+                        scale:    true,
+                        labels:   true,
+                        tooltip:  true,
+                        step:     null, // step size
+                        disabled: false, // is disabled?
+                        onChange: function change_slider_section() {
+                        } // callback
+                      }),
+                "values_map": values_map,
+      }
+      build_att_filters();
+    }
+}
+
+function build_att_filters() {
+  //*Now check all the other filters*//
+  if ('section_filter' in my_config) {
+    for (var k_att in my_config['section_filter']) {
+      var selected_lbl = SLIDERS["slider_section"]["slider_obj"].getValue();
+      var sec_ids_selected = SLIDERS["slider_section"]["values_map"][selected_lbl];
+
+      SECTIONS_ITEMS_SUITABLE = {};
+      for (var i = 0; i < sec_ids_selected.length; i++) {
+        SECTIONS_ITEMS_SUITABLE[sec_ids_selected[i]] = [];
+        for (var j = 0; j < SECTIONS_OBJ[sec_ids_selected[i]].length; j++) {
+          var sec_item = SECTIONS_OBJ[sec_ids_selected[i]][j];
+          if (k_att in sec_item) {
+            SECTIONS_ITEMS_SUITABLE[sec_ids_selected[i]].push(sec_item);
+          }
+        }
+      }
+
+      console.log(SECTIONS_ITEMS_SUITABLE);
+    }
   }
-  var final_res = [];
-  final_res.push(extra_obj_arr);
-  return final_res;
 }
 
 
-
-
-function get_preview_data(load_prev = null) {
-  var prev_conf = my_config['entry_section'].preview_section;
-  for (var i = 0; i < prev_conf.length; i++) {
-    var prev_i = prev_conf[i];
-    //pending += 1;
-
-    if (!(prev_i.id in ext_calls)) {
-        ext_calls[prev_i.id] = {'ifrom': 0,'ito': 2};
-        if ('max' in prev_i) {
-          ext_calls[prev_i.id] = {'ifrom': 0,'ito': prev_i.max};
-        }
-    }else {
-      var toadd = ext_calls[prev_i.id].ito - ext_calls[prev_i.id].ifrom;
-      if (load_prev) {
-        ext_calls[prev_i.id].ifrom += toadd;
-        ext_calls[prev_i.id].ito += toadd;
-      }else {
-        ext_calls[prev_i.id].ifrom -= toadd;
-        ext_calls[prev_i.id].ito -= toadd;
+/*UTIL*/
+function get_arr_val_from_list_obj(obj, val) {
+  var arr_res = [];
+  for (var k in obj) {
+    for (var att in obj[k]) {
+      if (att == val) {
+        arr_res.push(obj[k][att]);
       }
     }
-
-    httpGetAsync(prev_i.url, prev_i.id, prev_i.handle, call_param = {'id':prev_i.id,'ifrom':ext_calls[prev_i.id].ifrom,'ito':ext_calls[prev_i.id].ito});
   }
-
-  function httpGetAsync(theUrl, key, callback, call_param = null){
-  		var xhr = new XMLHttpRequest();
-  		xhr.open('GET', theUrl);
-  		xhr.onload = function() {
-  		    if (xhr.status === 200) {
-  						var result = {};
-  						result['call_url'] = theUrl;
-  						result['key'] = key;
-  						result['call_param'] = call_param;
-              result['data'] = xhr.responseText
-  						Reflect.apply(callback,undefined,[result]);
-  		    }
-  		    else {
-  						var result = {};
-  						result['call_url'] = theUrl;
-  						result['key'] = key;
-  						result['call_param'] = call_param;
-  					  result['data'] = null;
-  						//call the handle function
-  						Reflect.apply(callback,undefined,[result]);
-  		    }
-  		};
-  		xhr.send();
-  	}
+  return arr_res;
+}
+function get_arr_val_from_arr_obj(arr_obj, val) {
+  var arr_res = [];
+  for (var i = 0; i < arr_obj.length; i++) {
+    if (val in arr_obj[i]) {
+      arr_res.push(arr_obj[i][val]);
+    }
+  }
+  return arr_res;
 }

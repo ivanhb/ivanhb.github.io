@@ -1,10 +1,75 @@
 :root {
   --main-theme-color: #7c464a;
+  --link-color: #68cae8;
+}
+a{
+  color: var(--link-color);
 }
 
 #entry{
   background-color: var(--main-theme-color);
 }
+#entry .entry-header{
+  margin-top:5%;
+  padding-left: 10%;
+  width: 60%;
+  color: white;
+  font-size: 23pt;
+}
+#entry .entry-body{
+  margin-top:2%;
+  padding-left: 10%;
+  width: 60%;
+  color: white;
+  font-size: 13pt;
+}
+#entry .entry-footer{
+  margin-top:5%;
+  padding-left: 5%;
+  color: white;
+}
+#entry .entry-footer #sliders .slider-filter div{
+  display:inline-block;
+}
+#entry .entry-footer #sliders .slider-filter .input-slider{
+ margin-left: 7%;
+ width: 50%;
+}
+#entry .entry-footer #sliders .slider-filter .input-label{
+ font-size: 17pt;
+ width: 1%;
+ display: none;
+}
+
+
+
+.rs-container{
+  width: 100%;
+}
+.rs-tooltip{
+  border: none;
+  font-size: 15pt;
+  color: var(--link-color);
+  background-color: var(--main-theme-color);
+  width: 250px;
+}
+.rs-container .rs-bg,.rs-container .rs-selecte{
+  background-color:white;
+}
+.rs-container .rs-selected{
+  background-color:white;
+  border: none;
+}
+.rs-container .rs-pointer{
+  background-color:var(--link-color);
+  border:none;
+}
+.rs-container .rs-scale span ins{
+  color: white;
+  font-size: 10pt;
+  opacity: 0.4;
+}
+
 
 #sections{
   padding-left: 5%;
