@@ -3,6 +3,8 @@ var pending = 0;
 var PROF_SEC = "";
 var SECTIONS_DOM = {};
 var SECTIONS_OBJ = {};
+var SECTION_PROFILE = {};
+var SECTIONS_PROFILE_DOM = {};
 var SLIDERS = {};
 var SUITABLE_SECTIONS = {}
 
@@ -31,6 +33,7 @@ function handle_req(type_req, res_req, request_obj) {
 }
 
 function get_entities_and_build_sec(sec_obj){
+  var sec_type = sec_obj["section_type"];
   $.ajax({
       type: "GET",
       url: sec_obj["source"],
@@ -40,18 +43,23 @@ function get_entities_and_build_sec(sec_obj){
       },
       success: function(data) {
         pending -= 1;
-        SECTIONS_OBJ[sec_obj["id"]] = data["items"];
-
-        var str_html = "";
-        switch (sec_obj["section_type"]) {
-          case "gen-sec":
-            str_html = build_sec_dom(sec_obj, data["items"]);
-            break;
-          case "profile":
-            break;
+        if (sec_type == "profile") {
+          SECTION_PROFILE[sec_obj["id"]] = data["items"];
+        }else {
+          SECTIONS_OBJ[sec_obj["id"]] = data["items"];
         }
-        SECTIONS_DOM[sec_obj["id"]] = str_html;
+        //BUILD THE DOM FOR THE SECTION///
+        var str_html = build_sec_dom(sec_obj, data["items"]);
+
+        if (sec_type != "profile") {
+          SECTIONS_PROFILE_DOM[sec_obj["id"]] = str_html;
+        }else {
+          SECTIONS_DOM[sec_obj["id"]] = str_html;
+        }
+
         if (pending == 0) {
+          console.log(SECTIONS_DOM);
+          console.log(SECTIONS_PROFILE_DOM);
           build_page();
         }
       }
@@ -60,11 +68,45 @@ function get_entities_and_build_sec(sec_obj){
 
 //returns the HTML string of all the section
 function build_sec_dom(sec_obj, list_obj){
-   const sec_order = ["title","subtitle","content","extra"];
-
+   var sec_order = null;
    var layout = sec_obj["layout"];
-   var str_list_items = "<div class='"+sec_obj["section_type"]+" "+sec_obj["section_class"]+"'>";
+   if (sec_obj["section_type"] == "profile") {
+     var an_entity = list_obj[0];
+     document.getElementById("aboutme_section_header").innerHTML = sec_obj["section_title"];
 
+
+     var str_all_subsec = "";
+     if ("image" in an_entity) {
+       image_dom = '<img id="profile_img" class="ui circular image img-thumbnail bordered" src="'+an_entity["image"]+'">';
+       str_all_subsec = str_all_subsec + image_dom;
+     }
+     sec_order = ["title","subtitle","content"];
+     for (var j = 0; j < sec_order.length; j++) {
+       if(sec_order[j] in layout){
+         var str_subsec = "";
+         for (var k = 0; k < layout[sec_order[j]].length; k++) {
+               var normalized_subsec = layout[sec_order[j]][k];
+               var att = get_atts_regex(normalized_subsec, an_entity);
+               for (var a_k in att) {
+                 var replaced_val = att[a_k];
+                 if (replaced_val == null) {replaced_val = "";}
+                 if (a_k in sec_obj["normalize"]) {
+                   replaced_val = Reflect.apply(sec_obj["normalize"][a_k],undefined,[replaced_val]);
+                 }
+                 normalized_subsec = normalized_subsec.replace("[["+a_k+"]]", replaced_val);
+               }
+               str_subsec = str_subsec + "<div id="+k+">"+normalized_subsec+"</div>";
+          }
+          str_all_subsec = str_all_subsec + "<div class="+sec_order[j]+">"+str_subsec+"</div>";
+          document.getElementById("aboutme_section_"+sec_order[j]).innerHTML = str_all_subsec;
+       }
+     }
+     return document.getElementById("aboutme_section").innerHTML;
+     //var att = get_atts_regex(normalized_subsec, an_entity);
+   }
+
+   sec_order = ["title","subtitle","content","extra"];
+   var str_list_items = "<div class='"+sec_obj["section_type"]+" "+sec_obj["section_class"]+"'>";
    str_list_items = str_list_items + "<div class='sec-header'>"+sec_obj["section_title"]+"</div>";
    str_list_items = str_list_items + "<div class='sec-body'>";
    for (var i = 0; i < list_obj.length; i++) {
@@ -79,12 +121,7 @@ function build_sec_dom(sec_obj, list_obj){
            var normalized_subsec = layout[sec_order[j]][k];
 
            //get the list of attributes
-           var att = {};
-           var re_patt = /\[\[(\w*)\]\]/g;
-           var match;
-           while((match = re_patt.exec(normalized_subsec)) !== null) {
-               att[match[1]] = an_entity[match[1]];
-           }
+           var att = get_atts_regex(normalized_subsec, an_entity);
 
            if(sec_order[j] != "extra"){
              //replace the values in normalized string
@@ -137,6 +174,16 @@ function build_sec_dom(sec_obj, list_obj){
          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="star big icon"></i>'+extra_item["label"]+'</a>';
      }
    }
+}
+
+function get_atts_regex(normalized_subsec, an_entity) {
+  var att = {};
+  var re_patt = /\[\[(\w*)\]\]/g;
+  var match;
+  while((match = re_patt.exec(normalized_subsec)) !== null) {
+      att[match[1]] = an_entity[match[1]];
+  }
+  return att;
 }
 
 function build_page() {
@@ -211,7 +258,7 @@ function build_page() {
       }
 
       //Now populate the att sliders
-      build_att_filters();
+      //build_att_filters();
     }
 }
 
@@ -265,12 +312,11 @@ function build_att_filters() {
             var corresponding_value = SLIDERS["slider_"+k_att]["values_map"][selected_lbl];
             var suitable_res = gen_suitable_items(k_att, sec_ids_selected, normalize_fun, normalize_lbl_fun, respects = corresponding_value);
 
-            console.log(SUITABLE_SECTIONS);
+            //console.log(SUITABLE_SECTIONS);
             str_html = "";
             for (var sec_id in SUITABLE_SECTIONS) {
               var arr_ids = get_arr_val_from_arr_obj(my_config["section"], "id");
               var sec_obj = my_config["section"][arr_ids.indexOf(sec_id)];
-              console.log(sec_obj);
               str_html = str_html + build_sec_dom(sec_obj, SUITABLE_SECTIONS[sec_id]);
             }
             document.getElementById("sections").innerHTML = str_html;

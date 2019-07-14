@@ -16,19 +16,18 @@ var my_config = {
       'url': 'https://ivanhb.github.io/phd/doc/news.md'
     }
   ],
+  'profile_section': {
+    'id': 'profile',
+    'source': 'https://ivanhb.github.io/data/index/bio.json',
+    'section_title': 'About me',
+    'section_type': 'profile',
+    'section_class': 'profile',
+    'normalize': {},
+    'layout':{
+      "content": ['[[description]]']
+    }
+  },
   'section':[
-      {
-        'id': 'profile',
-        'source': 'https://ivanhb.github.io/data/index/bio.json',
-        'section_title': 'About me',
-        'section_type': 'profile',
-        'section_class': 'profile',
-        'normalize': {},
-        'layout':{
-          "content": ['[[description]]'],
-          "extra": ['[[extra]]']
-        }
-      },
       {
         'id': 'projects',
         'source': 'https://ivanhb.github.io/data/index/project.json',

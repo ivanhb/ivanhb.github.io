@@ -1,14 +1,19 @@
 
-//BUILD SECTIONS
+var sections_to_call = [];
+
+//Number of all sections
+if (my_config['profile_section'] != undefined) {
+  sections_to_call.push(my_config['profile_section']);
+}
 if (my_config['section'] != undefined) {
-  pending = my_config['section'].length;
-  for (var i = 0; i < my_config['section'].length; i++) {
-      get_entities_and_build_sec(my_config['section'][i]);
-  }
+  sections_to_call = sections_to_call.concat(my_config['section']);
 }
 
-
-
+//BUILD SECTIONS
+pending = sections_to_call.length;
+for (var i = 0; i < sections_to_call.length; i++) {
+    get_entities_and_build_sec(sections_to_call[i]);
+}
 
 //Check if I am requesting another resource
 var myRegexp = /index\.html\?(.*)=(.*)/g;

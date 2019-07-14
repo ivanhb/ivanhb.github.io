@@ -1,5 +1,5 @@
 :root {
-  --main-theme-color: #081526;
+  --main-theme-color: #222f33;
   --link-color: #68cae8;
 }
 body{
@@ -12,6 +12,7 @@ a{
 
 #entry{
   background-color: var(--main-theme-color);
+  margin-bottom: 0.5%;
 }
 #entry .entry-header{
   margin-top:2%;
@@ -27,27 +28,64 @@ a{
   color: white;
   font-size: 13pt;
 }
-#entry .entry-footer{
-  margin-top:5%;
-  padding-left: 5%;
+
+#aboutme_section{
+  background-color: var(--main-theme-color);
+}
+#aboutme_section_header{
+  color: var(--main-theme-color);
+  float: right;
+  margin-right: 10%;
+  margin-top: -50px;
+  font-size: 28pt;
+  background-color: white;
+  min-width: 300px;
+  height: 60px;
+  text-align: center;
+  border-radius: 15px 15px 15px 15px;
+}
+#aboutme_section_content{
+  padding-left: 10%;
+  padding-top: 4%;
+  color: white;
+  width: 90%;
+  font-size: 110%;
+}
+#aboutme_section_content #profile_img{
+  width: 280px;
+  float: right;
+  border: 3px solid;
+}
+
+#aboutme_section .footer{
+  margin-top: 15px;
   color: white;
 }
-#entry .entry-footer #sliders .slider-filter div{
+#aboutme_section .footer #pre_sliders{
+  border: solid;
+  min-width: 350px;
+  min-height: 150px;
+  max-width: 250px;
+  margin-left: 10%;
+  display: inline-block;
+}
+#aboutme_section .footer #sliders{
+  display: inline-block;
+  margin-left: 100px;
+}
+#aboutme_section .footer #sliders .slider-filter div{
   display:inline-block;
 }
-#entry .entry-footer #sliders .slider-filter .input-slider{
- margin-left: 7%;
- width: 50%;
+#aboutme_section .footer #sliders .slider-filter .input-slider{
+ width: 300px;
 }
-#entry .entry-footer #sliders .slider-filter .input-label{
+#aboutme_section .footer #sliders .slider-filter .input-label{
  font-size: 17pt;
  width: 1%;
  display: none;
 }
-
-
 .slider-filter + .slider-filter{
-  margin-top: 35px;
+  margin-top: 15px;
 }
 
 .rs-container{
@@ -57,8 +95,8 @@ a{
   border: none;
   font-size: 15pt;
   color: var(--link-color);
+  min-width: 150px;
   background-color: var(--main-theme-color);
-  width: 250px;
 }
 .rs-container .rs-bg,.rs-container .rs-selecte{
   background-color:white;
@@ -75,6 +113,7 @@ a{
   color: white;
   font-size: 10pt;
   opacity: 0.4;
+  display: none;
 }
 
 
@@ -372,6 +411,4 @@ a.section_content_link{
   .section_item + .section_item{
     margin-top: 5%;
   }
-
-
 }
