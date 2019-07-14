@@ -4,7 +4,7 @@ var PROF_SEC = "";
 var SECTIONS_DOM = {};
 var SECTIONS_OBJ = {};
 var SLIDERS = {};
-var SECTIONS_ITEMS_SUITABLE = {}
+var SUITABLE_SECTIONS = {}
 
 function handle_req(type_req, res_req, request_obj) {
   if (request_obj != undefined) {
@@ -203,15 +203,7 @@ function build_page() {
                             target: '#slider_'+k_att,
                             values: [""],
                             range: false,
-                            set:    null, // an array of preselected values
-                            width:    null,
-                            scale:    true,
-                            labels:   true,
-                            tooltip:  true,
-                            step:     null, // step size
-                            disabled: true, // is disabled?
-                            onChange: function change_slider_section() {
-                            } // callback
+                            disabled: true
                           }),
                     "values_map": [],
           }
@@ -233,31 +225,14 @@ function build_att_filters() {
       var selected_lbl = SLIDERS["slider_section"]["slider_obj"].getValue();
       var sec_ids_selected = SLIDERS["slider_section"]["values_map"][selected_lbl];
 
-      SECTIONS_ITEMS_SUITABLE = {};
-      var index_elems_value_maps = {};
-      var index_elems = [];
-      for (var i = 0; i < sec_ids_selected.length; i++) {
-        SECTIONS_ITEMS_SUITABLE[sec_ids_selected[i]] = [];
-        for (var j = 0; j < SECTIONS_OBJ[sec_ids_selected[i]].length; j++) {
-          var sec_item = SECTIONS_OBJ[sec_ids_selected[i]][j];
-          if (k_att in sec_item) {
+      var suitable_res = gen_suitable_items(k_att, sec_ids_selected, normalize_fun, normalize_lbl_fun);
+      var index_elems_value_maps = suitable_res[0];
+      var index_elems = suitable_res[1];
 
-            SECTIONS_ITEMS_SUITABLE[sec_ids_selected[i]].push(sec_item);
-
-            //make the function to normalize
-            var res_arr = Reflect.apply(normalize_fun,undefined,[sec_item[k_att]]);
-            var res_arr_lbl = Reflect.apply(normalize_lbl_fun,undefined,[sec_item[k_att]]);
-            for (var res_i = 0; res_i < res_arr.length; res_i++) {
-              if (index_elems.indexOf(res_arr_lbl[res_i]) == -1) {
-                index_elems.push(res_arr_lbl[res_i]);
-                index_elems_value_maps[res_arr[res_i]] = res_arr_lbl[res_i];
-              }
-            }
-          }
-        }
-      }
-      index_elems_value_maps['all'] = index_elems;
+      index_elems_value_maps['All'] = index_elems;
       index_elems = ["All"].concat(index_elems);
+
+      SLIDERS["slider_"+k_att]["values_map"] = index_elems_value_maps;
 
       var rslider_obj = {};
       if (index_elems.length == 1) {
@@ -288,7 +263,17 @@ function build_att_filters() {
           onChange: function change_slider_section() {
             var selected_lbl = SLIDERS["slider_"+k_att]["slider_obj"].getValue();
             var corresponding_value = SLIDERS["slider_"+k_att]["values_map"][selected_lbl];
-            build_filtered_section(sec_ids_selected, corresponding_value);
+            var suitable_res = gen_suitable_items(k_att, sec_ids_selected, normalize_fun, normalize_lbl_fun, respects = corresponding_value);
+
+            console.log(SUITABLE_SECTIONS);
+            str_html = "";
+            for (var sec_id in SUITABLE_SECTIONS) {
+              var arr_ids = get_arr_val_from_arr_obj(my_config["section"], "id");
+              var sec_obj = my_config["section"][arr_ids.indexOf(sec_id)];
+              console.log(sec_obj);
+              str_html = str_html + build_sec_dom(sec_obj, SUITABLE_SECTIONS[sec_id]);
+            }
+            document.getElementById("sections").innerHTML = str_html;
           }
         };
       }
@@ -299,8 +284,37 @@ function build_att_filters() {
   }
 }
 
-function build_filtered_section(sec_ids_selected, corresponding_value){
-  //get subset of items
+function gen_suitable_items(k_att, sec_ids_selected, normalize_fun, normalize_lbl_fun, respects = null) {
+  SUITABLE_SECTIONS = {};
+  var index_elems_value_maps = {};
+  var index_elems = [];
+  for (var i = 0; i < sec_ids_selected.length; i++) {
+    SUITABLE_SECTIONS[sec_ids_selected[i]] = [];
+    for (var j = 0; j < SECTIONS_OBJ[sec_ids_selected[i]].length; j++) {
+      var sec_item = SECTIONS_OBJ[sec_ids_selected[i]][j];
+      if (k_att in sec_item) {
+
+        SUITABLE_SECTIONS[sec_ids_selected[i]].push(sec_item);
+
+        //make the function to normalize
+        var res_arr = Reflect.apply(normalize_fun,undefined,[sec_item[k_att]]);
+        var res_arr_lbl = Reflect.apply(normalize_lbl_fun,undefined,[sec_item[k_att]]);
+        for (var res_i = 0; res_i < res_arr.length; res_i++) {
+          if (index_elems.indexOf(res_arr_lbl[res_i]) == -1) {
+            if (respects != null) {
+              if (intersect(res_arr,respects).length == 0) {
+                SUITABLE_SECTIONS[sec_ids_selected[i]].pop();
+                continue;
+              }
+            }
+            index_elems.push(res_arr_lbl[res_i]);
+            index_elems_value_maps[res_arr[res_i]] = [res_arr_lbl[res_i]];
+          }
+        }
+      }
+    }
+  }
+  return [index_elems_value_maps, index_elems];
 }
 
 
@@ -324,6 +338,13 @@ function get_arr_val_from_arr_obj(arr_obj, val) {
     }
   }
   return arr_res;
+}
+function intersect(a, b) {
+    var t;
+    if (b.length > a.length) t = b, b = a, a = t; // indexOf to loop over shorter
+    return a.filter(function (e) {
+        return b.indexOf(e) > -1;
+    });
 }
 function order_arr(arr, data_type) {
   switch (data_type) {

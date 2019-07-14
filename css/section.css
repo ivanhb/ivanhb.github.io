@@ -2,6 +2,10 @@
   --main-theme-color: #081526;
   --link-color: #68cae8;
 }
+body{
+    font-family: "Georgia", Times, Sans-serif;
+    font-size: 110%;
+}
 a{
   color: var(--link-color);
 }
@@ -10,11 +14,11 @@ a{
   background-color: var(--main-theme-color);
 }
 #entry .entry-header{
-  margin-top:5%;
+  margin-top:2%;
   padding-left: 10%;
   width: 60%;
   color: white;
-  font-size: 23pt;
+  font-size: 28pt;
 }
 #entry .entry-body{
   margin-top:2%;
@@ -75,8 +79,8 @@ a{
 
 
 #sections{
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 #sections .gen-sec{
