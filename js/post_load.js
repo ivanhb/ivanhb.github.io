@@ -59,7 +59,6 @@ function get_entities_and_build_sec(list_sec_obj, i){
           SECTIONS_DOM[sec_obj["id"]] = str_html;
         }
 
-        console.log(pending);
         if (pending == 0) {
           build_page();
         }else {
@@ -218,7 +217,7 @@ function build_page() {
 
     //Populate the GENRAL SECTION div
     var str_gen_section_str = "";
-    console.log(SECTIONS_DOM);
+    //console.log(SECTIONS_DOM);
     for (var sec_id in SECTIONS_DOM) {
         str_gen_section_str = str_gen_section_str + SECTIONS_DOM[sec_id];
     }
