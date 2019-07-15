@@ -58,26 +58,42 @@ a{
 }
 
 #aboutme_section .footer{
-  margin-top: 15px;
+  margin-top: 35px;
   color: white;
 }
 #aboutme_section .footer #pre_sliders{
-  border: solid;
-  min-width: 350px;
-  min-height: 150px;
-  max-width: 250px;
   margin-left: 10%;
+  min-width: 100px;
+  min-height: 100px;
+  max-width: 250px;
   display: inline-block;
+  z-index: 1;
+}
+#aboutme_section .footer #pre_sliders a{
+}
+#filter_sections_menu{
+  min-width: 90%;
+  font-size: 18pt;
+  margin-left: 10%;
+}
+#filter_sections_menu a + .decoration.point{
+  margin-left: 20px;
+}
+.decoration.point{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color:white;
+  margin-right: 20px;
 }
 #aboutme_section .footer #sliders{
   display: inline-block;
-  margin-left: 100px;
 }
 #aboutme_section .footer #sliders .slider-filter div{
   display:inline-block;
 }
 #aboutme_section .footer #sliders .slider-filter .input-slider{
- width: 300px;
+ width: 400px;
 }
 #aboutme_section .footer #sliders .slider-filter .input-label{
  font-size: 17pt;
@@ -87,6 +103,14 @@ a{
 .slider-filter + .slider-filter{
   margin-top: 15px;
 }
+#pre_filter_menu{
+  display: inline-block;
+  width: 6%;
+  height: 20px;
+  margin-right: 20px;
+  border: solid;
+  background-color: var(--link-color);
+}
 
 .rs-container{
   width: 100%;
@@ -94,9 +118,10 @@ a{
 .rs-tooltip{
   border: none;
   font-size: 15pt;
+  float: left;
   color: var(--link-color);
-  min-width: 150px;
-  background-color: var(--main-theme-color);
+  min-width: 200px;
+  background-color: transparent;
 }
 .rs-container .rs-bg,.rs-container .rs-selecte{
   background-color:white;
@@ -141,9 +166,6 @@ a{
 .section_label{
   display: inline-block;
 }
-
-
-
 
 .section_item + .section_item{
   margin-top: 5%;

@@ -106,7 +106,7 @@ function build_sec_dom(sec_obj, list_obj){
    }
 
    sec_order = ["title","subtitle","content","extra"];
-   var str_list_items = "<div class='"+sec_obj["section_type"]+" "+sec_obj["section_class"]+"'>";
+   var str_list_items = "<div id='"+sec_obj["id"]+"' class='"+sec_obj["section_type"]+" "+sec_obj["section_class"]+"'>";
    str_list_items = str_list_items + "<div class='sec-header'>"+sec_obj["section_title"]+"</div>";
    str_list_items = str_list_items + "<div class='sec-body'>";
    for (var i = 0; i < list_obj.length; i++) {
@@ -203,6 +203,10 @@ function build_page() {
       add_filter = my_config["add_filter"]
     }
     if (add_filter) {
+
+      /*the preview filter img */
+      document.getElementById("filter_preview").innerHTML = '<img id="filter_preview_img" src="img/filter_pre.svg">';
+
       /*First the sections filter*/
       var str_slider_section = "";
       if (Object.keys(SECTIONS_OBJ).length > 1) {
@@ -313,12 +317,15 @@ function build_att_filters() {
             var suitable_res = gen_suitable_items(k_att, sec_ids_selected, normalize_fun, normalize_lbl_fun, respects = corresponding_value);
 
             //console.log(SUITABLE_SECTIONS);
+            var preview_menu = "";
             str_html = "";
             for (var sec_id in SUITABLE_SECTIONS) {
               var arr_ids = get_arr_val_from_arr_obj(my_config["section"], "id");
               var sec_obj = my_config["section"][arr_ids.indexOf(sec_id)];
               str_html = str_html + build_sec_dom(sec_obj, SUITABLE_SECTIONS[sec_id]);
+              preview_menu = preview_menu + "<a href='#"+sec_id+"'>"+ sec_obj["section_title"]+"</a><div class='decoration point'></div>";
             }
+            document.getElementById("filter_sections_menu").innerHTML = "<div id='pre_filter_menu' class='decoration'></div>"+preview_menu;
             document.getElementById("sections").innerHTML = str_html;
           }
         };
