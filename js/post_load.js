@@ -78,7 +78,7 @@ function build_sec_dom(sec_obj, list_obj){
      var str_all_subsec = "";
      if ("image" in an_entity) {
        image_dom = '<img id="profile_img" class="ui circular image img-thumbnail bordered" src="'+an_entity["image"]+'">';
-       str_all_subsec = str_all_subsec + image_dom;
+       str_all_subsec =  str_all_subsec + image_dom;
      }
      sec_order = ["title","subtitle","content"];
      for (var j = 0; j < sec_order.length; j++) {
@@ -101,8 +101,33 @@ function build_sec_dom(sec_obj, list_obj){
           document.getElementById("aboutme_section_"+sec_order[j]).innerHTML = str_all_subsec;
        }
      }
+
+     //build the contact links
+     var str_html_contacts = "";
+     for (var contact_k in an_entity["contacts"]) {
+       var href_contact = an_entity["contacts"][contact_k];
+       var logo_class = null;
+       switch (contact_k) {
+         case "twitter":
+          logo_class = "twitter big icon";
+          break;
+        case "git":
+          logo_class = "github big icon";
+          break;
+        case "facebook":
+          logo_class = "facebook big icon";
+          break;
+        case "linkedin":
+          logo_class = "linkedin big icon";
+          break;
+       }
+       if (logo_class != null) {
+         str_html_contacts = str_html_contacts + '<a href="'+href_contact+'"><i class="'+logo_class+'"></i></a>';
+       }
+     }
+     str_html_contacts = "<div id='aboutme_section_contacts'>"+ str_html_contacts +"</div>";
+     document.getElementById("aboutme_section_contacts").innerHTML = str_html_contacts;
      return document.getElementById("aboutme_section").innerHTML;
-     //var att = get_atts_regex(normalized_subsec, an_entity);
    }
 
    sec_order = ["title","subtitle","content","extra"];

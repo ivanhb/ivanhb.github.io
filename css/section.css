@@ -56,7 +56,13 @@ a{
   float: right;
   border: 3px solid;
 }
-
+#aboutme_section_contacts{
+  float: right;
+  margin-right: 10%;
+  width: 250px;
+  text-align: right;
+  font-size: 15pt;
+}
 #aboutme_section .footer{
   margin-top: 35px;
   color: white;
