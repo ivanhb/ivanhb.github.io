@@ -166,7 +166,7 @@ function normalize_filter_date(val){
 function last_diary(diary_obj) {
   var items = diary_obj["items"];
   if (items.length > 0) {
-    return items[items.length - 1]["link"]
+    return items[0]["link"]
   }
   return -1;
 }
