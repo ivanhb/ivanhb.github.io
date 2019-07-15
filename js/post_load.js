@@ -184,7 +184,7 @@ function build_sec_dom(sec_obj, list_obj){
    str_list_items = str_list_items + "</div>";
 
    //return an HTML string with a list of all entites
-   return str_list_items + "</div>";
+   return str_list_items + "</div><div class='section-separator'></div>";
 
    function _build_extra_item(extra_item) {
      var str_extra_item = "";
