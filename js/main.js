@@ -26,6 +26,4 @@ if (my_config['section'] != undefined) {
 
 //BUILD SECTIONS
 pending = sections_to_call.length;
-for (var i = 0; i < sections_to_call.length; i++) {
-    get_entities_and_build_sec(sections_to_call[i]);
-}
+get_entities_and_build_sec(sections_to_call,0);

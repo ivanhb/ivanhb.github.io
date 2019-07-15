@@ -33,7 +33,8 @@ function handle_req(type_req, res_req, request_obj) {
   }
 }
 
-function get_entities_and_build_sec(sec_obj){
+function get_entities_and_build_sec(list_sec_obj, i){
+  var sec_obj = list_sec_obj[i];
   var sec_type = sec_obj["section_type"];
   $.ajax({
       type: "GET",
@@ -52,16 +53,17 @@ function get_entities_and_build_sec(sec_obj){
         //BUILD THE DOM FOR THE SECTION///
         var str_html = build_sec_dom(sec_obj, data["items"]);
 
-        if (sec_type != "profile") {
+        if (sec_type == "profile") {
           SECTIONS_PROFILE_DOM[sec_obj["id"]] = str_html;
         }else {
           SECTIONS_DOM[sec_obj["id"]] = str_html;
         }
 
+        console.log(pending);
         if (pending == 0) {
-          console.log(SECTIONS_DOM);
-          console.log(SECTIONS_PROFILE_DOM);
           build_page();
+        }else {
+          get_entities_and_build_sec(list_sec_obj, i+1)
         }
       }
    });
@@ -213,8 +215,10 @@ function get_atts_regex(normalized_subsec, an_entity) {
 }
 
 function build_page() {
+
     //Populate the GENRAL SECTION div
     var str_gen_section_str = "";
+    console.log(SECTIONS_DOM);
     for (var sec_id in SECTIONS_DOM) {
         str_gen_section_str = str_gen_section_str + SECTIONS_DOM[sec_id];
     }
