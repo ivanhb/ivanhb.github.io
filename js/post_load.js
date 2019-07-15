@@ -19,6 +19,7 @@ function handle_req(type_req, res_req, request_obj) {
             type: "GET",
             url: link,
             dataType: "json",
+            async: false,
             success: function(data) {
               console.log(data);
               var redirect_href = Reflect.apply(fun_to_call,undefined,[data]);

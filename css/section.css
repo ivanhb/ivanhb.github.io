@@ -78,9 +78,12 @@ a{
 #aboutme_section .footer #pre_sliders a{
 }
 #filter_sections_menu{
-  min-width: 90%;
   font-size: 18pt;
   margin-left: 10%;
+  height: 40px;
+  border-radius: 15px 15px 15px 15px;
+  position: absolute;
+  background-color: var(--main-theme-color);
 }
 #filter_sections_menu a + .decoration.point{
   margin-left: 20px;
@@ -111,9 +114,10 @@ a{
 }
 #pre_filter_menu{
   display: inline-block;
-  width: 6%;
+  width: 40px;
   height: 20px;
   margin-right: 20px;
+  margin-left: 45px;
   border: solid;
   background-color: var(--link-color);
 }
