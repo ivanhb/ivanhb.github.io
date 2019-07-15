@@ -1,13 +1,26 @@
 {
   "items": [
     {
+      "name": "ISWS 2019 - International Semantic Web Research Summer School",
+      "location": "Bertinoro, Italy",
+      "date": "30/06/2019-06/07/2019",
+      "contribution": "Presenting a poster and attending as a Student of the Summer School",
+      "description": "ISWS is a full immersion, super intensive one-week experience including lectures and keynotes from outstanding speakers, a -learning by doing- teamwork program on open research problems, under the guidance of the best scientists in the field, with whom you will co-author a white paper of high potential impact",
+      "extra": [
+        {"type":"presentation","label":"The poster","value":"https://ivanhb.github.io/phd/activities/ISWS(summer_schooll)/poster.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activities",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
       "name": "EURAM 2019",
       "location": "Lisbon, Portugal",
       "date": "25/06/2019-28/06/2019",
-      "contribution": "Presenting a Symposium: CATARSI: Cleaning, analyzing and visualizing techniques for textual data. An interactive workshop",
-      "description": "It aims at advancing the academic discipline of management in Europe. With members from 49 countries in Europe and beyond, EURAM has a high degree of diversity and provides its members with opportunities to enrich debates over a variety of research management themes and traditions.",
+      "contribution": "Hosting a Symposium: CATARSI: Cleaning, analyzing and visualizing techniques for textual data. An interactive workshop",
+      "description": "It aims at advancing the academic discipline of management in Europe. With members from 49 countries in Europe and beyond, EURAM has a high degree of diversity and provides its members with opportunities to enrich debates over a variety of research management themes and traditions. In this workshop we presented MITAO, an automatic text analysis tool",
       "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/catarsi/mitao"}
+        {"type":"git_repository","label":"Go to MITAO repository","value":"https://github.com/catarsi/mitao"}
       ],
       "source": "https://ivanhb.github.io/phd/activities",
       "project": "catarsi",
@@ -43,16 +56,17 @@
       "include_in_webpage": 1
     },
     {
-      "name": "ISWS 2019 - International Semantic Web Research Summer School",
-      "location": "Bertinoro, Italy",
-      "date": "30/06/2019-06/07/2019",
-      "contribution": "Presenting a poster and attending as a Student of the Summer School",
-      "description": "ISWS is a full immersion, super intensive one-week experience including lectures and keynotes from outstanding speakers, a -learning by doing- teamwork program on open research problems, under the guidance of the best scientists in the field, with whom you will co-author a white paper of high potential impact",
+      "name": "The Web Conference",
+      "location": "Lyon, France",
+      "date": "23/04/2018-27/04/2018",
+      "contribution": "Presenting OSCAR at the SAVE-SD workshop",
+      "description": "The Web Conference (formerly www conference) is a yearly international conference on the topic of the future directions of the World Wide Web. The main goal of this workshop I have attended, is bringing together publishers, companies and researchers from different fields (including Document and Knowledge Engineering, Semantic Web, Natural Language Processing, Scholarly Communication, Bibliometrics, and Human-Computer Interaction) in order to bridge the gap between the theoretical/academic and practical/industrial aspects with regards to scholarly data.",
       "extra": [
-        {"type":"presentation","label":"The poster","value":"https://ivanhb.github.io/phd/activities/ISWS(summer_schooll)/poster.pdf"}
+        {"type":"webpage","label":"Workshop website","value":"https://save-sd.github.io/2018/index.html"},
+        {"type":"git_repository","label":"Go to OSCAR repository","value":"https://github.com/opencitations/oscar"}
       ],
       "source": "https://ivanhb.github.io/phd/activities",
-      "project": "phd",
+      "project": "opencitations",
       "include_in_webpage": 1
     }
   ]

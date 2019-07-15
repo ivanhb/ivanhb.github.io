@@ -12,7 +12,6 @@ a{
 }
 a:hover{
   color: var(--link-hover-color);
-  border-bottom: 1.5px solid;
 }
 
 #page_footer{
@@ -181,6 +180,7 @@ a:hover{
  background-color: var(--main-theme-color);
  margin-top: 30px;
 }
+
 #sections{
   padding-top: 60px;
 }
