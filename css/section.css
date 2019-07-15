@@ -98,9 +98,11 @@ a:hover{
 }
 #filter_sections_menu{
   font-size: 22pt;
-  margin-left: 10%;
-  height: 55px;
-  border-radius: 15px 15px 15px 15px;
+  padding-left: 10%;
+  height: fit-content;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  border-radius: 15px 15px 15px 0px;
   position: absolute;
   background-color: var(--main-theme-color);
   z-index: 100;
@@ -135,12 +137,11 @@ a:hover{
 }
 #pre_filter_menu{
   display: inline-block;
-  width: 40px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   margin-right: 20px;
-  margin-left: 45px;
-  border: solid;
-  background-color: var(--link-color);
+  margin-left: 50px;
+  background-color: white;
 }
 
 .rs-container{
@@ -174,11 +175,13 @@ a:hover{
 
 
 .section-separator{
- height: 5px;
+ height: 10px;
  opacity: 0.6;
  width: 100%;
  background-color: var(--main-theme-color);
- margin-top: 30px;
+ position: relative;
+ bottom: 50px;
+ z-index: -1;
 }
 
 #sections{
@@ -208,7 +211,7 @@ a:hover{
 }
 
 #sections .gen-sec{
-  margin-top: 5px;
+  margin-top: 40px;
 }
 .extra{
   margin-top: 10px;
@@ -220,9 +223,11 @@ a:hover{
   color: white;
   border: solid;
   width: fit-content;
-  padding: 10px;
+  padding: 13px;
   background-color: var(--main-theme-color);
   border-radius: 15px 15px 15px 15px;
+  z-index: 700;
+  opacity: 1;
 }
 
 .section_label{
