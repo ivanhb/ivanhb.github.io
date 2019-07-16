@@ -86,7 +86,7 @@ var my_config = {
   ],
   'add_filter': true,
   'section_filter': {
-    'date': {'label':"Date", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
+    'date': {'label':"Date", 'all_label':"All Dates", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
   },
   'request': {
     'workdiary':{
@@ -150,10 +150,15 @@ function normalize_date(d) {
 //*must return an array of values*//
 function normalize_filter_date(val){
   //05/07/2018
+  console.log("New Date ---- ");
   var res = [];
   var parts = val.split("-");
   for (var i = 0; i < parts.length; i++) {
-    res.push(_get_year(parts[i]));
+    console.log(parts[i]);
+    var _year = _get_year(parts[i]);
+    if (res.indexOf(_year) == -1) {
+      res.push(_year);
+    }
   }
   return res;
   function _get_year(val_date) {

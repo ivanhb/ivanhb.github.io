@@ -50,12 +50,13 @@ a:hover{
 #aboutme_section_header{
   color: var(--main-theme-color);
   float: right;
-  margin-right: 10%;
+  margin-right: 12.5%;
   margin-top: -50px;
   font-size: 30pt;
   background-color: white;
-  min-width: 300px;
-  height: 60px;
+  width: fit-content;
+  padding: 10px;
+  height: fit-content;
   text-align: center;
   border-radius: 15px 15px 15px 15px;
 }

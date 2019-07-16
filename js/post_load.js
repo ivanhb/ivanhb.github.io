@@ -249,12 +249,12 @@ function build_page() {
       for (var i = 0; i < sec_lbls.length; i++) {
         values_map[sec_lbls[i]] = [sec_ids[i]];
       }
-      values_map["All"] = sec_ids;
+      values_map["All Sections"] = sec_ids;
 
       SLIDERS["slider_section"] = {
                 "slider_obj": new rSlider({
                         target: '#slider_section',
-                        values: ["All"].concat(sec_lbls),
+                        values: ["All Sections"].concat(sec_lbls),
                         range: false,
                         set:    null, // an array of preselected values
                         width:    null,
@@ -299,6 +299,7 @@ function build_att_filters() {
   //*Now check all the other filters*//
   if ('section_filter' in my_config) {
     for (var k_att in my_config['section_filter']) {
+      var all_lbl = my_config['section_filter'][k_att]["all_label"];
       var normalize_fun = my_config['section_filter'][k_att]["normalize"];
       var normalize_lbl_fun = my_config['section_filter'][k_att]["normalize_lbl"];
       var data_type = my_config['section_filter'][k_att]["data_type"];
@@ -309,8 +310,8 @@ function build_att_filters() {
       var index_elems_value_maps = suitable_res[0];
       var index_elems = suitable_res[1];
 
-      index_elems_value_maps['All'] = index_elems;
-      index_elems = ["All"].concat(index_elems);
+      index_elems_value_maps[all_lbl] = index_elems;
+      index_elems = [all_lbl].concat(index_elems);
 
       SLIDERS["slider_"+k_att]["values_map"] = index_elems_value_maps;
 
