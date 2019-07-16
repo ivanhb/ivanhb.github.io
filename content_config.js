@@ -86,7 +86,7 @@ var my_config = {
   ],
   'add_filter': true,
   'section_filter': {
-    'date': {'label':"Date", 'all_label':"All Dates", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
+    'date': {'label':"Date", 'all_label':"All Years", "range":true, "normalize": normalize_filter_date, "normalize_lbl": normalize_filter_date, "data_type": "int"}
   },
   'request': {
     'workdiary':{
