@@ -127,7 +127,18 @@ function build_sec_dom(sec_obj, list_obj){
          str_html_contacts = str_html_contacts + '<a href="'+href_contact+'"><i class="'+logo_class+'"></i></a>';
        }
      }
-     str_html_contacts = "<div id='aboutme_section_contacts'>"+ str_html_contacts +"</div>";
+     //str_html_contacts = "<div id='aboutme_section_contacts'>"+ str_html_contacts +"</div>";
+
+     //build the extra components
+     var str_html_extras = "";
+     for (var i = 0; i < an_entity["extra"].length; i++) {
+       var extra_item = an_entity["extra"][i];
+       str_html_extras = str_html_extras + _build_extra_item(extra_item);
+     }
+     //str_html_extras = "<div id='aboutme_section_extra'>"+ str_html_extras +"</div>";
+
+
+     document.getElementById("aboutme_section_extra").innerHTML = str_html_extras;
      document.getElementById("aboutme_section_contacts").innerHTML = str_html_contacts;
      return document.getElementById("aboutme_section").innerHTML;
    }
@@ -187,6 +198,7 @@ function build_sec_dom(sec_obj, list_obj){
    return str_list_items;
 
    function _build_extra_item(extra_item) {
+
      var str_extra_item = "";
      switch (extra_item["type"]) {
        case "git_repository":
@@ -199,6 +211,8 @@ function build_sec_dom(sec_obj, list_obj){
          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="linkify big icon"></i>'+extra_item["label"]+'</a>';
        case "special":
          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="star big icon"></i>'+extra_item["label"]+'</a>';
+       default:
+          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><div class="'+extra_item["type"]+'"></div>'+extra_item["label"]+'</a>';
      }
    }
 }

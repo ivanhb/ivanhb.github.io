@@ -101,6 +101,19 @@ a:hover{
   margin-top: 20px;
   color: white;
 }
+#aboutme_section_extra{
+  padding-left: 10%;
+  margin-bottom: 50px;
+}
+#aboutme_section_extra .item_link{
+  margin-left: 20px;
+}
+.item_link .cv_document{
+  background-image: url("../../src/img/path.svg");
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
 .sliders{
   width: 100px;
 }

@@ -16,10 +16,10 @@
           "telegram bot":"ivanhbBot"
       },
       "extra": [
-        {"type":"document","label":"Curriculum vitae","value":"https://ivanhb.github.io/data/CV-Professional.pdf"},
-        {"type":"document","label":"Curriculum vitae (Europass)","value":"https://ivanhb.github.io/data/CV-Europass.pdf"},
-        {"type":"webpage","label":"Ph.D. page","value":"https://ivanhb.github.io/phd"},
-        {"type":"webpage","label":"OpenCitations page","value":"https://ivanhb.github.io/opencitations-doc"}
+        {"type":"cv_document", "img": "", "label":"Curriculum vitae","value":"https://ivanhb.github.io/data/CV-Professional.pdf"},
+        {"type":"cv_document_europass","img": "img/cv_europass.svg", "label":"Curriculum vitae (Europass)","value":"https://ivanhb.github.io/data/CV-Europass.pdf"},
+        {"type":"webpage","img": "", "label":"Ph.D. page","value":"https://ivanhb.github.io/phd"},
+        {"type":"webpage","img": "", "label":"OpenCitations page","value":"https://ivanhb.github.io/opencitations-doc"}
       ],
       "include_in_webpage": 1
     }
