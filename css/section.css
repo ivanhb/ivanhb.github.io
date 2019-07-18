@@ -41,7 +41,7 @@ a:hover{
 
 #entry{
   background-color: var(--main-theme-color);
-  margin-bottom: 0.5%;
+  margin-bottom: 0%;
   padding-top: 30px;
   padding-bottom: 5%;
   padding-left: 10%;
@@ -114,22 +114,24 @@ a:hover{
 }
 #aboutme_section_header{
   color: var(--main-theme-color);
-  float: right;
-  margin-right: 20%;
-  margin-top: -50px;
+  float: left;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: -40px;
   font-size: 30pt;
   background-color: var(--background-color);
   width: fit-content;
-  padding: 10px;
+  padding: 12px;
   height: fit-content;
   text-align: center;
   border-radius: 15px 15px 15px 15px;
 }
 #aboutme_section_content{
-  padding-left: 10%;
-  padding-top: 4%;
+  border-top: solid 8px;
+  margin-left: 10%;
+  padding-top: 7%;
   color: white;
-  width: 90%;
+  width: 80%;
   font-size: 13pt;
 }
 #aboutme_section_content #profile_img{
@@ -138,17 +140,23 @@ a:hover{
   border: 3px solid;
 }
 #aboutme_section_contacts{
+  border-radius: 15px 15px 15px 15px;
   float: right;
   margin-right: 10%;
-  width: 250px;
+  width: 300px;
   text-align: center;
   font-size: 15pt;
   vertical-align: bottom;
-
-  padding-top: 100px;
+  background-color: var(--background-color);
+  padding: 10px;
+}
+#aboutme_section_contacts a{
+  color: var(--main-theme-color);
+  opacity: 0.7;
 }
 #aboutme_section_contacts a:hover{
   border-bottom: none;
+  opacity: 1;
 }
 #aboutme_section .footer{
   margin-top: 20px;
