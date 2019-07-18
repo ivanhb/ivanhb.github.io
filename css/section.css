@@ -43,20 +43,70 @@ a:hover{
   background-color: var(--main-theme-color);
   margin-bottom: 0.5%;
   padding-top: 30px;
+  padding-bottom: 5%;
+  padding-left: 10%;
 }
 #entry .entry-header{
   margin-top:2%;
-  padding-left: 10%;
   width: 60%;
   color: white;
   font-size: 32pt;
 }
 #entry .entry-body{
   margin-top:2%;
-  padding-left: 10%;
-  width: 60%;
+  width: 50%;
   color: white;
   font-size: 15pt;
+  display: inline-block;
+}
+#entry .entry-window{
+  display: inline-block;
+  width : 35%;
+  height: 300px;
+  margin-right: 10%;
+  color: var(--main-theme-color);
+  float: right;
+  border-radius: 15px 15px 15px 15px;
+  background-color: var(--background-color);
+}
+#entry .entry-window .header{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18pt;
+  background-color: var(--main-theme-color);
+  color: white;
+  padding: 10px;
+}
+#entry .entry-window .body{
+  padding-left: 10px;
+  width: 90%;
+  overflow:auto;
+  height: 200px;
+}
+#entry .entry-window .body a{
+  color: var(--main-theme-color);
+  opacity: 0.55;
+}
+#entry .entry-window .body a:hover{
+  opacity: 1;
+}
+#entry .entry-window .body .item_title{
+  font-size: 15pt;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  opacity: 0.75;
+}
+#entry .entry-window .body .item_content{
+  padding-left: 30px;
+  margin-bottom: 35px;
+  font-size: 13pt;
+}
+#entry .entry-window .body .item_content #full_text{
+  margin-top:5px;
+  float:right;
+}
+#entry .entry-window .body .item_content + .item_title{
+  border-top: 0.3px solid;
 }
 
 #aboutme_section{
@@ -93,6 +143,9 @@ a:hover{
   width: 250px;
   text-align: center;
   font-size: 15pt;
+  vertical-align: bottom;
+
+  padding-top: 100px;
 }
 #aboutme_section_contacts a:hover{
   border-bottom: none;
@@ -105,7 +158,7 @@ a:hover{
   padding-left: 10%;
   margin-bottom: 50px;
 }
-#aboutme_section_extra .item_link{
+#aboutme_section_extra .item_link + .item_link{
   margin-left: 20px;
 }
 .item_link .cv_document{
@@ -131,7 +184,7 @@ a:hover{
   height: fit-content;
   padding-bottom: 20px;
   padding-top: 20px;
-  border-radius: 15px 15px 15px 0px;
+  border-radius: 0px 0px 15px 0px;
   position: absolute;
   background-color: var(--main-theme-color);
   z-index: 100;
@@ -284,54 +337,89 @@ a:hover{
 
 
 @media only screen and (max-width: 1200px) {
-  #entry .entry-body{
-    width: 90%;
-  }
   #aboutme_section_contacts{
-    text-align: center;
-    display: block;
-    margin-right: 15%;
-  }
-  #aboutme_section .footer {
-    margin-left: 10%;
-    margin-right: 10%;
-    display: table;
-    width: 100%;
+    text-align: right;
+    font-size: 14pt;
+    display: inline-block;
+    padding-top: 0px;
+    width: 80%;
+    right: 10%;
+    left: 10%;
+    position: absolute;
   }
   #pre_sliders{
+    margin-top: 60px;
+  }
+  #aboutme_section .footer {
     width: 100%;
-    padding-right: 0px;
   }
-  #sliders{
-
+  #aboutme_section_extra{
+    width: 100%;
   }
-  #filter_preview{
-    display: none;
-    float: right;
-    transform: rotate(90deg);
+  #filter_sections_menu{
+    font-size: 20pt;
+    width: 100%;
+    border-radius: 0px 0px 0px 0px;
   }
-
+  .rs-container{
+    width: 100%;
+  }
 }
 
 @media only screen and (max-width: 700px) {
- #entry{
-    padding-bottom: 70px;
+  #entry .entry-body{
+    margin-bottom:10%;
+    width: 100%;
   }
-  #filter_sections_menu{
-    position: relative;
-    min-height: 150px;
-    min-width: 90%;
-    margin-left: 0%;
+  #aboutme_section_content{
+    padding-top: 10%;
   }
-  #filter_sections_menu a{
-    display: grid;
-    text-align: left;
-  }
-  #filter_sections_menu .decoration.point{
-    margin-left: 0%;
+  #aboutme_section_footer{
     display: none;
   }
-  #filter_sections_menu #pre_filter_menu{
-    margin-left: 0%;
+  #aboutme_section_contacts{
+    width: 100%;
+    position: absolute;
+    bottom: 300px;
+    z-index: 200;
+    text-align: left;
+  }
+  #filter_sections_menu{
+    text-align: left;
+    font-size: 26pt;
+    position: absolute;
+  }
+  #filter_sections_menu a{
+    display: block;
+  }
+  #filter_sections_menu .decoration{
+    display: none;
+  }
+  .input-slider{
+    display: none;
+  }
+  #page_footer *{
+    text-align: center;
+  }
+  #prof_logo{
+    position: absolute;
+    opacity: 0.3;
+    top: -5.5%;
+    right: 37%;
+  }
+  #prof_logo img{
+    width: 110px;
+  }
+  #entry{
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+  #dynamic_section{
+    display: block;
+  }
+  #entry .entry-window{
+    margin:0 auto;
+    width: 100%;
+    margin-bottom: 10%;
   }
 }

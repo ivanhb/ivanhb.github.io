@@ -14,16 +14,20 @@ if (type_req != null) {
 }
 
 
-var sections_to_call = [];
+//Build Dynamic Sections
+if ("dynamic_section" in my_config) {
+  build_dynamic_section(my_config["dynamic_section"]);
+}
 
+
+//BUILD SECTIONS
 //Number of all sections
+var sections_to_call = [];
 if (my_config['profile_section'] != undefined) {
   sections_to_call.push(my_config['profile_section']);
 }
 if (my_config['section'] != undefined) {
   sections_to_call = sections_to_call.concat(my_config['section']);
 }
-
-//BUILD SECTIONS
 pending = sections_to_call.length;
 get_entities_and_build_sec(sections_to_call,0);

@@ -4,9 +4,11 @@ var my_config = {
       'id': 'diary',
       'section_title': "Last work report",
       'section_type': 'report',
-      'section_class': 'card',
-      'url': 'https://ivanhb.github.io/phd/doc/diary.csv'
+      'section_class': '',
+      'url': 'https://ivanhb.github.io/data/index/diary.json',
+      'handler': report_handler,
     },
+    /*
     {
       'id': 'news',
       'section_title': "News",
@@ -15,6 +17,7 @@ var my_config = {
       'max': 2,
       'url': 'https://ivanhb.github.io/phd/doc/news.md'
     }
+    */
   ],
   'profile_section': {
     'id': 'profile',
@@ -186,4 +189,20 @@ function last_diary(diary_obj) {
     return items[0]["link"]
   }
   return -1;
+}
+function report_handler(an_item) {
+  //{"content": , "date": }
+  console.log(an_item);
+  const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
+  var match;
+  var content = [];
+  while((match = regex.exec(an_item["html_content"])) !== null) {
+      console.log(match[1]);
+      content.push(match[1]);
+  }
+  var normalized_item = {
+    "date":  normalize_date(an_item["date"]),
+    "content": content
+  }
+  return normalized_item;
 }
