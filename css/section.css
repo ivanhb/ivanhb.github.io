@@ -113,6 +113,7 @@ a:hover{
   background-color: var(--main-theme-color);
 }
 #aboutme_section_header{
+  border: solid 5px;
   color: var(--main-theme-color);
   float: left;
   margin-left: 10%;
