@@ -75,15 +75,15 @@ var my_config = {
         //define the DOM layout pattern of each entity
         'layout':{
           "title": [
-            '<div class="section_label">Event: </div>[[name]]'
+            '<div class="section_label">Event:&ensp;</div>[[name]]'
           ],
           "subtitle": [
-            '<div class="section_label">Location: </div>[[location]]',
-            '<div class="section_label">Date: </div>[[date]]',
-            '<div class="section_label">Contribution: </div>[[contribution]]'
+            '<div class="section_label">Location:&ensp;</div>[[location]]',
+            '<div class="section_label">Date:&ensp;</div>[[date]]',
+            '<div class="section_label">Contribution:&ensp;</div>[[contribution]]'
           ],
           "content": [
-            '<div class="section_label">Description </div>[[description]]'
+            '<div class="section_label"></div>[[description]]'
           ],
           "extra": ['[[extra]]']
         }
