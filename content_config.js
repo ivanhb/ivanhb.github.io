@@ -2,7 +2,7 @@ var my_config = {
   'dynamic_section':[
     {
       'id': 'diary',
-      'section_title': "Last work report",
+      'section_title': "Working report",
       'section_type': 'report',
       'section_class': '',
       'url': 'https://ivanhb.github.io/data/index/diary.json',
