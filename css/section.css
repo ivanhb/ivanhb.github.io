@@ -346,17 +346,15 @@ a:hover{
 
 @media only screen and (max-width: 1200px) {
   #aboutme_section_contacts{
-    text-align: right;
     font-size: 14pt;
     display: inline-block;
-    padding-top: 0px;
-    width: 80%;
-    right: 10%;
-    left: 10%;
+    margin: 0 auto;
+    right: 0%;
+    left: 0%;
     position: absolute;
   }
   #pre_sliders{
-    margin-top: 60px;
+    margin-top: 80px;
   }
   #aboutme_section .footer {
     width: 100%;
