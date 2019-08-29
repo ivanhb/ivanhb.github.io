@@ -60,7 +60,7 @@ var my_config = {
         //define the DOM layout pattern of each entity
         'layout':{
           "title": ['[[reference]]'],
-          "subtitle": ['<a href="[[link]]">Go to publication resource</a>']
+          "subtitle": ['<a href="[[link]]">[[link]]</a>']
         }
       },
       {

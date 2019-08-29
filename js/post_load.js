@@ -136,8 +136,11 @@ function build_sec_dom(sec_obj, list_obj){
          for (var k = 0; k < layout[sec_order[j]].length; k++) {
                var normalized_subsec = layout[sec_order[j]][k];
                var att = get_atts_regex(normalized_subsec, an_entity);
-               for (var a_k in att) {
-                 var replaced_val = att[a_k];
+
+               for (var i_at = 0; i_at < att.length; i_at++) {
+                 a_k = Object.keys(att[i_at])[0];
+
+                 var replaced_val = att[i_at][a_k];
                  if (replaced_val == null) {replaced_val = "";}
                  if (a_k in sec_obj["normalize"]) {
                    replaced_val = Reflect.apply(sec_obj["normalize"][a_k],undefined,[replaced_val]);
@@ -210,8 +213,10 @@ function build_sec_dom(sec_obj, list_obj){
 
            if(sec_order[j] != "extra"){
              //replace the values in normalized string
-             for (var a_k in att) {
-               var replaced_val = att[a_k];
+
+             for (var i_at = 0; i_at < att.length; i_at++) {
+               a_k = Object.keys(att[i_at])[0];
+               var replaced_val = att[i_at][a_k];
                if (replaced_val == null) {
                  replaced_val = "";
                }
@@ -222,10 +227,12 @@ function build_sec_dom(sec_obj, list_obj){
                normalized_subsec = normalized_subsec.replace("[["+a_k+"]]", replaced_val);
              }
            }else {
+             console.log(att);
              var extra_str_dom = "";
-             for (var a_k in att) {
-               for (var ex_i = 0; ex_i < att[a_k].length; ex_i++) {
-                 extra_str_dom = extra_str_dom + _build_extra_item(att[a_k][ex_i]);
+             for (var i_at = 0; i_at < att.length; i_at++) {
+               a_k = Object.keys(att[i_at])[0];
+               for (var ex_i = 0; ex_i < att[i_at][a_k].length; ex_i++) {
+                 extra_str_dom = extra_str_dom + _build_extra_item(att[i_at][a_k][ex_i]);
                }
              }
              normalized_subsec = extra_str_dom;
@@ -265,11 +272,13 @@ function build_sec_dom(sec_obj, list_obj){
 }
 
 function get_atts_regex(normalized_subsec, an_entity) {
-  var att = {};
+  var att = [];
   var re_patt = /\[\[(\w*)\]\]/g;
   var match;
   while((match = re_patt.exec(normalized_subsec)) !== null) {
-      att[match[1]] = an_entity[match[1]];
+      var dict_att = {};
+      dict_att[match[1]] = an_entity[match[1]];
+      att.push(dict_att);
   }
   return att;
 }

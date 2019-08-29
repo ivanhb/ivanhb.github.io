@@ -45,6 +45,7 @@ a:hover{
   padding-top: 30px;
   padding-bottom: 5%;
   padding-left: 10%;
+  border-radius: 0px 0px 0px 0px;
 }
 #entry .entry-header{
   margin-top:2%;
