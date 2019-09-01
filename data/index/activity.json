@@ -1,6 +1,21 @@
 {
   "items": [
     {
+      "name": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
+      "location": "Rome, Italy",
+      "date": "02/09/2019-05/09/2019",
+      "contribution": "Hosting the 'Workshop on Open Citations: Opportunities and Ongoing Developments' and presenting OpenCitations and its API service, along with the participation into the ISSI doctoral forum.",
+      "description": "The ISSI 2019 Conference will provide an international forum for scientists, research managers and administrators, as well as information and communication related professionals to share research and debate the advancements of informetric and scientometric theory and applications.",
+      "extra": [
+        {"type":"presentation","label":"Doctoral forum presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/Doctoral%20forum%20Ph.D.%20presentation.pdf"},
+        {"type":"presentation","label":"OpenCitations infrastructure presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/OpenCitations,%20an%20infrastructure%20for%20open%20citation%20data.pdf"},
+        {"type":"presentation","label":"OpenCitations and Crossref APIs presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/A%20tutorial%20for%20OpenCitations%20and%20Crossref%20API.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activities",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
       "name": "ISWS 2019 - International Semantic Web Research Summer School",
       "location": "Bertinoro, Italy",
       "date": "30/06/2019-06/07/2019",
