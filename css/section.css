@@ -362,7 +362,12 @@ a:hover{
     width: 100%;
   }
   #aboutme_section_extra{
-    width: 100%;
+    margin-bottom: 50px;
+    display: table;
+  }
+  #aboutme_section_extra .item_link {
+    display: table-row;
+    height: 40px;
   }
   #filter_sections_menu{
     font-size: 20pt;
@@ -372,6 +377,12 @@ a:hover{
   .rs-container{
     width: 100%;
   }
+
+  .sec-item .extra div .item_link {
+    display: table-row;
+    height: 35px;
+  }
+
 }
 
 @media only screen and (max-width: 700px) {
@@ -382,30 +393,32 @@ a:hover{
   #aboutme_section_content{
     padding-top: 10%;
   }
-  #aboutme_section_footer{
+  #filter_sections_menu{
     display: none;
   }
   #aboutme_section_contacts{
-    width: 100%;
-    position: absolute;
-    bottom: 300px;
-    z-index: 200;
-    text-align: left;
-  }
-  #filter_sections_menu{
-    text-align: left;
-    font-size: 26pt;
-    position: absolute;
-  }
-  #filter_sections_menu a{
-    display: block;
-  }
-  #filter_sections_menu .decoration{
     display: none;
   }
-  .input-slider{
+  .slider-filter{
     display: none;
   }
+  #filter_preview{
+    display: none;
+  }
+  #sections{
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  #aboutme_section .footer{
+    max-height: 200px;
+    color: white;
+  }
+  #aboutme_section_extra .item_link {
+    display: table-row;
+    height: 40px;
+  }
+
   #page_footer *{
     text-align: center;
   }
