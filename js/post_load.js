@@ -121,7 +121,7 @@ function build_sec_dom(sec_obj, list_obj){
    var layout = sec_obj["layout"];
    if (sec_obj["section_type"] == "profile") {
      var an_entity = list_obj[0];
-     document.getElementById("aboutme_section_header").innerHTML = sec_obj["section_title"];
+     document.getElementById("aboutme_section_header").innerHTML = sec_obj["section_title"] + '<div id="aboutme_section_contacts"></div>';
 
 
      var str_all_subsec = "";

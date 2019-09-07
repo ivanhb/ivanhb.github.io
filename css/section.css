@@ -73,7 +73,7 @@ a:hover{
 #entry .entry-window .header{
   text-align: center;
   margin-top: 20px;
-  font-size: 18pt;
+  font-size: 20pt;
   background-color: var(--main-theme-color);
   color: white;
   padding: 10px;
@@ -120,7 +120,7 @@ a:hover{
   margin-left: 10%;
   margin-right: 10%;
   margin-top: -40px;
-  font-size: 30pt;
+  font-size: 25pt;
   background-color: var(--background-color);
   width: fit-content;
   padding: 12px;
@@ -131,7 +131,7 @@ a:hover{
 #aboutme_section_content{
   border-top: solid 8px;
   margin-left: 10%;
-  padding-top: 7%;
+  padding-top: 5%;
   color: white;
   width: 80%;
   font-size: 13pt;
@@ -142,15 +142,14 @@ a:hover{
   border: 3px solid;
 }
 #aboutme_section_contacts{
-  border-radius: 15px 15px 15px 15px;
   float: right;
-  margin-right: 10%;
-  width: 300px;
+  width: 220px;
   text-align: center;
-  font-size: 15pt;
+  font-size: 12pt;
   vertical-align: bottom;
   background-color: var(--background-color);
-  padding: 10px;
+  padding: 7px;
+  padding-left: 25px;
 }
 #aboutme_section_contacts a{
   color: var(--main-theme-color);
@@ -348,12 +347,7 @@ a:hover{
 
 @media only screen and (max-width: 1200px) {
   #aboutme_section_contacts{
-    font-size: 14pt;
-    display: inline-block;
-    float: right;
-    right: 0%;
-    top: 68%;
-    position: absolute;
+    margin: 0 auto;
   }
   #filter_sections_menu{
     padding-left: 7%;
@@ -394,9 +388,6 @@ a:hover{
     padding-top: 10%;
   }
   #filter_sections_menu{
-    display: none;
-  }
-  #aboutme_section_contacts{
     display: none;
   }
   .slider-filter{
