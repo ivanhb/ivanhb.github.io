@@ -193,7 +193,9 @@ function last_diary(diary_obj) {
 function report_handler(an_item) {
   //{"content": , "date": }
   console.log(an_item);
-  const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
+  //const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
+  const regex = /<h2.*id=\".*\".*\>(.*)<\/h2>/gm
+
   var match;
   var content = [];
   while((match = regex.exec(an_item["html_content"])) !== null) {
