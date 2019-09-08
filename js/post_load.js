@@ -172,6 +172,9 @@ function build_sec_dom(sec_obj, list_obj){
         case "linkedin":
           logo_class = "linkedin big icon";
           break;
+        case "university email":
+          logo_class = "envelope big icon";
+          break;
        }
        if (logo_class != null) {
          str_html_contacts = str_html_contacts + '<a href="'+href_contact+'"><i class="'+logo_class+'"></i></a>';
@@ -260,7 +263,7 @@ function build_sec_dom(sec_obj, list_obj){
        case "presentation":
          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="eye big icon"></i>'+extra_item["label"]+'</a>';
        case "document":
-         return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="linkify big icon"></i>'+extra_item["label"]+'</a>';
+         return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="file outline big icon"></i>'+extra_item["label"]+'</a>';
        case "webpage":
          return '<a class="item_link" target="_blank"  href="'+extra_item["value"]+'"><i class="linkify big icon"></i>'+extra_item["label"]+'</a>';
        case "special":

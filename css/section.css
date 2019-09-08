@@ -143,7 +143,7 @@ a:hover{
 }
 #aboutme_section_contacts{
   float: right;
-  width: 220px;
+  width: 260px;
   text-align: center;
   font-size: 12pt;
   vertical-align: bottom;
@@ -433,5 +433,15 @@ a:hover{
     margin:0 auto;
     width: 100%;
     margin-bottom: 10%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  #aboutme_section_header{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  #aboutme_section_contacts{
+    width: 100%;
   }
 }
