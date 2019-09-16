@@ -444,4 +444,10 @@ a:hover{
   #aboutme_section_contacts{
     width: 100%;
   }
+  #aboutme_section_content #profile_img{
+    float: none;
+    margin: 0 auto;
+    padding: 5px;
+    margin-bottom: 20px;
+  }
 }
