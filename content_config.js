@@ -39,13 +39,17 @@ var my_config = {
         'section_title': 'Projects',
         'section_type': 'gen-sec',
         'section_class': 'project',
-        'normalize': {},
+        'normalize': {
+          'achievements': normalize_achievements,
+          'people': normalize_people,
+          'date': date_to_status
+        },
         //define the DOM layout pattern of each entity
         'layout':{
           "title": ['[[name]]'],
           "subtitle": ['[[sub_name]]'],
-          "content": ['[[description]]'],
-          "contentextra": ['[[description]]'],
+          "subtitle": ['Status: [[date]]'],
+          "content": ['[[description]]<p>[[achievements]]</p><p>[[people]]</p>'],
           "extra": ['[[extra]]']
         }
       },
@@ -124,6 +128,42 @@ function normalize_date_range(date_range){
   }
   return str_date_range;
 }
+
+function normalize_people(d) {
+  var str_to_return = "";
+  for (var i = 0; i < d.length; i++) {
+    str_to_return = str_to_return +"<a href='"+d[i]["link"]+"'>"+d[i]["title"]+" - "+d[i]["affiliation"]+"; </a>";
+    if (i != d.length - 1) {
+      str_to_return = str_to_return + ",";
+    }
+  }
+  return str_to_return;
+}
+
+function normalize_achievements(d) {
+  var str_to_return = "";
+  for (var i = 0; i < d.length; i++) {
+    str_to_return = str_to_return + "<li>"+d[i]+"</li>";
+    if (i == d.length - 1) {
+      str_to_return = "<div class='subtitle'>Achievements</div>"+str_to_return;
+    }
+  }
+  return str_to_return;
+}
+
+function date_to_status(d) {
+  var str_date = "";
+  if (d != "") {
+      var d_to = d.split("-");
+      if(Date.parse(d_to) > new Date()){
+        str_date = "Ongoing (until: "+normalize_date(d_to)+")";
+      }else {
+        str_date = "Finished"
+      }
+  }
+  return str_date;
+}
+
 function normalize_date(d) {
   // e.g. 02/15/2017
   const months = {
@@ -191,6 +231,10 @@ function last_diary(diary_obj) {
   }
   return -1;
 }
+
+
+
+
 function report_handler(an_item) {
   //{"content": , "date": }
   //console.log(an_item);
