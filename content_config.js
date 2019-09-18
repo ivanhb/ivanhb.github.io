@@ -49,7 +49,7 @@ var my_config = {
           "title": ['[[name]]'],
           "subtitle": ['[[sub_name]]'],
           "subtitle": ['Status: [[date]]'],
-          "content": ['[[description]]<p>[[achievements]]</p><p>[[people]]</p>'],
+          "content": ['[[description]]<p>[[people]]</p><p>[[achievements]]</p>'],
           "extra": ['[[extra]]']
         }
       },
@@ -132,9 +132,9 @@ function normalize_date_range(date_range){
 function normalize_people(d) {
   var str_to_return = "";
   for (var i = 0; i < d.length; i++) {
-    str_to_return = str_to_return +"<a href='"+d[i]["link"]+"'>"+d[i]["title"]+" - "+d[i]["affiliation"]+"; </a>";
-    if (i != d.length - 1) {
-      str_to_return = str_to_return + ",";
+    str_to_return = str_to_return +"<li style='list-style:none;'><i class='user small icon'></i><a href='"+d[i]["link"]+"'>"+d[i]["title"]+" - "+d[i]["affiliation"]+"</a></li>";
+    if (i == d.length - 1) {
+      str_to_return = "<div class='subtitle'>People</div>"+str_to_return;
     }
   }
   return str_to_return;
@@ -143,7 +143,7 @@ function normalize_people(d) {
 function normalize_achievements(d) {
   var str_to_return = "";
   for (var i = 0; i < d.length; i++) {
-    str_to_return = str_to_return + "<li>"+d[i]+"</li>";
+    str_to_return = str_to_return + "<li style='list-style:none;'><i class='check small icon'></i>"+d[i]+"</li>";
     if (i == d.length - 1) {
       str_to_return = "<div class='subtitle'>Achievements</div>"+str_to_return;
     }
