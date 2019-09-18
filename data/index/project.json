@@ -14,7 +14,7 @@
       "people": [
         {"type":"researcher","title":"Luca Pareschi", "affiliation":"Department of Computer Science and Engineering DISI, University of Bologna","link":"https://www.unibo.it/sitoweb/luca.pareschi"},
         {"type":"researcher","title":"Paolo Ferri", "affiliation":"Department of Management, University of Bologna","link":"https://www.unibo.it/sitoweb/p.ferri"},
-        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
+        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"}
       ],
       "extra": [
         {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
