@@ -46,7 +46,7 @@ function build_dynamic_section(dynamic_sec_obj) {
               str_html_content = str_html_content + "<li>"+normalized_item["content"][j]+"</li>";
             }
             str_html_content = str_html_content + "<div id='full_text'><a href='"+an_item["link"]+"'>Read report</a></div></div>";
-            console.log(str_html_content);
+            //console.log(str_html_content);
             $("#"+id+" .body")[0].innerHTML = $("#"+id+" .body")[0].innerHTML + str_html_content;
 
             _call_for_content(handler, _items, id, index + 1)
@@ -68,7 +68,7 @@ function handle_req(type_req, res_req, request_obj) {
             dataType: "json",
             async: false,
             success: function(data) {
-              console.log(data);
+              //console.log(data);
               var redirect_href = Reflect.apply(fun_to_call,undefined,[data]);
               if (redirect_href != -1) {
                 window.location.replace(redirect_href);
@@ -230,7 +230,7 @@ function build_sec_dom(sec_obj, list_obj){
                normalized_subsec = normalized_subsec.replace("[["+a_k+"]]", replaced_val);
              }
            }else {
-             console.log(att);
+             //console.log(att);
              var extra_str_dom = "";
              for (var i_at = 0; i_at < att.length; i_at++) {
                a_k = Object.keys(att[i_at])[0];

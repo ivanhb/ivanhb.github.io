@@ -3,10 +3,11 @@
     {
       "name": "CATARSI, Automatic Text Understanding",
       "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
-      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<div class='subtitle'>Achievements:</div><li>Developing</li>",
+      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<div class='subtitle'>Achievements:</div><li>Developing MITAO, A Mashup Interface for Text Analysis Operations</li><li>Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup</li>",
       "date": "04/2019-10/2019",
       "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/catarsi/mitao"}
+        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
+        {"type":"git_repository","label":"DIPAM repository","value":"https://github.com/ivanhb/dipam"}
       ],
       "source": "https://ivanhb.github.io/phd/project",
       "id": "catarsi",

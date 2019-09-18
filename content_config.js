@@ -36,7 +36,7 @@ var my_config = {
       {
         'id': 'projects',
         'source': 'https://ivanhb.github.io/data/index/project.json',
-        'section_title': 'Main Projects',
+        'section_title': 'Projects',
         'section_type': 'gen-sec',
         'section_class': 'project',
         'normalize': {},
@@ -45,6 +45,7 @@ var my_config = {
           "title": ['[[name]]'],
           "subtitle": ['[[sub_name]]'],
           "content": ['[[description]]'],
+          "contentextra": ['[[description]]'],
           "extra": ['[[extra]]']
         }
       },
