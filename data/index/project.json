@@ -1,6 +1,42 @@
 {
   "items": [
     {
+      "id":"phd_thesis",
+      "name": "Ph.D. thesis: The application of Semantic Publishing technologies in the Science of Science research domain for the Humanities field",
+      "sub_name": "",
+      "description": "The main purpose of this work is the application of the Science Of Science methodologies into the Humanities domain, which has gained less attention in the literature compared to the sciences. Bibliometric analysis and social/networking interactions will be taken into consideration.",
+      "date": "01/11/2018-01/11/2021",
+      "achievements": [
+        "Presenting my Ph.D. work at the ISSI 2019 doctoral forum, <a href='#issi2019'>Check it in activities</a>.",
+        "Presenting a poster at ISWS 2019, <a href='#isws2019'>Check it in activities</a>."
+      ],
+      "people": [
+        {"type":"tutor","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
+        {"type":"tutor","title":"Francesca Tomasi", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/francesca.tomasi"}
+      ],
+      "extra": [
+        {"type":"webpage","label":"Dedicated webpage","value":"https://ivanhb.github.io/phd"}
+      ],
+      "source": "https://ivanhb.github.io/phd/project",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"digital_library",
+      "name": "The Digital Library interface",
+      "sub_name": "A digital library created and maintained by the FICLIT department",
+      "description": "The aim of this project is the creation of a digital library portal which stores digitalised resources taken from the FICLIT library, and make these digitalised resources freely accessible to academic users. Users will have the possibility to read resources full texts stored in IIIF format (International Image Interoperability Framework).",
+      "date": "01/06/2019-01/01/2021",
+      "achievements": [],
+      "people": [
+        {"type":"staff","title":"Tommaso Vitale", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://centri.unibo.it/dharc/en/centre/centre-people"}
+      ],
+      "extra": [
+        {"type":"webpage","label":"Follow upcoming updates on the DHARC website","value":"https://centri.unibo.it/dharc/en"}
+      ],
+      "source": "https://ivanhb.github.io/phd/project",
+      "include_in_webpage": 1
+    },
+    {
       "id":"catarsi",
       "name": "CATARSI, Automatic Text Understanding",
       "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
