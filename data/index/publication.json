@@ -1,10 +1,10 @@
 {
   "items": [
     {
-      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations. arXiv preprint arXiv:1904.06052.",
+      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations.",
       "reference_format": "apa",
-      "link": "https://arxiv.org/abs/1904.06052",
-      "link_format": "arxiv",
+      "link": "https://doi.org/10.1007/s11192-019-03217-6",
+      "link_format": "doi",
       "title": "COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations",
       "autor": "Ivan Heibi && Silvio Peroni && David Shotton",
       "date": "12/04/2019",

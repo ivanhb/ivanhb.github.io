@@ -1,6 +1,18 @@
 {
   "items": [
     {
+      "name": "CATARSI, Automatic Text Understanding",
+      "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
+      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<div class='subtitle'>Achievements:</div><li>Developing</li>",
+      "date": "04/2019-10/2019",
+      "extra": [
+        {"type":"git_repository","label":"Go to repository","value":"https://github.com/catarsi/mitao"}
+      ],
+      "source": "https://ivanhb.github.io/phd/project",
+      "id": "catarsi",
+      "include_in_webpage": 1
+    },
+    {
       "name": "MITAO",
       "sub_name": "A Mashup Interface for Text Analysis Operations",
       "description": "A web application tool for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the CATARSI Project. It was developed using DIPAM: A Dashboard Interface for Python-based Applications Mashup. Which has been configured for the application of text analysis methods based on popular python natural language libraries.",

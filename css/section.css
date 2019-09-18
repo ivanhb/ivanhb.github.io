@@ -437,6 +437,10 @@ a:hover{
 }
 
 @media only screen and (max-width: 650px) {
+  #entry .entry-header{
+    width: 100%;
+    margin-bottom: 30px;
+  }
   #aboutme_section_header{
     width: 80%;
     margin-bottom: 20px;
