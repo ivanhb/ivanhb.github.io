@@ -3,9 +3,11 @@
     {
       "name": "CATARSI, Automatic Text Understanding",
       "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
-      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<div class='subtitle'>Achievements:</div><li>Developing MITAO, A Mashup Interface for Text Analysis Operations</li><li>Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup</li>",
+      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<p><div class='subtitle'>Achievements:</div><li>Developing MITAO, A Mashup Interface for Text Analysis Operations</li><li>Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup</li><li>Attending and presenting MITAO at EURAM 2019</li>",
       "date": "04/2019-10/2019",
       "extra": [
+        {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
+        {"type":"git_repository","label":"CATARSI organization repository","value":"https://github.com/catarsi"},
         {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
         {"type":"git_repository","label":"DIPAM repository","value":"https://github.com/ivanhb/dipam"}
       ],
@@ -14,51 +16,18 @@
       "include_in_webpage": 1
     },
     {
-      "name": "MITAO",
-      "sub_name": "A Mashup Interface for Text Analysis Operations",
-      "description": "A web application tool for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the CATARSI Project. It was developed using DIPAM: A Dashboard Interface for Python-based Applications Mashup. Which has been configured for the application of text analysis methods based on popular python natural language libraries.",
-      "date": "04/2019-07/2019",
+      "name": "The OpenCitations Enhancement Project",
+      "sub_name": "An open repository of scholarly citation data.",
+      "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.\n<p><div class='subtitle'>Achievements:</div><li>Developing OSCAR, The OpenCitations RDF Search Application</li><li>Developing LUCINDA, The OpenCitations RDF Resource Browser</li><li>Presenting OSCAR at The Web Conference 2018</li><li>Presenting OSCAR and LUCINDA application to Wikidata at WikiCite 2018</li>",
+      "date": "11/2017-11/2018",
       "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/catarsi/mitao"}
+        {"type":"webpage","label":"OpenCitations website","value":"http://opencitations.net/"},
+        {"type":"git_repository","label":"OpenCitations organization repository","value":"https://github.com/opencitations"},
+        {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"},
+        {"type":"git_repository","label":"LUCINDA repository","value":"https://github.com/opencitations/lucinda"}
       ],
       "source": "https://ivanhb.github.io/phd/project",
-      "project": "catarsi",
-      "include_in_webpage": 1
-    },
-    {
-      "name": "DIPAM",
-      "sub_name": "A Dashboard Interface for Python-based Applications Mashup",
-      "description": "A Web-based application for mashing up Python-based Applications. Created for mashing up automatic text analysis tools and create a customizable visual workflow. This application is linked to the CATARSI Project",
-      "date": "04/2019-05/2019",
-      "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/ivanhb/dipam"}
-      ],
-      "source": "https://ivanhb.github.io/phd/project",
-      "project": "phd",
-      "include_in_webpage": 1
-    },
-    {
-      "name": "OSCAR",
-      "sub_name": "The OpenCitations RDF Search Application",
-      "description": "A user friendly search platform applicable for any triplestore endpoint. This idea came out with regard to the OpenCitations project, which contains an open repository of scholarly citation data in RDF format, we would like to make accesible for any user to search and explore. The current version of the tool is integrated inside the OpenCitations web interface. opencitations.net/search",
-      "date": "01/2018-11/2018",
-      "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/opencitations/oscar"}
-      ],
-      "source": "https://ivanhb.github.io/opencitations-doc/project",
-      "project": "opencitations",
-      "include_in_webpage": 1
-    },
-    {
-      "name": "LUCINDA",
-      "sub_name": "The OpenCitations RDF Resource Browser",
-      "description": "Lucinda is a general RDF-resource browser which could be configured to work with any triplestore providing a SPARQL-endpoint address. LUCINDA can also integrate in it OSCAR, The OpenCitations RDF Search Application. In this repository you can find few examples of Lucinda usage. Currently we have tested Lucinda with two different projects: OpenCitations, and Wikidata. For each one of these projects we have its corresponding .html main entry, try the Wikidata example, presented at Wikicite2018, at example/wikidata/browser.html .",
-      "date": "01/2018-11/2018",
-      "extra": [
-        {"type":"git_repository","label":"Go to repository","value":"https://github.com/opencitations/lucinda"}
-      ],
-      "source": "https://ivanhb.github.io/opencitations-doc/project",
-      "project": "opencitations",
+      "id": "opencitations",
       "include_in_webpage": 1
     }
   ]

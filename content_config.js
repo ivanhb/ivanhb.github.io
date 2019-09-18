@@ -161,7 +161,7 @@ I was born in Israel, my father is arab and my mother is Italian. Luckily, I gai
   };
   var md = new Remarkable();
   var html_str = md.render(ex["description"]);
-  console.log(html_str);
+  //console.log(html_str);
   return html_str;
 }
 
@@ -193,14 +193,14 @@ function last_diary(diary_obj) {
 }
 function report_handler(an_item) {
   //{"content": , "date": }
-  console.log(an_item);
+  //console.log(an_item);
   //const regex = /<h2 id=\".*\"\>(.*)\<a.*><\/h2>/gm;
   const regex = /<h2.*id=\".*\".*\>(.*)<\/h2>/gm
 
   var match;
   var content = [];
   while((match = regex.exec(an_item["html_content"])) !== null) {
-      console.log(match[1]);
+      //console.log(match[1]);
       content.push(match[1]);
   }
   var normalized_item = {
