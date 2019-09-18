@@ -47,8 +47,7 @@ var my_config = {
         //define the DOM layout pattern of each entity
         'layout':{
           "title": ['[[name]]'],
-          "subtitle": ['[[sub_name]]'],
-          "subtitle": ['Status: [[date]]'],
+          "subtitle": ['[[sub_name]] <p>Status: [[date]]</p>'],
           "content": ['[[description]]<p>[[people]]</p><p>[[achievements]]</p>'],
           "extra": ['[[extra]]']
         }
@@ -154,11 +153,14 @@ function normalize_achievements(d) {
 function date_to_status(d) {
   var str_date = "";
   if (d != "") {
-      var d_to = d.split("-");
-      if(Date.parse(d_to) > new Date()){
-        str_date = "Ongoing (until: "+normalize_date(d_to)+")";
+      var second_date = d.split("-")[1];
+      var second_date_parts = second_date.split("/");
+      var d_to = new Date(second_date_parts[2], second_date_parts[1] - 1, second_date_parts[0])
+      var cur_date = new Date();
+      if(d_to > cur_date) {
+        str_date = "Ongoing (until: "+normalize_date(second_date)+")";
       }else {
-        str_date = "Finished"
+        str_date = "Finished";
       }
   }
   return str_date;

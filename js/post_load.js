@@ -199,7 +199,7 @@ function build_sec_dom(sec_obj, list_obj){
    sec_order = ["title","subtitle","content","extra","separator"];
    var str_list_items = "<div id='"+sec_obj["id"]+"' class='"+sec_obj["section_type"]+" "+sec_obj["section_class"]+"'>";
    str_list_items = str_list_items + "<div class='sec-header'>"+sec_obj["section_title"]+"</div>"+"</div><div class='section-separator'></div>";
-   str_list_items = str_list_items + "<div class='sec-body'>";
+   str_list_items = str_list_items + "<div class='sec-body "+sec_obj["id"]+"'>";
    for (var i = 0; i < list_obj.length; i++) {
      var an_entity = list_obj[i];
      var str_all_subsec = "";
