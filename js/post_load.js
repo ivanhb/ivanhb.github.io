@@ -247,7 +247,11 @@ function build_sec_dom(sec_obj, list_obj){
        }
      }
      //add the new entity here
-     str_list_items = str_list_items + "<div class='sec-item'>"+str_all_subsec+"</div>";
+     var entity_id = i;
+     if ("id" in an_entity) {
+       entity_id = an_entity["id"];
+     }
+     str_list_items = str_list_items + "<div id='"+entity_id+"' class='sec-item'>"+str_all_subsec+"</div>";
    }
    str_list_items = str_list_items + "</div>";
 

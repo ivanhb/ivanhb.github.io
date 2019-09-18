@@ -50,21 +50,6 @@ var my_config = {
         }
       },
       {
-        'id': 'publications',
-        'source': 'https://ivanhb.github.io/data/index/publication.json',
-        'section_title': 'Publications',
-        'section_type': 'gen-sec',
-        'section_class': 'publication',
-        'normalize': {
-          'date': normalize_date,
-        },
-        //define the DOM layout pattern of each entity
-        'layout':{
-          "title": ['[[reference]]'],
-          "subtitle": ['<a href="[[link]]">[[link]]</a>']
-        }
-      },
-      {
         'id': 'activities',
         'source': 'https://ivanhb.github.io/data/index/activity.json',
         'section_title': 'Activities',
@@ -87,6 +72,21 @@ var my_config = {
             '<div class="section_label"></div>[[description]]'
           ],
           "extra": ['[[extra]]']
+        }
+      },
+      {
+        'id': 'publications',
+        'source': 'https://ivanhb.github.io/data/index/publication.json',
+        'section_title': 'Publications',
+        'section_type': 'gen-sec',
+        'section_class': 'publication',
+        'normalize': {
+          'date': normalize_date,
+        },
+        //define the DOM layout pattern of each entity
+        'layout':{
+          "title": ['[[reference]]'],
+          "subtitle": ['<a href="[[link]]">[[link]]</a>']
         }
       }
   ],

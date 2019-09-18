@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "id":"coci",
       "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations.",
       "reference_format": "apa",
       "link": "https://doi.org/10.1007/s11192-019-03217-6",
@@ -12,6 +13,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"croci",
       "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). Crowdsourcing open citations with CROCI-An analysis of the current status of open citations, and a proposal. arXiv preprint arXiv:1902.02534.",
       "reference_format": "apa",
       "link": "https://arxiv.org/abs/1902.02534",
@@ -23,6 +25,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"oscarpub2",
       "reference": "Heibi, I., Peroni, S., & Shotton, D. Enabling text search on SPARQL endpoints through OSCAR. Data Science, 1-23.",
       "reference_format": "apa",
       "link": "https://doi.org/10.3233/DS-190016",
@@ -35,6 +38,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"oscarpub1",
       "reference": "Heibi, I., Peroni, S., & Shotton, D. (2017). OSCAR: A customisable tool for free-text search over SPARQL endpoints. In Semantics, Analytics, Visualization (pp. 121-137). Springer, Cham.",
       "reference_format": "apa",
       "link": "https://doi.org/10.1007/978-3-030-01379-0_9",

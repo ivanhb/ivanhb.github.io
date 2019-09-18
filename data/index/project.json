@@ -1,9 +1,10 @@
 {
   "items": [
     {
+      "id":"catarsi",
       "name": "CATARSI, Automatic Text Understanding",
       "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
-      "description": "aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<p><div class='subtitle'>Achievements:</div><li>Developing MITAO, A Mashup Interface for Text Analysis Operations</li><li>Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup</li><li>Attending and presenting MITAO at EURAM 2019</li>",
+      "description": "This project aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.\n<p><div class='subtitle'>Achievements:</div><li>Developing MITAO, A Mashup Interface for Text Analysis Operations</li><li>Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup</li><li>Attending and presenting MITAO at EURAM 2019, <a href='#euram2019'>Check it in activities</a>.</li>",
       "date": "04/2019-10/2019",
       "extra": [
         {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
@@ -12,13 +13,13 @@
         {"type":"git_repository","label":"DIPAM repository","value":"https://github.com/ivanhb/dipam"}
       ],
       "source": "https://ivanhb.github.io/phd/project",
-      "id": "catarsi",
       "include_in_webpage": 1
     },
     {
+      "id":"opencitations_enhancment",
       "name": "The OpenCitations Enhancement Project",
       "sub_name": "An open repository of scholarly citation data.",
-      "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.\n<p><div class='subtitle'>Achievements:</div><li>Developing OSCAR, The OpenCitations RDF Search Application</li><li>Developing LUCINDA, The OpenCitations RDF Resource Browser</li><li>Presenting OSCAR at The Web Conference 2018</li><li>Presenting OSCAR and LUCINDA application to Wikidata at WikiCite 2018</li>",
+      "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.\n<p><div class='subtitle'>Achievements:</div><li>Developing OSCAR, The OpenCitations RDF Search Application</li><li>Developing LUCINDA, The OpenCitations RDF Resource Browser</li><li>Presenting OSCAR at The Web Conference 2018, <a href='#webconf2018'>Check it in activities</a>.</li><li>Presenting OSCAR and LUCINDA application to Wikidata at WikiCite 2018, <a href='#wikicite2018'>Check it in activities</a>.</li>",
       "date": "11/2017-11/2018",
       "extra": [
         {"type":"webpage","label":"OpenCitations website","value":"http://opencitations.net/"},
@@ -27,7 +28,6 @@
         {"type":"git_repository","label":"LUCINDA repository","value":"https://github.com/opencitations/lucinda"}
       ],
       "source": "https://ivanhb.github.io/phd/project",
-      "id": "opencitations",
       "include_in_webpage": 1
     }
   ]

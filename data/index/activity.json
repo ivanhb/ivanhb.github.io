@@ -1,6 +1,7 @@
 {
   "items": [
     {
+      "id":"issi2019",
       "name": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
       "location": "Rome, Italy",
       "date": "02/09/2019-05/09/2019",
@@ -16,6 +17,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"isws2019",
       "name": "ISWS 2019 - International Semantic Web Research Summer School",
       "location": "Bertinoro, Italy",
       "date": "30/06/2019-06/07/2019",
@@ -29,6 +31,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"euram2019",
       "name": "EURAM 2019",
       "location": "Lisbon, Portugal",
       "date": "25/06/2019-28/06/2019",
@@ -42,6 +45,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"wikicite2018",
       "name": "WikiCite 2018",
       "location": "Berkeley, California, USA",
       "date": "27/11/2018-29/11/2018",
@@ -58,6 +62,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"ocworkshop2018",
       "name": "Workshop on Open Citations",
       "location": "Bologna, Italy",
       "date": "03/09/2018-05/09/2018",
@@ -71,6 +76,7 @@
       "include_in_webpage": 1
     },
     {
+      "id":"webconf2018",
       "name": "The Web Conference",
       "location": "Lyon, France",
       "date": "23/04/2018-27/04/2018",
