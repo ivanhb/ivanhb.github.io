@@ -1,6 +1,20 @@
 {
   "items": [
     {
+      "id":"force2019",
+      "name": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
+      "location": "Edinburgh, Scotland",
+      "date": "15/10/2019-17/10/2019",
+      "contribution": "Presenting: 'COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations', and joining the panel: 'Citations: how open do we want them?'",
+      "description": "The FORCE11 annual conference is a different kind of meeting, where stakeholders come together – or scrummage – for an open discussion, on an even playing field, to talk about changing the ways scholarly and scientific information is communicated, shared and used. Researchers, publishers, librarians, computer scientists, informaticians, funders, educators, citizens, and others attend the FORCE11 meeting with a view to supporting the realisation of promising new ideas and identifying new potential collaborators.",
+      "extra": [
+        {"type":"presentation","label":"COCI presentation","value":"https://ivanhb.github.io/phd/activity/force11-2019/coci_presentation.pdf"}
+      ],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "project": "phd",
+      "include_in_webpage": 1
+    },
+    {
       "id":"issi2019",
       "name": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
       "location": "Rome, Italy",
