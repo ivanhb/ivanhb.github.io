@@ -2,7 +2,20 @@
 
 <head>
   <script>
-    window.location.replace("https://ivanhb.github.io/website/");
+    var myRegexp = /index\.html\?(.*)=(.*)/g;
+    var groups = myRegexp.exec(String(window.location.href));
+    var type_req = "";
+    var res_req = "";
+    if (groups != null) {
+      if (groups.length > 1) {type_req = groups[1];}
+      if (groups.length > 2) {res_req = groups[2];}
+    }
+
+    suffix = ""
+    if (type_req != "") {
+      suffix = "index.html?"+type_req+"="+res_req
+    }
+    window.location.replace("https://ivanhb.github.io/website/"+suffix);
   </script>
 </head>
 
