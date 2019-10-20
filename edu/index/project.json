@@ -14,7 +14,7 @@
         {"type":"tutor","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"tutor","title":"Francesca Tomasi", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/francesca.tomasi"}
       ],
-      "extra": [
+      "attached": [
         {"type":"webpage","label":"Dedicated webpage","value":"https://ivanhb.github.io/phd"}
       ],
       "source": "https://ivanhb.github.io/phd",
@@ -38,7 +38,7 @@
         {"type":"researcher","title":"Marilena Daquino", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/marilena.daquino2"},
         {"type":"staff","title":"Tommaso Vitale", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://centri.unibo.it/dharc/en/centre/centre-people"}
       ],
-      "extra": [
+      "attached": [
         {"type":"webpage","label":"/DH.ARC website","value":"https://centri.unibo.it/dharc/en"},
         {"type":"webpage","label":"My dedicated webpage","value":"https://ivanhb.github.io/dharc"}
       ],
@@ -49,7 +49,7 @@
       "id":"catarsi",
       "name": "CATARSI, Automatic Text Understanding",
       "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
-      "description": "This project aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extract meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.",
+      "description": "This project aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extra meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.",
       "date": "01/04/2019-01/10/2019",
       "achievements": [
         "Developing MITAO, A Mashup Interface for Text Analysis Operations",
@@ -61,7 +61,7 @@
         {"type":"researcher","title":"Paolo Ferri", "affiliation":"Department of Management, University of Bologna","link":"https://www.unibo.it/sitoweb/p.ferri"},
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"}
       ],
-      "extra": [
+      "attached": [
         {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
         {"type":"git_repository","label":"CATARSI organization repository","value":"https://github.com/catarsi"},
         {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
@@ -86,7 +86,7 @@
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"}
       ],
-      "extra": [
+      "attached": [
         {"type":"webpage","label":"OpenCitations website","value":"http://opencitations.net/"},
         {"type":"git_repository","label":"OpenCitations organization repository","value":"https://github.com/opencitations"},
         {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"},

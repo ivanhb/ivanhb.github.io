@@ -2,7 +2,7 @@
   "items": [
     {
       "id":"coci",
-      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations.",
+      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations. Scientometrics",
       "reference_format": "apa",
       "link": "https://doi.org/10.1007/s11192-019-03217-6",
       "link_format": "doi",
