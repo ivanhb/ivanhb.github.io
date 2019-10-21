@@ -13,7 +13,7 @@
           "linkedin":{"value":"https://www.linkedin.com/in/ivan-heibi-738317a3", "include_in_webpage": 1},
           "university_email":{"value":"mailto:ivan.heibi2@unibo.it", "include_in_webpage": 1},
           "orcid":{"value":"https://orcid.org/0000-0001-5366-5194", "include_in_webpage": 1},
-          "telegram bot":{"value":"ivanhbBot", "include_in_webpage": 0},
+          "telegram bot":{"value":"ivanhbBot", "include_in_webpage": 0}
       },
       "attached": [
         {"type":"document", "label":"Curriculum vitae","value":"https://ivanhb.github.io/doc/personal/CV-Professional.pdf", "include_in_webpage": 1},
