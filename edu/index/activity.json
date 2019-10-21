@@ -29,7 +29,7 @@
         {"type":"presentation","label":"OpenCitations infrastructure presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/OpenCitations,%20an%20infrastructure%20for%20open%20citation%20data.pdf"},
         {"type":"presentation","label":"OpenCitations and Crossref APIs presentation","value":"https://ivanhb.github.io/phd/activity/issi2019(roma)/A%20tutorial%20for%20OpenCitations%20and%20Crossref%20API.pdf"}
       ],
-      "keywords": ["open citations","citations","croci","crossref","opencitations","workshop","presentation","api","phd","doctoral forum","bibliometrics","scientometrics"],
+      "keywords": ["open citations","citations","croci","crossref","opencitations","workshop","presentation","api","phd","doctoral forum","bibliometrics","scientometrics","humanities","scienceofscience"],
       "source": "https://ivanhb.github.io/phd/activity",
       "project": "phd",
       "include_in_webpage": 1

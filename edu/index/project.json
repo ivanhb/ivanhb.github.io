@@ -17,6 +17,7 @@
       "attached": [
         {"type":"webpage","label":"Dedicated webpage","value":"https://ivanhb.github.io/phd"}
       ],
+      "keywords": ["citations","citation function","phd","bibliometrics","scientometrics","humanities","scienceofscience"],
       "source": "https://ivanhb.github.io/phd",
       "include_in_webpage": 1
     },
@@ -42,6 +43,7 @@
         {"type":"webpage","label":"/DH.ARC website","value":"https://centri.unibo.it/dharc/en"},
         {"type":"webpage","label":"My dedicated webpage","value":"https://ivanhb.github.io/dharc"}
       ],
+      "keywords": ["digital humanities","humanities","digital library"],
       "source": "https://github.com/dharc-org",
       "include_in_webpage": 1
     },
@@ -67,6 +69,7 @@
         {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
         {"type":"git_repository","label":"DIPAM repository","value":"https://github.com/ivanhb/dipam"}
       ],
+      "keywords": ["nlp","application","topic modelling","gui"],
       "source": "https://ivanhb.github.io/phd/project",
       "include_in_webpage": 1
     },
@@ -92,6 +95,7 @@
         {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"},
         {"type":"git_repository","label":"LUCINDA repository","value":"https://github.com/opencitations/lucinda"}
       ],
+      "keywords": ["open citations","citations","coci","oscar","lucinda","opencitations","gui"],
       "source": "https://ivanhb.github.io/phd/project",
       "include_in_webpage": 1
     }
