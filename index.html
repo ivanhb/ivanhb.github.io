@@ -1,22 +1,9 @@
 <html>
 
 <head>
+  <script  type="text/javascript" src="src/script/request.js"></script>
   <script>
-    var myRegexp = /index\.html\?(.*)=(.*)/g;
-    var groups = myRegexp.exec(String(window.location.href));
-    var type_req = "";
-    var res_req = "";
-    if (groups != null) {
-      if (groups.length > 1) {type_req = groups[1];}
-      if (groups.length > 2) {res_req = groups[2];}
-    }
-
-    suffix = ""
-    if (type_req != "") {
-      suffix = "index.html?"+type_req+"="+res_req
-    }
-    console.log("Redirect to:"+"https://ivanhb.github.io/website/home.html"+suffix);
-    window.location.replace("https://ivanhb.github.io/website/home.html"+suffix);
+    handle_url(String(window.location.href));
   </script>
 </head>
 
