@@ -1,4 +1,4 @@
-var WEBSITE_URL = "https://ivanhb.github.io/website"
+var website_homepage = "https://ivanhb.github.io/website/home.html"
 var my_config = {
     //**  /request/
     'request': {
@@ -51,7 +51,7 @@ function handle_url(str_url){
   if ("fun" in fun_parts) {
     handle_req(fun_parts);
   }else {
-    window.location.replace(WEBSITE_URL);
+    window.location.replace(website_homepage);
   }
 }
 
