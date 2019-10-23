@@ -1,83 +1,108 @@
-var website_homepage = "https://ivanhb.github.io/website/home.html"
+var website_homepage = "https://ivanhb.github.io/website/"
 var my_config = {
     //**  /request/
-    'request': {
-      //** /request/doc
-      'doc':[
-        {
-          'data': "https://ivanhb.github.io/edu/index/diary.json",
-          //param and value
-          'param': "diary",
-          'value': {
-              'last': last_diary
-          },
-          'format': ["html", "text"]
-        }
-      ]
-    }
+    'query':{
+          'lastreport':{
+              'format': ['html'],
+              'data': "https://ivanhb.github.io/edu/index/diary.json",
+              'handler': last_report
+          }
+     },
+     'format': {
+          'html':{'handler': handle_html},
+          'csv':{'handler': handle_csv},
+          'json':{'handler': handle_json},
+      }
 }
 
 
 
 function handle_url(str_url){
   var url = new URL(str_url);
-  var fun_parts = {}
-  for (var k_main in my_config) {
-    if (str_url.includes(k_main)) {
-      for (var k_type in my_config[k_main]) {
-        if (str_url.includes(k_type)) {
-          //is in config
-          for (var i = 0; i < my_config[k_main][k_type].length; i++) {
-            var param_obj = my_config[k_main][k_type][i]
-            var param_value = url.searchParams.get(param_obj.param);
-            if (param_value != null) {
-              if (param_value in param_obj.value) {
-                fun_parts['fun'] = param_obj.value[param_value];
-                fun_parts['data'] = param_obj.data;
-              }
-            }
+  var params = new URLSearchParams(url.search);
+
+  var dict_params = [];
+  for(var pair of params.entries()) {
+    var dict_elem = {}
+    dict_elem[pair[0]] = pair[1];
+    dict_params.push(dict_elem);
+  }
+  console.log(dict_params);
+
+  if (dict_params.length == 0) {
+    window.location.replace(website_homepage);
+  }else {
+    var i_query = check_list_dict(dict_params,"query");
+    if (i_query != -1) {
+      var param_val = dict_params[i_query]["query"];
+      if(param_val in my_config['query']){
+        var param_obj = my_config['query'][param_val];
+
+        //check the format
+        var format = param_obj.format[0];
+        var i_format = check_list_dict(dict_params,"format");
+        if (i_format != -1) {
+          var format_val = dict_params[i_format]["format"];
+          if (param_obj.format.indexOf(format_val) != -1) {
+            format = format_val;
           }
         }
+
+        Reflect.apply(param_obj.handler,undefined,[param_obj.data,format]);
+      }else {
+          alert("Invalid parameter value !!");
       }
+    }else {
+      alert("Invalid request !!");
     }
   }
 
-  var format_value = url.searchParams.get("format");
-  if (format_value != null){
-    fun_parts['format'] = format_value;
-  }
-
-  //final check
-  if ("fun" in fun_parts) {
-    handle_req(fun_parts);
-  }else {
-    window.location.replace(website_homepage);
+  //window.location.replace(website_homepage);
+  function check_list_dict(list_dict, key) {
+    for (var i = 0; i < list_dict.length; i++) {
+      if(key in list_dict[i]){
+        return i;
+      }
+    }
+    return -1;
   }
 }
 
 
-function handle_req(fun_parts) {
+
+function last_report(data_url,format) {
+
   $.ajax({
       type: "GET",
-      url: fun_parts["data"],
+      url: data_url,
       dataType: "json",
       async: false,
       success: function(data) {
-        var result = Reflect.apply(fun_parts["fun"],undefined,[data]);
-        if ("format" in fun_parts) {
-          result = handle_result(result, fun_parts["format"])
+
+        var res = null
+        var items = data["items"];
+        if (items.length > 0) {
+          res = items[0]["link"]
         }
+
+        if (res == null) {
+          alert("Error !");
+        }else {
+          Reflect.apply(my_config["format"][format].handler,undefined,[res]);
+        }
+
       }
    });
 }
 
-function handle_result(result) {
+function handle_html(res) {
+  window.location.replace(res);
 }
 
-function last_diary(diary_obj) {
-  var items = diary_obj["items"];
-  if (items.length > 0) {
-    return items[0]["link"]
-  }
-  return -1;
+function handle_csv(res) {
+
+}
+
+function handle_json(res) {
+
 }
