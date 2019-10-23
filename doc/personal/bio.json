@@ -9,7 +9,7 @@
           "gmail":{"value":"ivanhb.ita@gmail.com", "label":"ivanhb.ita@gmail.com", "include_in_webpage": 0},
           "twitter":{"value":"https://twitter.com/ivanheib", "label":"@ivanheib", "include_in_webpage": 1},
           "git":{"value":"https://github.com/ivanhb", "label":"github.com/ivanhb", "include_in_webpage": 1},
-          "facebook":{"value":"https://www.facebook.com/ivanhb.ita", "label":"facebook.com/ivanhb.ita", "include_in_webpage": 0},
+          "facebook":{"value":"https://www.facebook.com/ivanhb.ita", "label":"facebook.com/ivanhb.ita", "include_in_webpage": 1},
           "linkedin":{"value":"https://www.linkedin.com/in/ivan-heibi-738317a3", "label":"linkedin:ivan-heibi", "include_in_webpage": 1},
           "university_email":{"value":"mailto:ivan.heibi2@unibo.it", "label":"ivan.heibi2@unibo.it", "include_in_webpage": 1},
           "orcid":{"value":"https://orcid.org/0000-0001-5366-5194", "label":"orcid.org/0000-0001-5366-5194", "include_in_webpage": 1},
