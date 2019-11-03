@@ -10,7 +10,7 @@
       "autor": "Ivan Heibi && Silvio Peroni && David Shotton",
       "date": "12/04/2019",
       "keywords": ["open citations","citations","coci","crossref","opencitations","api"],
-      "project": "phd",
+      "related_to": ["opencitaions"],
       "include_in_webpage": 1
     },
     {
@@ -23,7 +23,7 @@
       "autor": "Ivan Heibi && Silvio Peroni && David Shotton",
       "date": "21/06/2019",
       "keywords": ["open citations","citations","croci","coci","crossref","opencitations"],
-      "project": "phd",
+      "related_to": ["opencitaions"],
       "include_in_webpage": 1
     },
     {
@@ -37,7 +37,7 @@
       "booktitle": "Semantics, Analytics, Visualization",
       "date": "10/04/2019",
       "keywords": ["open citations","citations","oscar","lucinda","opencitations","gui","sparql","semantic web"],
-      "project": "phd",
+      "related_to": ["opencitaions"],
       "include_in_webpage": 1
     },
     {
@@ -52,7 +52,7 @@
       "date": "31/10/2018",
       "keywords": ["open citations","citations","oscar","opencitations","gui","sparql","semantic web"],
       "publisher": "Springer",
-      "project": "opencitations",
+      "related_to": ["opencitations_enhancment"],
       "include_in_webpage": 1
     }
   ]
