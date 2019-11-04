@@ -43,13 +43,13 @@
       "relation":{}
     },
     "Publication":{
-      "attribute":{},
-      "@isSubclassOf": "Product",
-      "relation":{
+      "attribute":{
         "reference": "",
         "reference_format": "",
         "author": ""
-      }
+      },
+      "@isSubclassOf": "Product",
+      "relation":{}
     },
     "Illustration":{
       "prefix": "il",
@@ -131,7 +131,17 @@
         "value": ""
       },
       "relation":{
-        "@hasPerson": ""
+        "@hasPerson": "Person"
+      }
+    },
+    "Report":{
+      "prefix": "re",
+      "attribute":{
+        "date": -1,
+        "source":""
+      },
+      "relation":{
+        "@hasKeyword": "Keyword"
       }
     }
   }

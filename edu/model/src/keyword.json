@@ -1,4 +1,5 @@
 {
+  "class": "Keyword",
   "items": [
     {"id": "1","attribute":{"value":"digital humanities"}},
     {"id": "2","attribute":{"value":"humanities"}},

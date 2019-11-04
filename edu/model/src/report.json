@@ -1,0 +1,15 @@
+{
+  "class": "Report",
+  "items": [
+    {
+      "id":"1",
+      "attribute":{
+        "date":"1/11/2019",
+        "source": "https://ivanhb.github.io/edu/diary/2019/11/1.html"
+      },
+      "relation":{
+        "@hasKeyword": ["1","2","3","8","9","10"]
+      }
+    }
+  ]
+}
