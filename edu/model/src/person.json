@@ -1,0 +1,112 @@
+{
+  "items": [
+    {
+      "id":"1",
+      "attribute":{
+          "name":"Silvio Peroni",
+          "position":"professor",
+          "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+          "webpage":"https://www.unibo.it/sitoweb/silvio.peroni"
+        }
+    },
+    {
+      "id":"2",
+      "attribute":{
+            "name":"Francesca Tomasi",
+            "position":"professor",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/francesca.tomasi"
+      }
+    },
+    {
+      "id":"3",
+      "attribute":{
+            "name":"Aldo Gangemi",
+            "position":"professor",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/aldo.gangemi"
+      }
+    },
+    {
+      "id":"4",
+      "attribute":{
+            "name":"Paola Carmela Italia",
+            "position":"professor",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/paola.italia"
+      }
+    },
+    {
+      "id":"5",
+      "attribute":{
+            "name":"Fabio Tamburini",
+            "position":"professor",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/aldo.gangemi"
+      }
+    },
+    {
+      "id":"6",
+      "attribute":{
+            "name":"Fabio Vitali",
+            "position":"professor",
+            "affiliation":"Department of Computer Science and Engineering, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/fabio.vitali"
+      }
+    },
+    {
+      "id":"7",
+      "attribute":{
+            "name":"Angelo Di Iorio",
+            "position":"professor",
+            "affiliation":"Department of Computer Science and Engineering, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/angelo.diiorio"
+      }
+    },
+    {
+      "id":"8",
+      "attribute":{
+            "name":"Marilena Daquino",
+            "position":"researcher",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/marilena.daquino2"
+      }
+    },
+    {
+      "id":"9",
+      "attribute":{
+            "position":"staff",
+            "name":"Tommaso Vitale",
+            "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
+            "webpage":"https://centri.unibo.it/dharc/en/centre/centre-people"
+      }
+    },
+    {
+      "id":"10",
+      "attribute":{
+            "position":"director",
+            "name":"David Shotton",
+            "affiliation":"Oxford e-Research Centre, University of Oxford",
+            "webpage":"http://www.oerc.ox.ac.uk/people/DavidShotton"
+      }
+    },
+    {
+      "id":"11",
+      "attribute":{
+            "position":"researcher",
+            "name":"Luca Pareschi",
+            "affiliation":"Department of Computer Science and Engineering DISI, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/luca.pareschi"
+      }
+    },
+    {
+      "id":"12",
+      "attribute":{
+            "position":"researcher",
+            "name":"Paolo Ferri",
+            "affiliation":"Department of Management, University of Bologna",
+            "webpage":"https://www.unibo.it/sitoweb/p.ferri"
+      }
+    }
+  ]
+}

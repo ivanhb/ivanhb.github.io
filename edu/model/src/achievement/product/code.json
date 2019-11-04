@@ -1,0 +1,68 @@
+{
+  "items": [
+    {
+      "id":"8",
+      "attribute":{
+        "title": "OSCAR, The OpenCitations RDF Search Application",
+        "source": "",
+        "release": "",
+        "subtitle": "",
+        "persistent_id": "",
+        "persistent_id_type": "",
+        "date": ""
+      },
+      "relation":{
+        "@hasWork": ["6"],
+        "@hasKeyword": ["12","14","4","5","6","30"]
+      }
+    },
+    {
+      "id":"9",
+      "attribute":{
+        "title": "LUCINDA, The OpenCitations RDF Resource Browser",
+        "source": "",
+        "release": "",
+        "subtitle": "",
+        "persistent_id": "",
+        "persistent_id_type": "",
+        "date": ""
+      },
+      "relation":{
+        "@hasWork": ["6"],
+        "@hasKeyword": ["12","14","4","5","6","30"]
+      }
+    },
+    {
+      "id":"10",
+      "attribute":{
+        "title": "MITAO, A Mashup Interface for Text Analysis Operations",
+        "source": "",
+        "release": "",
+        "subtitle": "",
+        "persistent_id": "",
+        "persistent_id_type": "",
+        "date": ""
+      },
+      "relation":{
+        "@hasWork": ["5"],
+        "@hasKeyword": ["12","14","13","11"]
+      }
+    },
+    {
+      "id":"11",
+      "attribute":{
+        "title": "DIPAM, A Dashboard Interface for Python-based Applications Mashup",
+        "source": "",
+        "release": "",
+        "subtitle": "",
+        "persistent_id": "",
+        "persistent_id_type": "",
+        "date": ""
+      },
+      "relation":{
+        "@hasWork": ["5"],
+        "@hasKeyword": ["12","14","13","11"]
+      }
+    }
+  ]
+}

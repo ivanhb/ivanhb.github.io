@@ -1,0 +1,40 @@
+{
+  "items": [
+    {
+      "id":"1",
+      "attribute":{
+          "name": "Digital Humanities Advanced Research Centre - /DH.ARC",
+          "description": "The Digital Humanities Advanced Research Centre (/DH.arc) is part of the Department of Classical Philology and Italian Studies (FICLIT), that connects students, researchers, IT staff, and professors from FICLIT and the Department of Computer Science and Engineering (DISI) and affiliated structures, within the University of Bologna. The Centre supports scholars and institutions in designing, developing, and maintaining DH research projects. The aim is to be a hub for researchers and agencies currently working in the field of DH, and to promote innovative projects in the Humanities.",
+          "logo": "https://ivanhb.github.io/data/img/dharc_logo.png",
+          "webpage": "https://centri.unibo.it/dharc/en",
+          "personal_page": "https://ivanhb.github.io/dharc",
+          "keywords": ["digital humanities","humanities","digital library"],
+          "include_in_webpage": 1,
+          "start_date": "01/06/2019",
+          "end_date": "ongoing"
+      },
+      "relation":{
+          "@hasKeyword":["1","2","3"],
+          "@hasMember": ["1","2","3","4","5","6","8","9","10","13"]
+      }
+    },
+    {
+      "id":"2",
+      "attribute":{
+          "name": "OpenCitaions",
+          "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.",
+          "logo": "https://ivanhb.github.io/data/img/oc_logo.png",
+          "webpage": "http://opencitations.net/",
+          "personal_page": "https://ivanhb.github.io/opencitations",
+          "keywords": ["open citations","citations","opencitations"],
+          "include_in_webpage": 1,
+          "start_date": "01/11/2017",
+          "end_date": "ongoing"
+      },
+      "relation":{
+          "@hasKeyword":["4","5","6"],
+          "@hasMember": ["11","12","16"]
+      }
+    }
+  ]
+}

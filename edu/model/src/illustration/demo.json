@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id":"1",
+      "attribute": {
+          "source": "https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q30536251",
+          "title": "Lucinda demo for Wikidata",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{
+          "@hasProduct": ["9","15","14"]
+      }
+    },
+    {
+      "id":"2",
+      "attribute": {
+          "source": "https://opencitations.github.io/oscar/example/v2/wikidata.html",
+          "title": "OSCAR demo for Wikidata",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{
+          "@hasProduct": ["8","15","14"]
+      }
+    }
+  ]
+}

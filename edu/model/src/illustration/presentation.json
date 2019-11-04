@@ -1,0 +1,94 @@
+{
+  "items": [
+    {
+      "id":"3",
+      "attribute":{
+          "source": "https://ivanhb.github.io/opencitations/activity/force11-2019/coci_presentation.pdf",
+          "title": "COCI presentation",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{
+          "@hasProduct": ["12"]
+      }
+    },
+    {
+      "id":"4",
+      "attribute":{
+          "source": "https://ivanhb.github.io/opencitations/activity/issi2019(roma)/Doctoral%20forum%20Ph.D.%20presentation.pdf",
+          "title": "Doctoral forum presentation",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{}
+    },
+    {
+      "id":"5",
+      "attribute":{
+          "source": "https://ivanhb.github.io/opencitations/activity/issi2019(roma)/OpenCitations,%20an%20infrastructure%20for%20open%20citation%20data.pdf",
+          "title": "OpenCitations infrastructure presentation",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{}
+    },
+    {
+      "id":"6",
+      "attribute":{
+          "source": "https://ivanhb.github.io/opencitations/activity/issi2019(roma)/A%20tutorial%20for%20OpenCitations%20and%20Crossref%20API.pdf",
+          "title": "OpenCitations and Crossref APIs presentation",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{}
+    },
+    {
+      "id":"7",
+      "attribute":{
+          "source": "https://ivanhb.github.io/phd/activity/isws(bertinoro)/poster_ivanhb.pdf",
+          "title": "ISWS-2019 Ph.D. poster",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{}
+    },
+    {
+      "id":"8",
+      "attribute":{
+          "source": "https://docs.google.com/presentation/d/1lM8HDFUytUEQ2vu603yJ0R1T8qTdsx8q50o5vP9y2so/edit?usp=sharing",
+          "title": "OSCAR and LUCINDA with Wikidata",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{
+          "@hasProduct": ["8","9","15","14"]
+      }
+    },
+    {
+      "id":"9",
+      "attribute":{
+          "source": "https://ivanhb.github.io/opencitations/activity/webconf2018(Lyon)_apr2018/SAVE-SD-2018.pdf",
+          "title": "OSCAR: A customizable tool for free-text search over SPARQL endpoints",
+          "subtitle": "",
+          "persistent_id": "",
+          "persistent_id_type": "",
+          "date": ""
+      },
+      "relation":{
+          "@hasProduct": ["8","15"]
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+{
+  "class": {
+    "Achievement":{
+      "prefix": "ac",
+      "last_id": 15,
+      "attribute":{
+        "title": "",
+        "subtitle": ""
+      },
+      "relation":{
+        "@hasWork": "Work",
+        "@hasKeyword": "Keyword"
+      }
+    },
+    "Product":{
+      "@isSubclassOf": "Achievement",
+      "attribute":{
+        "date": -1,
+        "persistent_id": -1,
+        "persistent_id_type": -1
+      },
+      "relation":{}
+    },
+    "Activity":{
+      "@isSubclassOf": "Achievement",
+      "attribute":{
+        "description": "",
+        "contribution": "",
+        "location": "",
+        "webpage": "",
+        "start_date": -1,
+        "end_date": -1
+      },
+      "relation":{
+        "@hasIllustration": "Illustration"
+      }
+    },
+    "Code":{
+      "@isSubclassOf": "Product",
+      "attribute":{
+        "source": ""
+      },
+      "relation":{}
+    },
+    "Publication":{
+      "attribute":{},
+      "@isSubclassOf": "Product",
+      "relation":{
+        "reference": "",
+        "reference_format": "",
+        "author": ""
+      }
+    },
+    "Illustration":{
+      "prefix": "il",
+      "last_id": 9,
+      "attribute":{
+        "source": "",
+        "title": "",
+        "subtitle": "",
+        "persistent_id": -1,
+        "persistent_id_type": -1,
+        "date": -1
+      },
+      "relation":{
+        "@hasProduct": "Product"
+      }
+    },
+    "Presentation":{
+      "attribute":{},
+      "@isSubclassOf": "Illustration",
+      "relation":{}
+    },
+    "Demo":{
+      "attribute":{},
+      "@isSubclassOf": "Illustration",
+      "relation":{}
+    },
+    "Work":{
+      "prefix": "wo",
+      "last_id": 6,
+      "attribute":{
+        "name": "",
+        "description": "",
+        "personal_webpage": "",
+        "logo": "",
+        "webpage": "",
+        "start_date": -1,
+        "end_date": -1
+      },
+      "relation":{
+        "@hasMember": "Person",
+        "@hasKeyword": "Keyword"
+      }
+    },
+    "Organization":{
+      "attribute":{},
+      "@isSubclassOf": "Work",
+      "relation":{}
+    },
+    "Project":{
+      "attribute":{},
+      "@isSubclassOf": "Work",
+      "relation":{
+        "@hasOrganization": "Organization"
+      }
+    },
+    "Keyword":{
+      "prefix": "kw",
+      "last_id": 30,
+      "attribute":{
+        "value":""
+      },
+      "relation":{}
+    },
+    "Person":{
+      "prefix": "pe",
+      "last_id": 12,
+      "attribute":{
+        "name":"",
+        "position":"",
+        "affiliation":"",
+        "webpage": -1
+      },
+      "relation":{}
+    },
+    "Role":{
+      "prefix": "ro",
+      "last_id": 5,
+      "attribute":{
+        "value": ""
+      },
+      "relation":{
+        "@hasPerson": ""
+      }
+    }
+  }
+}

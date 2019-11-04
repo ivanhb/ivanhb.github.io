@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "id":"1",
+      "attribute":{
+        "title": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
+        "subtitle": "",
+        "webpage": "https://www.force11.org/meetings/force2019",
+        "location": "Edinburgh, Scotland",
+        "start_date": "15/10/2019",
+        "end_date": "17/10/2019",
+        "contribution": "Presenting: 'COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations', and joining the panel: 'Citations: how open do we want them?'",
+        "description": "The FORCE11 annual conference is a different kind of meeting, where stakeholders come together – or scrummage – for an open discussion, on an even playing field, to talk about changing the ways scholarly and scientific information is communicated, shared and used. Researchers, publishers, librarians, computer scientists, informaticians, funders, educators, citizens, and others attend the FORCE11 meeting with a view to supporting the realisation of promising new ideas and identifying new potential collaborators."
+      },
+      "relation":{
+        "@hasWork": ["2"],
+        "@hasIllustration": ["3"],
+        "@hasKeyword": ["4","5","15","18","6","19","20"]
+      }
+    },
+    {
+      "id":"2",
+      "attribute":{
+        "title": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
+        "subtitle": "",
+        "webpage": "https://www.issi2019.org/",
+        "location": "Rome, Italy",
+        "start_date": "02/09/2019",
+        "end_date": "05/09/2019",
+        "contribution": "Hosting the 'Workshop on Open Citations: Opportunities and Ongoing Developments' and presenting OpenCitations and its API service, along with the participation into the ISSI doctoral forum.",
+        "description": "The ISSI 2019 Conference will provide an international forum for scientists, research managers and administrators, as well as information and communication related professionals to share research and debate the advancements of informetric and scientometric theory and applications."
+      },
+      "relation":{
+        "@hasWork": ["2","3"],
+        "@hasIllustration": ["4","5","6"],
+        "@hasKeyword": ["4","5","21","18","6","22","19","23","8","24","9","10","2","25"]
+      }
+    },
+    {
+      "id":"3",
+      "attribute":{
+        "title": "ISWS 2019 - International Semantic Web Research Summer School",
+        "subtitle": "",
+        "webpage": "http://stlab.istc.cnr.it/isws/wordpress-isws2019/",
+        "location": "Bertinoro, Italy",
+        "start_date": "30/06/2019",
+        "end_date": "06/07/2019",
+        "contribution": "Presenting a poster and attending as a Student of the Summer School",
+        "description": "ISWS is a full immersion, super intensive one-week experience including lectures and keynotes from outstanding speakers, a -learning by doing- teamwork program on open research problems, under the guidance of the best scientists in the field, with whom you will co-author a white paper of high potential impact"
+      },
+      "relation":{
+        "@hasWork": ["3"],
+        "@hasIllustration": ["7"],
+        "@hasKeyword": ["8","26","27","28"]
+      }
+    },
+    {
+      "id":"4",
+      "attribute":{
+        "title": "EURAM 2019",
+        "subtitle": "",
+        "webpage": "http://www.euram-online.org/annual-conference-2019.html",
+        "location": "Lisbon, Portugal",
+        "start_date": "25/06/2019",
+        "end_date": "28/06/2019",
+        "contribution": "Hosting a Symposium: CATARSI: Cleaning, analyzing and visualizing techniques for textual data. An interactive workshop",
+        "description": "It aims at advancing the academic discipline of management in Europe. With members from 49 countries in Europe and beyond, EURAM has a high degree of diversity and provides its members with opportunities to enrich debates over a variety of research management themes and traditions. In this workshop we presented MITAO, an automatic text analysis tool"
+      },
+      "relation":{
+        "@hasWork": ["5"],
+        "@hasIllustration": [],
+        "@hasKeyword": ["11","22","12","13"]
+      }
+    },
+    {
+      "id":"5",
+      "attribute":{
+        "title": "WikiCite 2018",
+        "subtitle": "",
+        "location": "Berkeley, California, USA",
+        "start_date": "27/11/2018",
+        "end_date": "29/11/2018",
+        "contribution": "Presenting a talk about: OSCAR and LUCINDA with Wikidata",
+        "description": "WikiCite 2018 is a 3-day conference, summit, and hack day dedicated to the vision of creating an open repository of bibliographic data to support the citation and fact-checking needs of Wikimedia related_tos, and possibly, to serve as an open infrastructure for research, education, and information quality across the web.",
+        "webpage": "https://meta.wikimedia.org/wiki/WikiCite_2018"
+      },
+      "relation":{
+        "@hasWork": ["6"],
+        "@hasIllustration": ["1","2","8"],
+        "@hasKeyword": ["4","5","6","19","12","29","14"]
+      }
+    },
+    {
+      "id":"6",
+      "attribute":{
+        "title": "Workshop on Open Citations",
+        "subtitle": "",
+        "location": "Bologna, Italy",
+        "start_date": "03/09/2018",
+        "end_date": "05/09/2018",
+        "contribution": "Member of workshop staff",
+        "description": "About 500 million open bibliographic citations are available on the web. We invite to this workshop researchers, scholarly publishers, funders, policy makers, and opening citations advocates, interested in the widespread adoption of practises for creation, reuse and improvement of open citation data.",
+        "webpage": "https://workshop-oc.github.io/index.html"
+      },
+      "relation":{
+        "@hasWork": ["2"],
+        "@hasIllustration": [],
+        "@hasKeyword": ["4","5","6"]
+      }
+    },
+    {
+      "id":"7",
+      "attribute":{
+        "title": "The Web Conference",
+        "subtitle": "",
+        "location": "Lyon, France",
+        "start_date": "23/04/2018",
+        "end_date": "27/04/2018",
+        "contribution": "Presenting OSCAR at the SAVE-SD workshop",
+        "description": "The Web Conference (formerly www conference) is a yearly international conference on the topic of the future directions of the World Wide Web. The main goal of this workshop I have attended, is bringing together publishers, companies and researchers from different fields (including Document and Knowledge Engineering, Semantic Web, Natural Language Processing, Scholarly Communication, Bibliometrics, and Human-Computer Interaction) in order to bridge the gap between the theoretical/academic and practical/industrial aspects with regards to scholarly data.",
+        "webpage": "https://save-sd.github.io/2018/index.html"
+      },
+      "relation":{
+        "@hasWork": ["6"],
+        "@hasIllustration": ["9"],
+        "@hasKeyword": ["6","19","12","30","14"]
+      }
+    }
+  ]
+}
