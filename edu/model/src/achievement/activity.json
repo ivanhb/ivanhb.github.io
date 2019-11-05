@@ -4,6 +4,7 @@
     {
       "id":"1",
       "attribute":{
+        "nickname": "FORCE2019",
         "title": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
         "subtitle": "",
         "webpage": "https://www.force11.org/meetings/force2019",
@@ -22,6 +23,7 @@
     {
       "id":"2",
       "attribute":{
+        "nickname": "ISSI-2019",
         "title": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
         "subtitle": "",
         "webpage": "https://www.issi2019.org/",

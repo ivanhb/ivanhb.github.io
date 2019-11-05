@@ -4,6 +4,7 @@
     {
       "id":"1",
       "attribute": {
+          "nickname": "LUCINDA: wikidata",
           "source": "https://opencitations.github.io/lucinda/example/wikidata/browser.html?browse=Q30536251",
           "title": "Lucinda demo for Wikidata",
           "subtitle": "",
@@ -18,6 +19,7 @@
     {
       "id":"2",
       "attribute": {
+          "nickname": "OSCAR: wikidata",
           "source": "https://opencitations.github.io/oscar/example/v2/wikidata.html",
           "title": "OSCAR demo for Wikidata",
           "subtitle": "",

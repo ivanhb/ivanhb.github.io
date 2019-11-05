@@ -4,6 +4,7 @@
     {
       "id":"8",
       "attribute":{
+        "nickname": "OSCAR",
         "title": "OSCAR, The OpenCitations RDF Search Application",
         "source": "",
         "release": "",
@@ -20,6 +21,7 @@
     {
       "id":"9",
       "attribute":{
+        "nickname": "LUCINDA",
         "title": "LUCINDA, The OpenCitations RDF Resource Browser",
         "source": "",
         "release": "",
@@ -36,6 +38,7 @@
     {
       "id":"10",
       "attribute":{
+        "nickname": "MITAO",
         "title": "MITAO, A Mashup Interface for Text Analysis Operations",
         "source": "",
         "release": "",
@@ -52,6 +55,7 @@
     {
       "id":"11",
       "attribute":{
+        "nickname": "DIPAM",
         "title": "DIPAM, A Dashboard Interface for Python-based Applications Mashup",
         "source": "",
         "release": "",

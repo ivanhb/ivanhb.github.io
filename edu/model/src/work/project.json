@@ -4,6 +4,7 @@
     {
       "id":"3",
       "attribute":{
+          "nickname": "Ph.D.",
           "name": "Ph.D. thesis: The application of Semantic Publishing technologies in the Science of Science research domain for the Humanities field",
           "description": "The main purpose of this work is the application of the Science Of Science methodologies into the Humanities domain, which has gained less attention in the literature compared to the sciences. Bibliometric analysis and social/networking interactions will be taken into consideration.",
           "webpage": "http://www.ficlit.unibo.it/it/ricerca/dottorati",
@@ -22,6 +23,7 @@
     {
       "id":"4",
       "attribute":{
+          "nickname": "The Digital Library",
           "name": "The /DH.ARC Digital Library",
           "description": "Among the objectives of /DH.arc is the creation of a Digital Library for collecting, curating, and sharing the wealth preserved at FICLIT, including the cultural heritage of its library and archive.",
           "webpage": "https://centri.unibo.it/dharc/en",
@@ -41,6 +43,7 @@
     {
       "id":"5",
       "attribute":{
+          "nickname": "CATARSI",
           "name": "CATARSI, Automatic Text Understanding",
           "description": "This project aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extra meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.",
           "webpage":"https://catarsiproject.wordpress.com",
@@ -59,6 +62,7 @@
     {
       "id":"6",
       "attribute":{
+          "nickname": "OpenCitations enhancement",
           "name": "The OpenCitations Enhancement Project",
           "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.",
           "webpage":"http://opencitations.net/",

@@ -4,6 +4,7 @@
     {
       "id":"1",
       "attribute":{
+          "nickname": "Silvio Peroni",
           "name":"Silvio Peroni",
           "position":"professor",
           "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -13,6 +14,7 @@
     {
       "id":"2",
       "attribute":{
+            "nickname":"Francesca Tomasi",
             "name":"Francesca Tomasi",
             "position":"professor",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -22,6 +24,7 @@
     {
       "id":"3",
       "attribute":{
+            "nickname":"Aldo Gangemi",
             "name":"Aldo Gangemi",
             "position":"professor",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -31,6 +34,7 @@
     {
       "id":"4",
       "attribute":{
+            "nickname":"Paola Carmela Italia",
             "name":"Paola Carmela Italia",
             "position":"professor",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -40,6 +44,7 @@
     {
       "id":"5",
       "attribute":{
+            "nickname":"Fabio Tamburini",
             "name":"Fabio Tamburini",
             "position":"professor",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -49,6 +54,7 @@
     {
       "id":"6",
       "attribute":{
+            "nickname":"Fabio Vitali",
             "name":"Fabio Vitali",
             "position":"professor",
             "affiliation":"Department of Computer Science and Engineering, University of Bologna",
@@ -58,6 +64,7 @@
     {
       "id":"7",
       "attribute":{
+            "nickname":"Angelo Di Iorio",
             "name":"Angelo Di Iorio",
             "position":"professor",
             "affiliation":"Department of Computer Science and Engineering, University of Bologna",
@@ -67,6 +74,7 @@
     {
       "id":"8",
       "attribute":{
+            "nickname":"Marilena Daquino",
             "name":"Marilena Daquino",
             "position":"researcher",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -76,6 +84,7 @@
     {
       "id":"9",
       "attribute":{
+            "nickname":"Tommaso Vitale",
             "position":"staff",
             "name":"Tommaso Vitale",
             "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna",
@@ -85,6 +94,7 @@
     {
       "id":"10",
       "attribute":{
+            "nickname":"David Shotton",
             "position":"director",
             "name":"David Shotton",
             "affiliation":"Oxford e-Research Centre, University of Oxford",
@@ -94,6 +104,7 @@
     {
       "id":"11",
       "attribute":{
+            "nickname":"Luca Pareschi",
             "position":"researcher",
             "name":"Luca Pareschi",
             "affiliation":"Department of Computer Science and Engineering DISI, University of Bologna",
@@ -103,6 +114,7 @@
     {
       "id":"12",
       "attribute":{
+            "nickname":"Paolo Ferri",
             "position":"researcher",
             "name":"Paolo Ferri",
             "affiliation":"Department of Management, University of Bologna",
