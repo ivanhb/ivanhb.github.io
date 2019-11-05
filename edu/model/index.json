@@ -89,7 +89,7 @@
         "end_date": -1
       },
       "relation":{
-        "@hasMember": "Person",
+        "@hasMember": "Member",
         "@hasKeyword": "Keyword"
       }
     },
@@ -124,7 +124,7 @@
       },
       "relation":{}
     },
-    "Role":{
+    "Member":{
       "prefix": "ro",
       "last_id": 5,
       "attribute":{
