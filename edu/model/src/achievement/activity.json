@@ -42,6 +42,7 @@
     {
       "id":"3",
       "attribute":{
+        "nickname": "ISWS-2019",
         "title": "ISWS 2019 - International Semantic Web Research Summer School",
         "subtitle": "",
         "webpage": "http://stlab.istc.cnr.it/isws/wordpress-isws2019/",
@@ -60,6 +61,7 @@
     {
       "id":"4",
       "attribute":{
+        "nickname": "EURAM-2019",
         "title": "EURAM 2019",
         "subtitle": "",
         "webpage": "http://www.euram-online.org/annual-conference-2019.html",
@@ -78,6 +80,7 @@
     {
       "id":"5",
       "attribute":{
+        "nickname": "WikiCite-2018",
         "title": "WikiCite 2018",
         "subtitle": "",
         "location": "Berkeley, California, USA",
@@ -96,6 +99,7 @@
     {
       "id":"6",
       "attribute":{
+        "nickname": "Open Citations Workshop",
         "title": "Workshop on Open Citations",
         "subtitle": "",
         "location": "Bologna, Italy",
@@ -114,6 +118,7 @@
     {
       "id":"7",
       "attribute":{
+        "nickname": "WWW-2018",
         "title": "The Web Conference",
         "subtitle": "",
         "location": "Lyon, France",
