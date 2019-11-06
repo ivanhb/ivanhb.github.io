@@ -142,7 +142,7 @@
       "prefix": "re",
       "attribute":{
         "date": -1,
-        "source":""
+        "source": ""
       },
       "relation":{
         "@hasKeyword": "Keyword"
