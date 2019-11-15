@@ -23,8 +23,8 @@
     {
       "id":"2",
       "attribute":{
-          "nickname": "OpenCitaions",
-          "name": "OpenCitaions",
+          "nickname": "OpenCitations",
+          "name": "OpenCitations",
           "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.",
           "logo": "https://ivanhb.github.io/data/img/oc_logo.png",
           "webpage": "http://opencitations.net/",
