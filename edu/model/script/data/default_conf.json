@@ -1,0 +1,10 @@
+{
+  "object_properties_key": "@",
+  "subclass_key": "@isSubclassOf",
+  "datatype": {
+        "string":{"default":"string"},
+        "int":{"default":"int"},
+        "datetime":{"default":"datetime"},
+        "url":{"default":"url"}
+    }
+}
