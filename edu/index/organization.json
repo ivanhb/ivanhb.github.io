@@ -48,6 +48,31 @@
       "keywords": ["open citations","citations","opencitations"],
       "source": "https://github.com/opencitaions",
       "include_in_webpage": 1
+    },
+    {
+      "id":"openscholarlymetadata",
+      "name": "Research Centre for Open Scholarly Metadata",
+      "sub_name": "",
+      "description": "The Research Centre for Open Scholarly Metadata is an independent research centre within the University of Bologna, and it is hosted within the Department of Classical Philology and Italian Studies. It was formed on the 26th of November 2019.",
+      "logo": "https://ivanhb.github.io/data/img/oc_center.png",
+      "start_date": "26/11/2019",
+      "end_date": "ongoing",
+      "achievements": [],
+      "people": [
+        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
+        {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"},
+        {"type":"professor","title":"Ludo Waltman", "affiliation":"University of Leiden","link":"https://twitter.com/LudoWaltman"},
+        {"type":"professor","title":"Fabio Vitali", "affiliation":"Department of Computer Science and Engineering, University of Bologna","link":"https://www.unibo.it/sitoweb/fabio.vitali"},
+        {"type":"professor","title":"Angelo Di Iorio", "affiliation":"Department of Computer Science and Engineering, University of Bologna","link":"https://www.unibo.it/sitoweb/angelo.diiorio"},
+        {"type":"researcher","title":"Marilena Daquino", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/marilena.daquino2"}
+      ],
+      "attached": [
+        {"type":"webpage","label":"The center website","value":"https://openscholarlymetadata.org/"},
+      ],
+      "personal_page": "https://ivanhb.github.io/opencitations",
+      "keywords": ["open citations","citations","opencitations","metadata"],
+      "source": "",
+      "include_in_webpage": 1
     }
   ]
 }
