@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "title": "Teorie e metodi nella didattica delle lingue: il ruolo della grammatica valenzial",
+      "type": "seminary",
+      "activity_type": "Didattica comune",
+      "date": "30/04/2020",
+      "duration": "H4",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "Yahis Martari",
+      "source": "",
+      "note": "Done via Teams"
+    },
+    {
+      "title": "Lo SBA per i Dottorandi - Area umanistica",
+      "type": "seminary",
+      "activity_type": "Didattica curriculare",
+      "date": "29/04/2020",
+      "duration": "H3",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "",
+      "source": "https://sba.unibo.it/it/bacheca/eventi/lo-sba-per-i-dottorandi-area-umanistica",
+      "note": "Done via Teams"
+    },
+    {
       "title": "Cesare Segre: la vita e il metodo",
       "type": "seminary",
       "activity_type": "Didattica comune",
