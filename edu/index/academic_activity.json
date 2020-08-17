@@ -1,6 +1,54 @@
 {
   "items": [
     {
+      "title": "Carlo Dionisotti",
+      "type": "seminary",
+      "activity_type": "Didattica comune",
+      "date": "21/05/2020",
+      "duration": "H3",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "Giorgio Panizza",
+      "source": "https://phd.unibo.it/culture-letterarie-e-filologiche/it/agenda/carlo-dionisotti",
+      "note": "Done via Teams"
+    },
+    {
+      "title": "Metodi induttivi per l'insegnamento del latino. Storia e pratica di un'ovvietà non sempre ovvia",
+      "type": "seminary",
+      "activity_type": "Didattica comune",
+      "date": "14/05/2020",
+      "duration": "H3",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "Guido Milanese",
+      "source": "https://phd.unibo.it/culture-letterarie-e-filologiche/it/agenda/metodi-induttivi-per-l-insegnamento-del-latino-storia-e-pratica-di-un-ovvieta-non-sempre-ovvia",
+      "note": "Done via Teams"
+    },
+    {
+      "title": "Didattica delle lingue moderne",
+      "type": "seminary",
+      "activity_type": "Didattica comune",
+      "date": "06/05/2020",
+      "duration": "H3",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "Cesare Zanca",
+      "source": "https://phd.unibo.it/culture-letterarie-e-filologiche/it/agenda/didattica-delle-lingue-moderne",
+      "note": "Done via Teams"
+    },
+    {
+      "title": "Dante Isella",
+      "type": "seminary",
+      "activity_type": "Didattica comune",
+      "date": "04/05/2020",
+      "duration": "H3",
+      "location": "Bologna, Italy",
+      "description": "",
+      "host": "Paola Italia",
+      "source": "",
+      "note": "Done via Teams"
+    },
+    {
       "title": "Teorie e metodi nella didattica delle lingue: il ruolo della grammatica valenzial",
       "type": "seminary",
       "activity_type": "Didattica comune",
@@ -244,7 +292,7 @@
       "location": "Bologna, Italy",
       "description": "",
       "host": "Angelo Di Iorio",
-      "source": "https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge/notice-board/introductory-activities-2019-20",
+      "source": "https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge/notice-board/introductory-activities-2019-20"
     },
     {
       "title": "Intro to languages for the Web",
@@ -255,7 +303,7 @@
       "location": "Bologna, Italy",
       "description": "",
       "host": "Angelo Di Iorio",
-      "source": "https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge/notice-board/introductory-activities-2019-20",
+      "source": "https://corsi.unibo.it/2cycle/DigitalHumanitiesKnowledge/notice-board/introductory-activities-2019-20"
     },
     {
       "title": "Gianfranco Contini: un romanista integrale",
