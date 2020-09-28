@@ -1,6 +1,33 @@
 {
   "items": [
     {
+      "id":"ramose",
+      "reference": "Daquino, M., Heibi, I., Peroni, S., & Shotton, D. (under review). Creating Restful APIs over SPARQL endpoints with RAMOSE. Submitted for publication to Semantic Web.",
+      "reference_format": "apa",
+      "link": "https://arxiv.org/abs/2007.16079",
+      "link_format": "arxiv",
+      "title": "Creating Restful APIs over SPARQL endpoints with RAMOSE",
+      "autor": "Marilena Daquino && Ivan Heibi && Silvio Peroni && David Shotton",
+      "date": "31/07/2020",
+      "keywords": ["ramose","citations","coci","crossref","opencitations","api"],
+      "related_to": ["opencitaions"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"mitao",
+      "reference": "Pareschi, L., Ferri, P., Peroni, S., Heibi, I. (under review). MITAO: a user friendly and modular software for Topic Modeling. Submitted for publication to puntOorg International Journal",
+      "reference_format": "apa",
+      "link": "",
+      "link_format": "",
+      "title": "MITAO: a user friendly and modular software for Topic Modeling",
+      "autor": "Luca Pareschi && Paolo Ferri && Silvio Peroni && Ivan Heibi",
+      "date": "06/03/2020",
+      "keywords": ["mitao","nlp","topic modelling","text analysis","catarsi","api"],
+      "related_to": ["catarsi"],
+      "include_in_webpage": 1
+    },
+
+    {
       "id":"coci",
       "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019). COCI, the OpenCitations Index of Crossref open DOI-to-DOI citations. Scientometrics",
       "reference_format": "apa",
@@ -28,7 +55,7 @@
     },
     {
       "id":"oscarpub2",
-      "reference": "Heibi, I., Peroni, S., & Shotton, D. Enabling text search on SPARQL endpoints through OSCAR. Data Science, 1-23.",
+      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2019) Enabling text search on SPARQL endpoints through OSCAR. Data Science, 2 (1-2), 205-227.",
       "reference_format": "apa",
       "link": "https://doi.org/10.3233/DS-190016",
       "link_format": "doi",
@@ -42,7 +69,7 @@
     },
     {
       "id":"oscarpub1",
-      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2017). OSCAR: A customisable tool for free-text search over SPARQL endpoints. In Semantics, Analytics, Visualization (pp. 121-137). Springer, Cham.",
+      "reference": "Heibi, I., Peroni, S., & Shotton, D. (2018). OSCAR: A customisable tool for free-text search over SPARQL endpoints. In Proceedings of SAVE-SD 2018: 121-137.",
       "reference_format": "apa",
       "link": "https://doi.org/10.1007/978-3-030-01379-0_9",
       "link_format": "doi",

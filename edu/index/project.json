@@ -1,6 +1,30 @@
 {
   "items": [
     {
+      "id":"catarsi",
+      "name": "CATARSI, Automatic Text Understanding",
+      "sub_name": "Improvement of MITAO",
+      "description": "Working on the improvement of the MITAO software platform, aimed at creating an execution pipeline of tools for automatic text analysis. Some existing applications will be refined and customized (for example PDF cleaning tools, topic modeling, named entity recognition, visualization tools) and a Web application will be implemented that allows the sequential composition of these software in order to set up an automatic processing workflow , which can be operated via a web interface.",
+      "start_date": "01/07/2020",
+      "end_date": "ongoing",
+      "achievements": [],
+      "people": [
+        {"type":"researcher","title":"Luca Pareschi", "affiliation":"Department of Computer Science and Engineering DISI, University of Bologna","link":"https://www.unibo.it/sitoweb/luca.pareschi"},
+        {"type":"researcher","title":"Paolo Ferri", "affiliation":"Department of Management, University of Bologna","link":"https://www.unibo.it/sitoweb/p.ferri"},
+        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"}
+      ],
+      "attached": [
+        {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
+        {"type":"git_repository","label":"CATARSI organization repository","value":"https://github.com/catarsi"},
+        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"}
+      ],
+      "related_to": [],
+      "personal_page": "https://ivanhb.github.io/catarsi",
+      "keywords": ["mitao","nlp","application","topic modelling","gui"],
+      "source": "https://ivanhb.github.io/phd/project",
+      "include_in_webpage": 1
+    },
+    {
       "id":"phd_thesis",
       "name": "Ph.D. thesis: The application of Semantic Publishing technologies in the Science of Science research domain for the Humanities field",
       "sub_name": "",
