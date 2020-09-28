@@ -2,7 +2,7 @@
   "items": [
     {
       "id":"catarsi",
-      "name": "CATARSI, Automatic Text Understanding",
+      "name": "CATARSI, improving MITAO",
       "sub_name": "Improvement of MITAO",
       "description": "Working on the improvement of the MITAO software platform, aimed at creating an execution pipeline of tools for automatic text analysis. Some existing applications will be refined and customized (for example PDF cleaning tools, topic modeling, named entity recognition, visualization tools) and a Web application will be implemented that allows the sequential composition of these software in order to set up an automatic processing workflow , which can be operated via a web interface.",
       "start_date": "01/07/2020",
