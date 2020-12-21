@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id":"mitao_aiucd",
+      "reference": "Heibi, I., Peroni, S., Pareschi, L., & Ferri, P. (2020). MITAO: a tool for enabling scholars in the Humanities to use Topic Modelling in their studies. In proceedings of the upcoming AIUCD 2021.",
+      "reference_format": "apa",
+      "link": "https://arxiv.org/abs/2011.13886",
+      "link_format": "arxiv",
+      "title": "MITAO: a tool for enabling scholars in the Humanities to use Topic Modelling in their studies",
+      "autor": "Ivan Heibi && Silvio Peroni && Luca Pareschi && Paolo Ferri",
+      "date": "24/10/2020",
+      "keywords": ["mitao","topic modelling","text analysis","digital humanities"],
+      "related_to": ["catarsi"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"ramose",
       "reference": "Daquino, M., Heibi, I., Peroni, S., & Shotton, D. (under review). Creating Restful APIs over SPARQL endpoints with RAMOSE. Submitted for publication to Semantic Web.",
       "reference_format": "apa",
@@ -22,7 +35,7 @@
       "title": "MITAO: a user friendly and modular software for Topic Modeling",
       "autor": "Paolo Ferri && Ivan Heibi && Luca Pareschi && Silvio Peroni ",
       "date": "24/10/2020",
-      "keywords": ["mitao","nlp","topic modelling","text analysis","catarsi","api"],
+      "keywords": ["mitao","nlp","topic modelling","text analysis"],
       "related_to": ["catarsi"],
       "include_in_webpage": 1
     },
