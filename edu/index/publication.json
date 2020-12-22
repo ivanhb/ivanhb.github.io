@@ -1,6 +1,19 @@
 {
   "items": [
     {
+      "id":"wakefield_ret",
+      "reference": "Heibi, I., Peroni, S. (under review). A qualitative and quantitative citation analysis toward retracted articles: a case of study.",
+      "reference_format": "apa",
+      "link": "https://arxiv.org/abs/2012.11475",
+      "link_format": "arxiv",
+      "title": "A qualitative and quantitative citation analysis toward retracted articles: a case of study",
+      "autor": "Ivan Heibi && Silvio Peroni",
+      "date": "22/12/2020",
+      "keywords": ["retraction","mitao","topic modelling","text analysis","citation analysis"],
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"mitao_aiucd",
       "reference": "Heibi, I., Peroni, S., Pareschi, L., & Ferri, P. (2020). MITAO: a tool for enabling scholars in the Humanities to use Topic Modelling in their studies. In proceedings of the upcoming AIUCD 2021.",
       "reference_format": "apa",
