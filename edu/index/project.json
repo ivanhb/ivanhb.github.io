@@ -55,6 +55,7 @@
       "description": "Lucinda is a general RDF-resource browser which could be configured to work with any triplestore providing a SPARQL-endpoint address.",
       "start_date": "01/11/2017",
       "end_date": "01/11/2018",
+      "achievements": [],
       "people": [
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"}
@@ -76,6 +77,7 @@
       "description": "OSCAR, the OpenCitations RDF Search Application, is a user-friendly search platform that can be used to search any RDF triplestore providing a SPARQL endpoint, while hiding the complexities of SPARQL.",
       "start_date": "01/11/2017",
       "end_date": "01/11/2018",
+      "achievements": [],
       "people": [
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"}
