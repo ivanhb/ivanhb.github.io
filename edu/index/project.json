@@ -15,7 +15,6 @@
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"}
       ],
       "attached": [
-        {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
         {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
         {"type":"webpage","label":"MITAO on Internet Archive","value":"https://archive.org/details/mitao2"}
       ],

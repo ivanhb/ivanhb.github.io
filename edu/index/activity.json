@@ -1,6 +1,22 @@
 {
   "items": [
     {
+      "id":"okb_nl_workshop",
+      "name": "The Open Knowledge Base - Netherlands workshop",
+      "location": "Online event",
+      "start_date": "19/11/2020",
+      "end_date": "20/11/2020",
+      "contribution": "Participant of the workshop",
+      "description": "The aim of the hackathon/workshop is to create a proof of concept of an open knowledge base (OKB) for universities and other research institutions, with a particular focus on two use cases: (1) supporting new approaches to recognizing and rewarding researchers; (2) supporting monitoring of the adoption of open science practices.",
+      "attached": [
+        {"type":"webpage","label":"General thematics","value":"https://openworking.wordpress.com/2020/05/29/what-is-an-open-knowledge-base-anyway/"}
+      ],
+      "keywords": ["open knowledge base","netherlands","cwts","coki"],
+      "source": "https://ivanhb.github.io/opencitations/activity",
+      "related_to": ["opencitaions"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"force2019",
       "name": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
       "location": "Edinburgh, Scotland",
