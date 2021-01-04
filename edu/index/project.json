@@ -1,11 +1,12 @@
 {
   "items": [
     {
-      "id":"catarsi",
-      "name": "CATARSI, improving MITAO",
-      "sub_name": "Improvement of MITAO",
-      "description": "Working on the improvement of the MITAO software platform, aimed at creating an execution pipeline of tools for automatic text analysis. Some existing applications will be refined and customized (for example PDF cleaning tools, topic modeling, named entity recognition, visualization tools) and a Web application will be implemented that allows the sequential composition of these software in order to set up an automatic processing workflow , which can be operated via a web interface.",
-      "start_date": "01/07/2020",
+      "id":"mitao",
+      "image": "https://ivanhb.github.io/data/img/mitao_logo.png",
+      "name": "MITAO",
+      "sub_name": "Software",
+      "description": "MITAO, a Mashup Interface for Text Analysis Operations, is an open-source, user-friendly, modular, and flexible software written in Python and Javascript for performing several kinds of text analysis, it can be installed and launched locally on any machine (Linux, Windows, and macOS)",
+      "start_date": "01/04/2019",
       "end_date": "ongoing",
       "achievements": [],
       "people": [
@@ -15,41 +16,19 @@
       ],
       "attached": [
         {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
-        {"type":"git_repository","label":"CATARSI organization repository","value":"https://github.com/catarsi"},
-        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"}
+        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
+        {"type":"webpage","label":"MITAO on Internet Archive","value":"https://archive.org/details/mitao2"}
       ],
       "related_to": [],
-      "personal_page": "https://ivanhb.github.io/catarsi",
+      "personal_page": "https://github.com/catarsi/mitao",
       "keywords": ["mitao","nlp","application","topic modelling","gui"],
       "source": "https://ivanhb.github.io/phd/project",
       "include_in_webpage": 1
     },
     {
-      "id":"phd_thesis",
-      "name": "Ph.D. thesis: The application of Semantic Publishing technologies in the Science of Science research domain for the Humanities field",
-      "sub_name": "",
-      "description": "The main purpose of this work is the application of the Science Of Science methodologies into the Humanities domain, which has gained less attention in the literature compared to the sciences. Bibliometric analysis and social/networking interactions will be taken into consideration.",
-      "start_date": "01/11/2018",
-      "end_date": "ongoing",
-      "achievements": [
-        "Presenting my Ph.D. work at the ISSI 2019 doctoral forum, <a href='#issi2019'>Check it in activities</a>.",
-        "Presenting a poster at ISWS 2019, <a href='#isws2019'>Check it in activities</a>."
-      ],
-      "people": [
-        {"type":"tutor","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
-        {"type":"tutor","title":"Francesca Tomasi", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/francesca.tomasi"}
-      ],
-      "related_to": [],
-      "attached": [],
-      "personal_page": "https://ivanhb.github.io/phd",
-      "keywords": ["citations","citation function","phd","bibliometrics","scientometrics","humanities","scienceofscience"],
-      "source": "https://ivanhb.github.io/phd",
-      "include_in_webpage": 1
-    },
-    {
       "id":"digital_lib",
       "name": "The /DH.ARC Digital Library",
-      "sub_name": "",
+      "sub_name": "Software",
       "description": "Among the objectives of /DH.arc is the creation of a Digital Library for collecting, curating, and sharing the wealth preserved at FICLIT, including the cultural heritage of its library and archive.",
       "start_date": "01/06/2019",
       "end_date": "ongoing",
@@ -57,8 +36,6 @@
       "people": [
         {"type":"staff","title":"Tommaso Vitale", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://centri.unibo.it/dharc/en/centre/centre-people"},
         {"type":"director","title":"Francesca Tomasi", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/francesca.tomasi"},
-        {"type":"director","title":"Aldo Gangemi", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/aldo.gangemi"},
-        {"type":"professor","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"researcher","title":"Marilena Daquino", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/marilena.daquino2"}
       ],
       "attached": [
@@ -71,60 +48,44 @@
       "include_in_webpage": 1
     },
     {
-      "id":"catarsi",
-      "name": "CATARSI, Automatic Text Understanding",
-      "sub_name": "Automatic understanding of texts and articles in social sciences and computer sciences",
-      "description": "This project aims at tackling the interface between social sciences and information science and improving both the knowledge and the development of computer based techniques for analyzing texts and extra meanings. The issue tackled by CATARSI is cultural and practical, and its results will impact both on information science, which deals more with ontological aspects, and on social sciences, that can use new instruments to improve the way knowledge is analyzed and created. CATARSI is a project funded the University of Bologna under the funding sheme ALMA IDEA linea giovani.",
-      "start_date": "01/04/2019",
-      "end_date": "01/10/2019",
-      "achievements": [
-        "Developing MITAO, A Mashup Interface for Text Analysis Operations",
-        "Developing DIPAM, A Dashboard Interface for Python-based Applications Mashup",
-        "Attending and presenting MITAO at EURAM 2019, <a href='#euram2019'>Check it in activities</a>."
-      ],
-      "people": [
-        {"type":"researcher","title":"Luca Pareschi", "affiliation":"Department of Computer Science and Engineering DISI, University of Bologna","link":"https://www.unibo.it/sitoweb/luca.pareschi"},
-        {"type":"researcher","title":"Paolo Ferri", "affiliation":"Department of Management, University of Bologna","link":"https://www.unibo.it/sitoweb/p.ferri"},
-        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"}
-      ],
-      "attached": [
-        {"type":"webpage","label":"Project website","value":"https://catarsiproject.wordpress.com"},
-        {"type":"git_repository","label":"CATARSI organization repository","value":"https://github.com/catarsi"},
-        {"type":"git_repository","label":"MITAO repository","value":"https://github.com/catarsi/mitao"},
-        {"type":"git_repository","label":"DIPAM repository","value":"https://github.com/ivanhb/dipam"}
-      ],
-      "related_to": [],
-      "personal_page": "https://ivanhb.github.io/catarsi",
-      "keywords": ["nlp","application","topic modelling","gui"],
-      "source": "https://ivanhb.github.io/phd/project",
-      "include_in_webpage": 1
-    },
-    {
-      "id":"opencitations_enhancment",
-      "name": "The OpenCitations Enhancement Project",
-      "sub_name": "An open repository of scholarly citation data.",
-      "description": "OpenCitations, is a scholarly infrastructure organization dedicated to open scholarship and the publication of open bibliographic and citation data by the use of Semantic Web (Linked Data) technologies, and engaged in advocacy for semantic publishing and open citations. The financial support for this project was provided by the Alfred P. Sloan Foundation.",
+      "id":"lucinda",
+      "image": "https://ivanhb.github.io/data/img/lucinda_logo-v2.0.png",
+      "name": "LUCINDA",
+      "sub_name": "Software",
+      "description": "Lucinda is a general RDF-resource browser which could be configured to work with any triplestore providing a SPARQL-endpoint address.",
       "start_date": "01/11/2017",
       "end_date": "01/11/2018",
-      "achievements": [
-        "Developing OSCAR, The OpenCitations RDF Search Application",
-        "Developing LUCINDA, The OpenCitations RDF Resource Browser",
-        "Presenting OSCAR at The Web Conference 2018, <a href='#webconf2018'>Check it in activities</a>",
-        "Presenting OSCAR and LUCINDA application to Wikidata at WikiCite 2018, <a href='#wikicite2018'>Check it in activities</a>"
-      ],
       "people": [
         {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
         {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"}
       ],
       "attached": [
-        {"type":"webpage","label":"OpenCitations website","value":"http://opencitations.net/"},
-        {"type":"git_repository","label":"OpenCitations organization repository","value":"https://github.com/opencitations"},
-        {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"},
         {"type":"git_repository","label":"LUCINDA repository","value":"https://github.com/opencitations/lucinda"}
       ],
       "related_to": ["opencitations"],
       "personal_page": "https://ivanhb.github.io/opencitations",
-      "keywords": ["open citations","citations","coci","oscar","lucinda","opencitations","gui"],
+      "keywords": ["open citations","citations","lucinda","opencitations","gui"],
+      "source": "https://ivanhb.github.io/phd/project",
+      "include_in_webpage": 1
+    },
+    {
+      "id":"oscar",
+      "image": "https://ivanhb.github.io/data/img/oscar_logo-v2.0.png",
+      "name": "OSCAR",
+      "sub_name": "Software",
+      "description": "OSCAR, the OpenCitations RDF Search Application, is a user-friendly search platform that can be used to search any RDF triplestore providing a SPARQL endpoint, while hiding the complexities of SPARQL.",
+      "start_date": "01/11/2017",
+      "end_date": "01/11/2018",
+      "people": [
+        {"type":"director","title":"Silvio Peroni", "affiliation":"Department of Classic Philology and Italian Studies, University of Bologna","link":"https://www.unibo.it/sitoweb/silvio.peroni"},
+        {"type":"director","title":"David Shotton", "affiliation":"Oxford e-Research Centre, University of Oxford", "link":"http://www.oerc.ox.ac.uk/people/DavidShotton"}
+      ],
+      "attached": [
+        {"type":"git_repository","label":"OSCAR repository","value":"https://github.com/opencitations/oscar"}
+      ],
+      "related_to": ["opencitations"],
+      "personal_page": "https://ivanhb.github.io/opencitations",
+      "keywords": ["open citations","citations","oscar","opencitations","gui"],
       "source": "https://ivanhb.github.io/phd/project",
       "include_in_webpage": 1
     }
