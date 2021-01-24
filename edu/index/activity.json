@@ -1,6 +1,23 @@
 {
   "items": [
     {
+      "id":"aiucd2021",
+      "name": "AIUCD 2021 – DHs for society",
+      "location": "Online event",
+      "start_date": "19/01/2021",
+      "end_date": "22/01/2021",
+      "contribution": "Presenting: 'MITAO: a tool for enabling scholars in the Humanities to use Topic Modelling in their studies'",
+      "description": "The 10th AIUCD conference aims to be a moment of study and reflection on Digital Humanities (DHs) as a privileged meeting place among different needs of contemporary society in research, politics, economics and everyday life, giving the humanist the role of interpreter and ferryman of change.",
+      "attached": [
+        {"type":"webpage","label":"AIUCD2021 website","value":"https://aiucd2021.labcd.unipi.it/en/home-english/"},
+        {"type":"webpage","label":"Talk programme","value":"https://aiucd2021.labcd.unipi.it/en/programme/talk/#session5"}
+      ],
+      "keywords": ["mitao","digital humanities","umanistica digitale","topic modeling"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"okb_nl_workshop",
       "name": "The Open Knowledge Base - Netherlands workshop",
       "location": "Online event",
