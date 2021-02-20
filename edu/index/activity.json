@@ -2,6 +2,7 @@
   "items": [
     {
       "id":"aiucd2021",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "AIUCD 2021 – DHs for society",
       "location": "Online event",
       "start_date": "19/01/2021",
@@ -19,6 +20,7 @@
     },
     {
       "id":"okb_nl_workshop",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "The Open Knowledge Base - Netherlands workshop",
       "location": "Online event",
       "start_date": "19/11/2020",
@@ -35,6 +37,7 @@
     },
     {
       "id":"force2019",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "FORCE2019 - the Future Of Research Communications and e-Scholarships",
       "location": "Edinburgh, Scotland",
       "start_date": "15/10/2019",
@@ -52,6 +55,7 @@
     },
     {
       "id":"issi2019",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "ISSI 2019 - 17th international conference on  scientometrics & informetrics",
       "location": "Rome, Italy",
       "start_date": "02/09/2019",
@@ -71,6 +75,7 @@
     },
     {
       "id":"isws2019",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "ISWS 2019 - International Semantic Web Research Summer School",
       "location": "Bertinoro, Italy",
       "start_date": "30/06/2019",
@@ -88,6 +93,7 @@
     },
     {
       "id":"euram2019",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "EURAM 2019",
       "location": "Lisbon, Portugal",
       "start_date": "25/06/2019",
@@ -105,6 +111,7 @@
     },
     {
       "id":"wikicite2018",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "WikiCite 2018",
       "location": "Berkeley, California, USA",
       "start_date": "27/11/2018",
@@ -124,6 +131,7 @@
     },
     {
       "id":"ocworkshop2018",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "Workshop on Open Citations",
       "location": "Bologna, Italy",
       "start_date": "03/09/2018",
@@ -140,6 +148,7 @@
     },
     {
       "id":"webconf2018",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "The Web Conference",
       "location": "Lyon, France",
       "start_date": "23/04/2018",
