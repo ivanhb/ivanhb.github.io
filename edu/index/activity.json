@@ -1,6 +1,24 @@
 {
   "items": [
     {
+      "id":"lab_compthink",
+      "type": {"label":"Teaching/Tutoring", "value": "teach_tutor"},
+      "name": "Computational Thinking and Programming 2020/2021 – Laboratory session",
+      "location": "Bologna, Italy",
+      "start_date": "23/10/2020",
+      "end_date": "11/12/2020",
+      "contribution": "Lecturer",
+      "description": "Master's Degree in Digital Humanities and Digital Knowledge, University of Bologna, academic year 2020/2021",
+      "attached": [
+        {"type":"webpage","label":"Page of the laboratory session 2020/2021","value":"https://comp-think.github.io/2020-2021/laboratory/"},
+        {"type":"webpage","label":"Page of the course 2020/2021","value":"https://github.com/comp-think/2020-2021"}
+      ],
+      "keywords": ["computational thinking","python","digital humanities","laboratory"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"aiucd2021",
       "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "AIUCD 2021 – DHs for society",
