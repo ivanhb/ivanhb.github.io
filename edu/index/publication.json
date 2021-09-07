@@ -2,7 +2,7 @@
   "items": [
     {
       "id":"ret_ann_method",
-      "reference": "Heibi, I., Peroni, S. (under review). A protocol to gather, characterize and analyze incoming citations of retracted articles",
+      "reference": "Heibi, I., Peroni, S. .A protocol to gather, characterize and analyze incoming citations of retracted articles [Manuscript submitted for publication]",
       "reference_format": "apa",
       "link": "http://arxiv.org/abs/2106.01781",
       "link_format": "arxiv",
@@ -41,7 +41,7 @@
     },
     {
       "id":"ramose",
-      "reference": "Daquino, M., Heibi, I., Peroni, S., & Shotton, D. (under review). Creating Restful APIs over SPARQL endpoints with RAMOSE. Submitted for publication to Semantic Web.",
+      "reference": "Daquino, M., Heibi, I., Peroni, S., & Shotton, D. (in press). Creating Restful APIs over SPARQL endpoints with RAMOSE. Submitted for publication to Semantic Web.",
       "reference_format": "apa",
       "link": "https://arxiv.org/abs/2007.16079",
       "link_format": "arxiv",
