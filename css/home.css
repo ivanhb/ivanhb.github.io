@@ -115,6 +115,7 @@
 }
 
 .report-col{
+  display: none;
   z-index: 50;
   margin-top: 50px;
   width: 35%;
@@ -124,6 +125,7 @@
   height: 180px;
 }
 .report-header{
+ display: none;
  font-size: 15pt;
  text-align: center;
  background-color: rgba(212,105,105,1);
@@ -132,6 +134,7 @@
  border-radius: 15px 15px 0px 0px;
 }
 .report{
+  display: none;
   background-color: rgba(212,105,105,1);
   border: solid 1px rgba(212,105,105,1);
   padding: 10px;
