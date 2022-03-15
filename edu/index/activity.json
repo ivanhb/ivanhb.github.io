@@ -1,6 +1,74 @@
 {
   "items": [
     {
+      "id":"com_eswc_2022",
+      "type": {"label":"Program committee", "value": "program_committee"},
+      "name": "ESWC 2022",
+      "location": "",
+      "start_date": "08/02/2022",
+      "end_date": "08/02/2022",
+      "contribution": "A review of 4 submissions, each 4 pages long",
+      "description": "",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":""}
+      ],
+      "keywords": ["review"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": [""],
+      "include_in_webpage": 0
+    },
+    {
+      "id":"com_bibliodap2021",
+      "type": {"label":"Program committee", "value": "program_committee"},
+      "name": "BiblioDAP2021",
+      "location": "",
+      "start_date": "05/07/2021",
+      "end_date": "05/07/2021",
+      "contribution": "Papers' reviewer",
+      "description": "",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":"https://easychair.org/cfp/BiblioDAP2021"}
+      ],
+      "keywords": ["review"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": [""],
+      "include_in_webpage": 0
+    },
+    {
+      "id":"kickoff_hum_ai",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
+      "name": "Kick-off meeting - ALMA-AI Humanistic AI",
+      "location": "Bologna, Italy",
+      "start_date": "16/09/2021",
+      "end_date": "16/09/2021",
+      "contribution": "Presenting: 'Citation Intent Classification: challenges and experiments'",
+      "description": "A kick-off meeting to discuss ongoing and future projects dedicated to the integration of AI techniques in the Humanities domain",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":"http://www.cs.unibo.it/~diiorio/kickoff-hai.html"}
+      ],
+      "keywords": ["ai","kickoff","humanities"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"sciroc2021",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
+      "name": "SciRoc 2021",
+      "location": "Bologna, Italy",
+      "start_date": "06/09/2021",
+      "end_date": "10/09/2021",
+      "contribution": "Staff member",
+      "description": "SciRoc is an EU-H2020 funded project supporting the European Robotics League (ERL), whose aim is to bring ERL tournaments into smart cities.",
+      "attached": [
+        {"type":"webpage","label":"SciRoc 2021 website","value":"https://sciroc.org/2021-challenge-description/"}
+      ],
+      "keywords": ["sciroc","bot","ai"],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"aiucd2021",
       "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "AIUCD 2021 – DHs for society",
