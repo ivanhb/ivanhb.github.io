@@ -70,7 +70,7 @@ var sections = (function () {
   function shortbio() {
     $.ajax({
            type: "GET",
-           url: my_config["section"]["bio"][0]["source"],
+           url: get_sec_conf('bio')['source'],
            dataType: "json",
            error: function() {},
            success: function(data) {
