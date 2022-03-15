@@ -23,28 +23,28 @@ var my_config = {
   'dynamic_section':[
     {
       'id': 'diary',
-      'url': 'https://ivanhb.github.io/edu/index/diary.json',
+      'url': 'https://ivanhb.it/edu/index/diary.json',
       'handler': report_handler
     }
   ],
   'section':[
       {
         'id': 'bio',
-        'source': 'https://ivanhb.github.io/edu/index/bio.json'
+        'source': 'https://ivanhb.it/edu/index/bio.json'
       },
       {
         'id': 'projects',
-        'source': 'https://ivanhb.github.io/edu/index/project.json'
+        'source': 'https://ivanhb.it/edu/index/project.json'
       },
       {
         'id': 'activities',
-        'source': 'https://ivanhb.github.io/edu/index/activity.json',
+        'source': 'https://ivanhb.it/edu/index/activity.json',
         //use the attribute "type" to build several tabs
         'category': 'type'
       },
       {
         'id': 'publications',
-        'source': 'https://ivanhb.github.io/edu/index/publication.json'
+        'source': 'https://ivanhb.it/edu/index/publication.json'
       }
   ]
 }
