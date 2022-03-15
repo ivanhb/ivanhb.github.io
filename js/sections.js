@@ -49,7 +49,7 @@ var sections = (function () {
   function homepage() {
     $.ajax({
            type: "GET",
-           url: "https://ivanhb.github.io/doc/personal/bio.json",
+           url: my_config["personal_bio"],
            dataType: "json",
            error: function() {},
            success: function(data) {
