@@ -1,0 +1,122 @@
+:root {
+  --main-theme-color: #222f33;
+  --link-color: #2665cb;
+  --link-hover-color: #92b2e5;
+  --separator-color: #DDDDDD;
+  --background-color: #DDDDDD;
+}
+.hide-it{
+  background-color: transparent!important;
+  border: none!important;
+}
+
+.nav-item{
+  margin-top: 20px;
+  font-size: 13pt!important;
+  float: right;
+}
+.nav-item.active{
+  background-color: transparent !important;
+  box-shadow: 0px 3px 0px 0px !important;
+  color: black!important;
+}
+.nav-item.active::after{
+  display: none;
+}
+.nav-item::before{
+  width: 0px!important;
+}
+#menu_logo{
+  width: 160px;
+  float: left;
+  margin-left: 10px;
+  margin-bottom: 8px;
+}
+#menu_logo img{
+  width: 100%;
+}
+#menu_nav_logo{
+  display: none;
+  margin-top: 15px;
+  font-size: 12pt;
+  float: right;
+  border: none;
+  background-color: transparent;
+  font-size: 20pt;
+  color: rgba(44,44,44,0.9);
+}
+#menu_nav_list{
+  border-radius: 5px;
+  display: none;
+  padding: 5px;
+}
+#menu_nav_list .item{
+  margin-left: 0px;
+}
+
+body{
+  font-family: Arvo;
+  font-size: 12pt;
+  padding-top: 2%;
+  margin-right: 8%;
+  margin-left: 8%;
+  min-height: 800px;
+}
+
+body a{
+  color: var(--link-color);
+  opacity: 0.7;
+}
+body a:hover{
+  color: var(--link-hover-color);
+  border-bottom: none;
+  opacity: 1;
+}
+
+#section_structure{
+  height: 400px;
+  background-color: var(--background-color);
+  border-radius: 10px 10px 240px 40px;
+  padding-top: 0px;
+  border-bottom: solid 3px gray;
+}
+
+footer{
+  position: relative;
+  height: 100px;
+  width: 100%;
+  /*border-top: var(--background-color) solid;*/
+  display: block;
+  z-index: -1;
+  bottom: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+
+  #section_structure{
+    background-color: transparent;
+    border: none;
+    height: fit-content;
+  }
+  #menu_logo img{
+    margin-left: 0px;
+  }
+  #menu_nav{
+    display: none;
+  }
+
+  #menu_nav_logo{
+    display: block;
+  }
+
+  .nav-item{
+    display: table-row;
+    width: 100%;
+    float: left;
+  }
+  #menu_nav_list{
+    background-color: #E5E7E9;
+    width: 100%;
+    padding-right: 5px;
+  }
+}

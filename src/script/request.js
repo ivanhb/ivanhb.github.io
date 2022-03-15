@@ -1,10 +1,11 @@
-var website_homepage = "https://ivanhb.github.io/website/"
+//var website_homepage = "https://ivanhb.github.io/website/"
+var website_homepage = "https://ivanhb.it/website/"
 var my_config = {
     //**  /request/
     'query':{
           'lastreport':{
               'format': ['html'],
-              'data': "https://ivanhb.github.io/edu/index/diary.json",
+              'data': "https://ivanhb.it/edu/index/diary.json",
               'handler': last_report
           }
      },

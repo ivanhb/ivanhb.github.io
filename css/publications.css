@@ -1,0 +1,44 @@
+.boxes .item{
+  border-left: #F4D03F solid 4px;
+}
+
+.boxes .item .title{
+  font-size: 13pt;
+}
+
+.boxes .item .link{
+  font-size: 12pt;
+  margin: 8px;
+  background-color: rgba(255,255,255,0.3);
+  padding: 5px;
+  border-radius: 5px;
+  border: 0.1px solid rgba(0,0,0,0.08);
+  width: fit-content;
+}
+
+
+.boxes .item-info .item-link{
+  text-align: center;
+}
+.boxes .item-info .separator{
+  text-align: center;
+  font-size: 10px;
+}
+.boxes .item-info .keywords{
+  vertical-align: bottom;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  text-align: left;
+}
+
+@media only screen and (max-width: 1200px) {
+  .boxes .item{
+    border-left: #F4D03F solid 4px;
+  }
+  .boxes .item-info{
+    border-left: #F4D03F solid 4px;
+  }
+  .boxes .item-info.alternate{
+    border-left: #F4D03F solid 4px;
+  }
+}
