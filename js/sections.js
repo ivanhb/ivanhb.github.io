@@ -70,7 +70,7 @@ var sections = (function () {
   function shortbio() {
     $.ajax({
            type: "GET",
-           url: "https://ivanhb.github.io/edu/index/bio.json",
+           url: my_config["section"]["bio"][0]["source"],
            dataType: "json",
            error: function() {},
            success: function(data) {
