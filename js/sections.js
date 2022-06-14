@@ -98,6 +98,10 @@ var sections = (function () {
             for (var i = 0; i < data["items"].length; i++) {
               var an_item_obj = data["items"][i];
 
+              if (an_item_obj["include_in_webpage"] == 0) {
+                continue
+              }
+
               var an_item_html = "<div class='title'>"+an_item_obj["name"]+"</div>";
               an_item_html += "<div class='date'>"+an_item_obj["start_date"]+" - "+an_item_obj["end_date"]+"</div>";
               an_item_html += "<div class='description'>"+an_item_obj["description"]+"</div>";
@@ -137,6 +141,10 @@ var sections = (function () {
 
             for (var i = 0; i < data["items"].length; i++) {
               var an_item_obj = data["items"][i];
+
+              if (an_item_obj["include_in_webpage"] == 0) {
+                continue
+              }
 
               var an_item_html = "<div class='title'>"+an_item_obj["name"]+"</div>";
               an_item_html += "<div class='location'>"+an_item_obj["location"]+"</div>";
@@ -203,6 +211,10 @@ var sections = (function () {
           if ("items" in data) {
             for (var i = 0; i < data["items"].length; i++) {
               var an_item_obj = data["items"][i];
+
+              if (an_item_obj["include_in_webpage"] == 0) {
+                continue
+              }
 
               var an_item_html = "<div class='title'>"+an_item_obj["reference"]+"</div>";
               an_item_html += "<div class='link'><a href='"+an_item_obj["link"]+"'>"+an_item_obj["link"]+"</a></div>";

@@ -1,8 +1,94 @@
 {
   "items": [
     {
+      "id":"idcc2022",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
+      "name": "IDCC-2022, 17th International Digital Curation Conference",
+      "location": "Online event",
+      "start_date": "14/06/2022",
+      "end_date": "15/06/2022",
+      "contribution": "Presenting: 'OpenCitations, an open e-infrastructure to foster maximum reuse of citation data'",
+      "description": "This year IDCC22 focuses on the topic of Reusability",
+      "attached": [
+        {"type":"webpage","label":"IDCC-2022 website","value":"https://www.dcc.ac.uk/events/idcc22"},
+        {"type":"presentation","label":"Slides of the presentaion","value":"https://doi.org/10.5281/zenodo.6622077"}
+      ],
+      "keywords": [],
+      "source": "",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"aiucd2022",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
+      "name": "AIUCD 2022 – DHs for society",
+      "location": "Lecce, Italy",
+      "start_date": "01/06/2022",
+      "end_date": "03/06/2022",
+      "contribution": "Attending the conference",
+      "description": "The AIUCD conference aims to be a moment of study and reflection on Digital Humanities (DHs) as a privileged meeting place among different needs of contemporary society in research, politics, economics and everyday life, giving the humanist the role of interpreter and ferryman of change.",
+      "attached": [
+        {"type":"webpage","label":"AIUCD2022 website","value":"http://www.aiucd.it/cfp-aiucd-2022-lecce/"}
+      ],
+      "keywords": [],
+      "source": "https://ivanhb.github.io/phd/activity",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"ulite2022",
+      "type": {"label":"Reviewer", "value": "reviewer"},
+      "name": "ULITE-2022 conference",
+      "location": "",
+      "start_date": "24/06/2022",
+      "end_date": "24/06/2022",
+      "contribution": "Review of a long paper submitted to the ULITE-2022 conference",
+      "description": "",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":"https://exciteproject.github.io/ULITE-ws/"}
+      ],
+      "keywords": ["review"],
+      "source": "",
+      "related_to": [""],
+      "include_in_webpage": 0
+    },
+    {
+      "id":"tpld_2022",
+      "type": {"label":"Reviewer", "value": "reviewer"},
+      "name": "TPDL-2022 conference",
+      "location": "",
+      "start_date": "24/06/2022",
+      "end_date": "24/06/2022",
+      "contribution": "Review of a long paper submitted to the TPDL-2022 conference",
+      "description": "",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":"http://tpdl2022.dei.unipd.it/"}
+      ],
+      "keywords": ["review"],
+      "source": "",
+      "related_to": [""],
+      "include_in_webpage": 0
+    },
+    {
+      "id":"qss_2022",
+      "type": {"label":"Reviewer", "value": "reviewer"},
+      "name": "QSS Journal 2022",
+      "location": "",
+      "start_date": "14/05/2022",
+      "end_date": "14/05/2022",
+      "contribution": "A review of a research paper submitted to the QSS journal",
+      "description": "",
+      "attached": [
+        {"type":"webpage","label":"Dedicated webpage","value":"https://direct.mit.edu/qss"}
+      ],
+      "keywords": ["review"],
+      "source": "",
+      "related_to": [""],
+      "include_in_webpage": 0
+    },
+    {
       "id":"com_eswc_2022",
-      "type": {"label":"Program committee", "value": "program_committee"},
+      "type": {"label":"Reviewer", "value": "reviewer"},
       "name": "ESWC 2022",
       "location": "",
       "start_date": "08/02/2022",
@@ -19,7 +105,7 @@
     },
     {
       "id":"com_bibliodap2021",
-      "type": {"label":"Program committee", "value": "program_committee"},
+      "type": {"label":"Reviewer", "value": "reviewer"},
       "name": "BiblioDAP2021",
       "location": "",
       "start_date": "05/07/2021",
