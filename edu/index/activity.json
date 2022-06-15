@@ -13,7 +13,7 @@
         {"type":"webpage","label":"IDCC-2022 website","value":"https://www.dcc.ac.uk/events/idcc22"},
         {"type":"presentation","label":"Slides of the presentaion","value":"https://doi.org/10.5281/zenodo.6622077"}
       ],
-      "keywords": [],
+      "keywords": ["fair","opencitations","reusability","open science"],
       "source": "",
       "related_to": ["phd"],
       "include_in_webpage": 1
@@ -30,7 +30,7 @@
       "attached": [
         {"type":"webpage","label":"AIUCD2022 website","value":"http://www.aiucd.it/cfp-aiucd-2022-lecce/"}
       ],
-      "keywords": [],
+      "keywords": ["digital humanities","umanistica digitale"],
       "source": "https://ivanhb.github.io/phd/activity",
       "related_to": ["phd"],
       "include_in_webpage": 1

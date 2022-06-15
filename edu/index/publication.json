@@ -1,6 +1,71 @@
 {
   "items": [
     {
+      "id":"meta_demo_paper",
+      "reference": "Massari, A., & Heibi, I. (2022). How to structure citations data and bibliographic metadata in the OpenCitations accepted format (arXiv:2206.03971). arXiv. http://arxiv.org/abs/2206.03971 [Submitted for publication]",
+      "reference_format": "apa",
+      "link": "http://arxiv.org/abs/2206.03971",
+      "link_format": "arxiv",
+      "title": "How to structure citations data and bibliographic metadata in the OpenCitations accepted format",
+      "autor": "Arcangelo Massari && Ivan Heibi",
+      "date": "08/06/2022",
+      "keywords": ["citations","opencitations","meta"],
+      "related_to": ["opencitaions"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"opencitations_idcc",
+      "reference": "Di Giambattista, C., Heibi, I., I., Peroni, S., & Shotton, D. (2022). OpenCitations, an open e-infrastructure to foster maximum reuse of citation data, IDCC-2022",
+      "reference_format": "apa",
+      "link": "",
+      "link_format": "",
+      "title": "OpenCitations, an open e-infrastructure to foster maximum reuse of citation data",
+      "autor": "Chiara Di Giambattista && Ivan Heibi && Silvio Peroni && David Shotton",
+      "date": "13/06/2022",
+      "keywords": ["opencitations","open science", "reusability", "fair"],
+      "related_to": ["opencitaions"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"ret_hum_reasons_dh2022",
+      "reference": "Heibi, I., & Peroni, S. (2022). Why arts and humanities publications get retracted: A topic modeling analysis of the retraction notices. DH2022.",
+      "reference_format": "apa",
+      "link": "",
+      "link_format": "",
+      "title": "Why arts and humanities publications get retracted: A topic modeling analysis of the retraction notices",
+      "autor": "Ivan Heibi && Silvio Peroni",
+      "date": "16/05/2022",
+      "keywords": ["retraction","humanities", "topic modeling"],
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"distributed_inf_tpdl",
+      "reference": "Grieco, G., Heibi, I., Massari, A., Moretti, A., & Peroni, S. (2022). Enabling Portability and Reusability of Open Science Infrastructures. https://arxiv.org/abs/2206.03926",
+      "reference_format": "apa",
+      "link": "https://arxiv.org/abs/2206.03926",
+      "link_format": "arxiv",
+      "title": "Enabling Portability and Reusability of Open Science Infrastructures",
+      "autor": "Giuseppe Grieco, Ivan Heibi, Arcangelo Massari, Arianna Moretti, Silvio Peroni",
+      "date": "09/06/2022",
+      "keywords": ["iac","opencitations","terraform","kubernetes","distributed infrastructure","reusability"],
+      "related_to": ["opencitaions"],
+      "include_in_webpage": 1
+    },
+    {
+      "id":"ret_hum_qss",
+      "reference": "Heibi, I., & Peroni, S. (2021). A quantitative and qualitative citation analysis of retracted articles in the humanities. ArXiv:2111.05223 [Cs]. http://arxiv.org/abs/2111.05223 [Manuscript submitted for publication]",
+      "reference_format": "apa",
+      "link": "http://arxiv.org/abs/2111.05223",
+      "link_format": "arxiv",
+      "title": "A quantitative and qualitative citation analysis of retracted articles in the humanities",
+      "autor": "Ivan Heibi && Silvio Peroni",
+      "date": "11/10/2021",
+      "keywords": ["retraction","topic modelling","humanities","citation analysis"],
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"ret_ann_method",
       "reference": "Heibi, I., Peroni, S. .A protocol to gather, characterize and analyze incoming citations of retracted articles [Manuscript submitted for publication]",
       "reference_format": "apa",
