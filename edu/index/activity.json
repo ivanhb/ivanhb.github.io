@@ -1,6 +1,24 @@
 {
   "items": [
     {
+      "id":"dh2022",
+      "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
+      "name": "DH2022, Digital Humanities 2022",
+      "location": "Online event",
+      "start_date": "25/07/2022",
+      "end_date": "29/06/2022",
+      "contribution": "Presenting: 'Why arts and humanities publications get retracted: a topic modeling analysis of the retraction notices'",
+      "description": "The focus of this year in DH2022 was on asian diversity",
+      "attached": [
+        {"type":"webpage","label":"DH2022 website","value":"https://dh2022.adho.org"},
+        {"type":"presentation","label":"Slides of the presentaion","value":"https://zenodo.org/record/6857175#.YySBDOxBzvU"}
+      ],
+      "keywords": ["retraction","topic modeling","retraction notice"],
+      "source": "",
+      "related_to": ["phd"],
+      "include_in_webpage": 1
+    },
+    {
       "id":"idcc2022",
       "type": {"label":"Conferences/Workshops", "value": "conf_workshop"},
       "name": "IDCC-2022, 17th International Digital Curation Conference",
@@ -15,7 +33,7 @@
       ],
       "keywords": ["fair","opencitations","reusability","open science"],
       "source": "",
-      "related_to": ["phd"],
+      "related_to": ["opencitaions"],
       "include_in_webpage": 1
     },
     {
