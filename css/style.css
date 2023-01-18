@@ -104,6 +104,10 @@ nav a.nav-link:hover, a.active{
 	background: initial !important;
 	border-bottom: solid 2px var(--nav-bg-color-orange);
 }
+button.navbar-toggler{
+	color: black!important;
+	border: solid 1px black !important;
+}
 #indexlogo{
 	width: 45%;
 	filter: grayscale(1);
@@ -384,7 +388,6 @@ header {
 	.profile {
 		padding-top: 50px!important;
 	}
-
 }
 
 @media (max-width: 992px) {
@@ -436,5 +439,20 @@ header {
 		border-radius: 0px;
 		border-right: solid 3px white !important;
 		text-align: right;
+	}
+	#personal_info{
+		display: none !important;
+	}
+	.social-contact{
+		display: none !important;
+	}
+	.var-section{
+		padding: 20px;
+	}
+	.main-image{
+		max-width: 300px;
+	}
+	nav{
+		padding: 10px !important;
 	}
 }
