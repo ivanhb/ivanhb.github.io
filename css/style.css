@@ -104,10 +104,11 @@ nav a.nav-link:hover, a.active{
 	background: initial !important;
 	border-bottom: solid 2px var(--nav-bg-color-orange);
 }
-button.navbar-toggler{
+.navbar-toggler{
 	color: black!important;
-	border: solid 1px black !important;
+	font-size: 2em;
 }
+
 #indexlogo{
 	width: 45%;
 	filter: grayscale(1);
@@ -453,6 +454,23 @@ header {
 		max-width: 300px;
 	}
 	nav{
-		padding: 10px !important;
+		margin-left: 30px !important;
+		margin-right: 30px !important;
+	}
+	#fixed_section{
+		margin: 20px !important;
+	}
+	#indexlogo{
+		display: none;
+	}
+	#indexlogo_collapse{
+		width: 80px;
+		filter: grayscale(1);
+	}
+	#container_logo_collapse{
+		width: calc(70% - 30px);
+	}
+	#container_menulogo_collapse{
+		width: calc(30% - 30px);
 	}
 }
