@@ -107,6 +107,7 @@ nav a.nav-link:hover, a.active{
 .navbar-toggler{
 	color: black!important;
 	font-size: 2em;
+	border: solid 1.5px black !important;
 }
 
 #indexlogo{
@@ -449,7 +450,10 @@ header {
 		text-align: right;
 	}
 	#personal_info{
-		display: none !important;
+		display: inline-block;
+		width: 70% !important;
+		margin: 0 auto;
+		font-size: 0.8em !important;
 	}
 	.social-contact{
 		display: none !important;
@@ -458,14 +462,44 @@ header {
 		padding: 20px;
 	}
 	.main-image{
-		max-width: 300px;
+		max-width: 100px;
 	}
 	nav{
 		margin-left: 30px !important;
 		margin-right: 30px !important;
+		width: 80% !important;
+	}
+	nav .nav-link{
+		margin-left: 0px !important;
+	}
+	nav .navbar-nav{
+		margin-top: 20px;
 	}
 	#fixed_section{
 		margin: 20px !important;
+		border: none;
+		padding: 0px !important;
+	}
+	#fixed_section #_rc{
+		display: none;
+	}
+	#fixed_section .row{
+		display: table-column;
+		width: 30% !important;	
+		padding: 0px !important;
+		float: left;
+	}
+	#fixed_section .row .col-lg-12 img{
+		padding: 0px !important;
+		vertical-align: middle !important;
+	}
+	.var-section{
+		width: 95%;
+		margin-left: 10px;
+		border-top: solid 1px;
+	}
+	.var-section *{
+		text-align: left !important;
 	}
 	#indexlogo{
 		display: none;
@@ -478,6 +512,6 @@ header {
 		width: calc(70% - 30px);
 	}
 	#container_menulogo_collapse{
-		width: calc(30% - 30px);
+		width: calc(30% - 30px);		
 	}
 }
