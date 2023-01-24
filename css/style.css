@@ -184,7 +184,9 @@ nav a.nav-link:hover, a.active{
 	color: black!important;
 	border-bottom: solid 2px;
 }
-
+.bibbase_paper{
+	margin-bottom: 15px;
+}
 
 header .title{
 	/*background-color: rgba(0,0,0,0.3);*/
