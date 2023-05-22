@@ -130,8 +130,12 @@ nav a.nav-link:hover, a.active{
 	margin-top: 20px;
 	margin-bottom: 20px;
 	font-size: 1em !important;
+	text-align: justify !important;
+	text-justify: inter-word !important;
 }
 #personal_info ul{
+	text-align: justify;
+	text-justify: inter-word;
 	list-style-type: none;
 }
 #personal_info li{
@@ -174,7 +178,7 @@ nav a.nav-link:hover, a.active{
 	border: solid 2px transparent;
 }
 .section-tab-link:hover{
-	text-decoration: none;  
+	text-decoration: none;
 	border-bottom: solid 2px;
 	color: black!important;
 }
@@ -348,7 +352,7 @@ header {
 	flex-shrink: 0;
   width: 100%;
 	max-width: 100%;
-	max-height: 150px; 
+	max-height: 150px;
 	display: block;
 	margin: 0 auto;
 	padding-bottom: 10px;
@@ -380,7 +384,7 @@ header {
   -webkit-box-orient: vertical;
 }
 .container-img-news{
-	min-height: 150px; 
+	min-height: 150px;
 }
 
 @media (min-width: 992px) {
@@ -422,7 +426,7 @@ header {
 	#venue_section .row.section-content .mx-auto{
 		text-align: center!important;
 	}
-	
+
 	.social-icons{
 		display: block ;
 	}
@@ -487,7 +491,7 @@ header {
 	}
 	#fixed_section .row{
 		display: table-column;
-		width: 30% !important;	
+		width: 30% !important;
 		padding: 0px !important;
 		float: left;
 	}
@@ -514,6 +518,6 @@ header {
 		width: calc(70% - 30px);
 	}
 	#container_menulogo_collapse{
-		width: calc(30% - 30px);		
+		width: calc(30% - 30px);
 	}
 }
