@@ -34,7 +34,7 @@
 
 	<div id="nav-placeholder">
 		<nav class="navbar navbar-expand-lg navbar-right navbar-dark container" id="mainNav">
-				
+
 					<div class="col-lg-3">
 						<div class="row align-items-center text-center">
 							<div class="col-lg-12 justify-content-center text-center">
@@ -42,7 +42,7 @@
 							</div>
 						</div>
 					</div>
-				
+
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 						<span><i class="bi bi-list"></i></span>
 					</button>
@@ -63,114 +63,24 @@
 						</ul>
 					</div>
 		</nav>
-	
+
 	</div>
 
 	<script>
 	$(function(){
 		/*$("#fixed_section").load("fixed_section.html", function functionName() {apply_conf_onfunc(update_fixed_section, false);});*/
 		//$("#sidecol").load("side.html");
+		$("#fixed_section").load("fixed_section.html", function functionName() {apply_conf_onfunc(update_fixed_section, "publication", false);});
 		$("#page-footer").load("footer.html", function functionName() {apply_conf_onfunc(update_footer,"publication", false);});
 	});
 	</script>
 
 	<div class="container">
-		
+
 			<div class="row">
-				
-				<div class="col-lg-3 mx-auto fixed-section text-center" id="fixed_section">
-					<div class="row">
-						<div class="col-lg-12 justify-content-center">
-							<img typeof="foaf:Image" src="../img/prof.jpg" class="main-image rounded-circle" alt="">
-						</div>
-					</div>
 
-					<div id="personal_info">
-							<div class="text-left info-entry justify-content-center">
-								<strong>Researcher at the Department of Classical Philology and Italian Studies, University of Bologna</strong>
-							</div>
-							<div class="text-left info-entry justify-content-center" id="_rc">
-								<strong>Member of:</strong>
-								<ul>
-									<li style="border-left: solid 1.5px gray; margin-bottom: 5px; padding-left: 5px;">Digital Humanities Advanced Research Centre</li>
-									<li style="border-left: solid 1.5px gray; padding-left: 5px;">Research Centre for Open Scholarly Metadata</li>
-								</ul>
-							</div>
-					</div>
+				<div class="col-lg-3 mx-auto fixed-section text-center" id="fixed_section"></div>
 
-
-					<div class="row">
-						<div class="col-lg-12 justify-content-center">
-							
-								<a class="social-contact row align-items-center" href="https://www.unibo.it/sitoweb/ivan.heibi2">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-bank"></i>
-										</div>
-										<div class="col-lg-9 justify-content-left">
-											unibo.it/sitoweb/ivan.heibi2
-										</div>
-								</a>
-								
-								<!--
-								<a class="social-contact row align-items-center" href="https://www.facebook.com/ivanhb.ita">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-facebook"></i>
-										</div>
-										<div class="col-lg-9 justify-content-left">
-											facebook.com/ivanhb.ita
-										</div>
-								</a>
-								-->
-								
-								<a class="social-contact row align-items-center" href="https://www.linkedin.com/in/ivan-heibi-738317a3">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-linkedin"></i>
-										</div>
-										<div class="col-lg-9 justify-content-left">
-											linkedin:ivan-heibi
-										</div>
-								</a>
-								
-								<a class="social-contact row align-items-center" href="https://twitter.com/ivanheib">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-twitter"></i>
-										</div>
-										<div class="col-lg-9 justify-content-left">
-											twitter.com/ivanheib
-										</div>
-								</a>
-								
-								<a class="social-contact row align-items-center" href="https://github.com/ivanhb">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-github"></i>
-										</div>
-										<div class="col-lg-9">
-											github.com/ivanhb
-										</div>
-								</a>
-								
-								<a class="social-contact row align-items-center" href="https://orcid.org/0000-0001-5366-5194">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-pencil-fill"></i>
-										</div>
-										<div class="col-lg-9">
-											orcid.org/0000-0001-5366-5194
-										</div>
-								</a>
-								
-								<a class="social-contact row align-items-center" href="mailto:ivan.heibi2@unibo.it">
-										<div class="col-lg-2 justify-content-center">
-											<i class="bi bi-envelope-fill"></i>
-										</div>
-										<div class="col-lg-9 justify-content-left">
-											ivan.heibi2@unibo.it
-										</div>
-								</a>
-
-						</div>
-					</div>
-				</div>
-				
 				<div class="col-lg-9 mx-auto title" id="loading_label">
 					<div class="row text-center">
 						<div class="col-lg-12 mx-auto">
@@ -182,11 +92,11 @@
 							</div>
 							<div class="spinner-grow" role="status">
 							  <span class="sr-only">Loading...</span>
-							</div>							
+							</div>
 						</div>
 					</div>
 				</div>
-				
+
 				<div class="col-lg-9 mx-auto title var-section" id="">
 					<div class="row">
 						<div class="col-lg-12 mx-auto">
@@ -195,7 +105,7 @@
 							</zero-md>
 						</div>
 					</div>
-					
+
 					<div class="row" id="list_pubs">
 						<div class="col-lg-12 mx-auto">
 							<script src="https://bibbase.org/show?bib=https%3A%2F%2Fapi.zotero.org%2Fgroups%2F4738581%2Fitems%3Fkey%3DrNNMSDlB04T7xfkKNgIz0zbi%26format%3Dbibtex%26limit%3D100&jsonp=1"></script>
@@ -205,11 +115,11 @@
 						</div>
 					</div>
 				</div>
-				
+
 			</div>
-			
-			
-			
+
+
+
 	</div>
 
 	<!-- Footer -->
@@ -221,9 +131,9 @@
 
 	<!-- Plugin JavaScript -->
 	<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
-	
+
 	<script src="../js/scrolling-nav.js"></script>
-	
+
 
 </body>
 
