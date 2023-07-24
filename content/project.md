@@ -64,6 +64,7 @@ This page lists some of the main projects and initiatives in which I am directly
 
 <br/>
 
+<!--
 <div class="row align-items-center">
   <div class="col-lg-3 align-items-center">
     <img src="https://raw.githubusercontent.com/catarsi/mitao/master/doc/mitao_logo.png" alt="mitao" width="100%" height="auto">
@@ -87,3 +88,4 @@ This page lists some of the main projects and initiatives in which I am directly
   Using OSCAR can work with any sparql endpoint by configuring a particular JSON document, which specifies how the SPARQL queries are sent to that endpoint, and how the returned query results should be visualized, according to the predefined tabular view that OSCAR provides.<br>LUCINDA is a general RDF-resource browser which could be configured to work with any triplestore providing a SPARQL-endpoint address. LUCINDA can also integrate in it OSCAR, The OpenCitations RDF Search Application.
   </div>
 </div>
+-->

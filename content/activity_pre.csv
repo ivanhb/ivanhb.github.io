@@ -1,4 +1,6 @@
 date_from,date_to,type,venue,place,role,venue_page,material
+2023/06/05,2023/06/07,conference,"AIUCD 2023","Siena, Italy","Participant","http://www.aiucd2023.unisi.it/en/home_it-english/",
+2023/03/15,2023/03/15,conference,"ExICE - Extended Intelligence for Cultural Engagement","Bologna, Italy","Participant","https://spice-h2020.eu/conference/",
 2023/02/08,2023/02/08,webinar,"OpenAIRE Tech-Clinic internal webinar",Online,presenting: “OpenCitations an infrastructure for open bibliographical metadata”,,Presentation::https://doi.org/10.5281/zenodo.7680726
 2022/10/28,2022/10/28,webinar,"OpenAIRE OAWeek - Discover OpenCitations, an infrastructure for open bibliographical metadata",Online,presenting: “OpenCitations an infrastructure for open bibliographical metadata”,,Presentation::https://doi.org/10.5281/zenodo.7299699
 2022/09/20,2022/09/23,conference,The 26th International Conference on Theory and Practice of Digital Libraries (TPDL 2022),"Padova, Italy",presenting “Enabling Portability and Reusability of Open Science Infrastructures”,http://tpdl2022.dei.unipd.it/index.html,Article::https://doi.org/10.1007/978-3-031-16802-4_36_;;_Presentation::https://doi.org/10.5281/zenodo.7111425

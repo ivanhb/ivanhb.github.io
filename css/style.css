@@ -116,7 +116,7 @@ nav a.nav-link:hover, a.active{
 	filter: saturate(0%) brightness(0%) contrast(1000%);
 }
 #indexlogo:hover{
-	filter: saturate(90%) brightness(75%) contrast(100%);
+	/*filter: saturate(90%) brightness(75%) contrast(100%);*/
 }
 
 .social-contact{
