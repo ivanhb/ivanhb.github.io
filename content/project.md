@@ -4,6 +4,18 @@ This page lists some of the main projects and initiatives in which I am directly
 
 <div class="row align-items-center">
   <div class="col-lg-3 align-items-center">
+  <img src="../img/graspos.png" alt="graspos" width="100%" height="auto">
+  </div>
+
+  <div class="col-lg-9">
+    <a href="https://graspos.eu/">GraspOS</a> | Develop, assess and operate an open and trusted federated infrastructure for next generation research metrics and indicators, offering data, tools, services and guidance.
+  </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+  <div class="col-lg-3 align-items-center">
   <img src="../img/logo_changes.png" alt="pe5" width="100%" height="auto">
   </div>
 
